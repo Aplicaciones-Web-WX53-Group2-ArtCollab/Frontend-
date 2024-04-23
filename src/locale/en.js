@@ -1,5 +1,9 @@
 const en = {
-  hello_world: 'Hello World!',
+  gender: 'Gender',
+  popular: 'Popular',
+  subscription: 'Subscription',
+  monetization: 'Monetization',
+  artists: 'Artists',
 }
 
 export default en

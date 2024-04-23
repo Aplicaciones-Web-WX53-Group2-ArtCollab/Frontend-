@@ -25,11 +25,11 @@ export default {
         <div class=" flex gap-7">
           <div class="flex flex-row text-xs gap-5 " aria-label="toolbar features content">
             <img src="../../assets/logo.png" width="40"/>
-            <h2> Géneros </h2>
-            <h2> Populares </h2>
-            <h2> Suscripciones </h2>
-            <h2> Monetización </h2>
-            <h2 > Artistas </h2>
+            <h2> {{ $t('gender') }}: </h2>
+            <h2> {{ $t('popular') }}: </h2>
+            <h2> {{ $t('subscription') }}: </h2>
+            <h2> {{ $t('monetization') }}: </h2>
+            <h2 > {{ $t('artists') }}: </h2>
           </div>
           <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
             <pv-iconfield icon-position="left" >
