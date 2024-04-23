@@ -13,23 +13,8 @@ export default {
           icon: 'pi pi-times'
         }
       ],
-      visible:false
+      visible:false,
     };
-  },
-  methods:{
-    toggle(){
-       this.visible = !this.visible;
-    }
-  },
-  mounted() {
-    if (this.$mq === 'lg') {
-      this.visible = true;
-    }
-  },
-  watch: {
-    '$mq': function(newVal) {
-      this.visible = newVal === 'lg';
-    }
   }
 };
 </script>
@@ -40,8 +25,18 @@ export default {
         <div class=" flex flex-row gap-7">
           <img src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
           <div>
-            <pv-inputicon class="pi pi-bars text-center text-2xl mt-2 block lg:hidden hover:text-cyan-600 " @click="toggle" />
-            <div v-show="visible" class=" text-center lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
+            <div  class=" block lg:hidden card flex justify-content-center">
+              <pv-sidebar   v-model:visible="visible" header="Artcollab">
+                <img src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
+                <h2> {{ $t('gender') }} </h2>
+                <h2> {{ $t('popular')}} </h2>
+                <h2> {{ $t('subscription') }} </h2>
+                <h2> {{ $t('monetization') }} </h2>
+                <h2 > {{ $t('artists') }} </h2>
+              </pv-sidebar>
+              <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" />
+            </div>
+            <div  class=" hidden  text-center lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
               <h2> {{ $t('gender') }} </h2>
               <h2> {{ $t('popular')}} </h2>
               <h2> {{ $t('subscription') }} </h2>
@@ -67,11 +62,11 @@ export default {
 .toolbar{
   border-radius:0;
 }
-.navbar-links h2:hover{
+ h2:hover{
     cursor:pointer;
     color: #00B4CC;
  }
- .navbar-links h2{
+  h2{
    color:black;
    font-size: 1rem;
    font-weight: bold;
