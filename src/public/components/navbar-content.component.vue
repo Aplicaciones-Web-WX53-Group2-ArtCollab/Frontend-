@@ -14,7 +14,6 @@ export default {
         }
       ],
       visible:false,
-      toggle: false
     };
   }
 };
