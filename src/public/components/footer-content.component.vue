@@ -19,15 +19,15 @@ export default {
           <pv-inputicon class="pi pi-youtube text-2xl" />
        </div>
         <div class="flex gap-5">
-          <p> Acerca de </p>
-          <p> Géneros </p>
-          <p> Populares </p>
-          <p> Suscripción </p>
-          <p> Monetización </p>
-          <p> Artistas </p>
+          <p> {{ $t('about') }} </p>
+          <p> {{ $t('gender') }} </p>
+          <p> {{ $t('popular') }} </p>
+          <p> {{ $t('subscription') }} </p>
+          <p> {{ $t('monetization') }} </p>
+          <p> {{ $t('artists') }} </p>
         </div>
        <div>
-          <p> Copyright &copy; 2024 ArtCollab. All rights reserverd </p>
+          <p> {{ $t('copyright') }} </p>
        </div>
     </div>
   </footer>
