@@ -31,6 +31,12 @@ export default {
             <h2> Monetización </h2>
             <h2> Artistas </h2>
           </div>
+          <div class="card flex flex-wrap justify-content-center gap-3">
+            <pv-iconfield iconPosition="left">
+              <pv-inputicon  class="pi pi-search"/>
+              <pv-inputicon  placeholder="Search" />
+            </pv-iconfield>
+          </div>
           <div>
             <pv-button class=" bg-cyan-600" label="Iniciar Sesion"/>
           </div>
