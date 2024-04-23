@@ -37,15 +37,17 @@ export default {
 <template>
     <pv-toolbar class="flex justify-content-center items-center toolbar" aria-label="the toolbar content">
       <template #start>
-        <div class=" flex gap-7">
-          <img src="../../assets/logo.png" width="40" alt="ArtCollab Logo"/>
-           <pv-inputicon class="pi pi-bars text-2xl mt-2 block lg:hidden hover:text-cyan-600 " @click="toggle" />
-          <div v-show="visible" class=" lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
-            <h2> {{ $t('gender') }} </h2>
-            <h2> {{ $t('popular')}} </h2>
-            <h2> {{ $t('subscription') }} </h2>
-            <h2> {{ $t('monetization') }} </h2>
-            <h2 > {{ $t('artists') }} </h2>
+        <div class=" flex flex-row gap-7">
+          <img src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
+          <div>
+            <pv-inputicon class="pi pi-bars text-center text-2xl mt-2 block lg:hidden hover:text-cyan-600 " @click="toggle" />
+            <div v-show="visible" class=" text-center lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
+              <h2> {{ $t('gender') }} </h2>
+              <h2> {{ $t('popular')}} </h2>
+              <h2> {{ $t('subscription') }} </h2>
+              <h2> {{ $t('monetization') }} </h2>
+              <h2 > {{ $t('artists') }} </h2>
+            </div>
           </div>
           <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
             <pv-iconfield icon-position="left" >
