@@ -27,13 +27,14 @@ export default {
           <div>
             <div  class=" block lg:hidden card flex justify-content-center">
               <pv-sidebar   v-model:visible="visible" header="Artcollab">
+                <img src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
                 <h2> {{ $t('gender') }} </h2>
                 <h2> {{ $t('popular')}} </h2>
                 <h2> {{ $t('subscription') }} </h2>
                 <h2> {{ $t('monetization') }} </h2>
                 <h2 > {{ $t('artists') }} </h2>
               </pv-sidebar>
-              <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl"  icon="pi pi-bars"  @click="visible = true" />
+              <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" />
             </div>
             <div  class=" hidden  text-center lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
               <h2> {{ $t('gender') }} </h2>
