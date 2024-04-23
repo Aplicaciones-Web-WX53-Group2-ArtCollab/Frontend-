@@ -9,6 +9,8 @@ import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
+import Card from 'primevue/card';
+
 
 import i18n from '@/locale/i18n.js'
 import VueMq from 'vue3-mq'
@@ -29,6 +31,7 @@ app.component('pv-iconfield', IconField);
 app.component('pv-inputicon', InputIcon);
 app.component('pv-inputtext', InputText);
 app.component('pv-sidebar', Sidebar);
+app.component('pv-card', Card);
 app.use(i18n);
 
 app.use(VueMq, {
