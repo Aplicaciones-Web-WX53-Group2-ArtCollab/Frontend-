@@ -24,7 +24,7 @@ export default {
       <template #start>
        <div class=" flex gap-7">
          <div class="flex flex-row text-xs gap-5 ">
-           <img src="../../assets/logo.png" width="40" />
+           <img src="../../assets/logo.png" width="40"/>
            <h2> Géneros </h2>
            <h2> Populares </h2>
            <h2> Suscripciones </h2>
