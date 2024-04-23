@@ -20,14 +20,18 @@ export default {
 
 <template>
   <div class="card">
-  <pv-toolbar>
-    <template #start>
-      <h1> Hola mundo</h1>
-      <pv-button icon="pi pi-plus" class="mr-2" severity="secondary" />
-      <pv-button icon="pi pi-print" class="mr-2" severity="secondary" />
-      <pv-button icon="pi pi-upload" severity="secondary" />
-    </template>
-  </pv-toolbar>
+    <pv-toolbar class="flex justify-center items-center">
+      <template #start>
+        <div class="flex flex-row text-xs gap-3 ">
+          <img src="../../assets/logo.png" width="50" />
+          <h1> Géneros </h1>
+          <h1> Populares </h1>
+          <h1> Suscripciones </h1>
+          <h1> Monetización </h1>
+          <h1> Artistas </h1>
+        </div>
+      </template>
+    </pv-toolbar>
   </div>
 </template>
 
