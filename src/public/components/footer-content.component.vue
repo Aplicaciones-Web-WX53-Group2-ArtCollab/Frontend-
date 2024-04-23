@@ -27,7 +27,7 @@ export default {
           <p> {{ $t('artists') }} </p>
         </div>
        <div>
-          <p> {{ $t('copyright') }} </p>
+          <p> Copyright &copy; 2024 ArtCollab. {{ $t('copyright') }} </p>
        </div>
     </div>
   </footer>
