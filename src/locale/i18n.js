@@ -3,7 +3,7 @@ import en from './en.js'
 import es from './es.js'
 
 const i18n = createI18n({
-  locale: 'en',
+  locale: 'es',
   messages: {
     en,
     es

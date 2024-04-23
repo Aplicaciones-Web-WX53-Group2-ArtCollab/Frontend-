@@ -1,13 +1,12 @@
 const es = {
-  genre:'Géneros',
-  popular:'Populares',
-  subscription:'Suscripción',
-  monetization:'Monetización',
-  artist:'Artistas',
+  gender: 'Género',
+  popular: 'Populares',
+  subscription: 'Suscripciones',
+  monetization: 'Monetización',
+  artists: 'Artistas',
+  login: 'Iniciar sesión',
   about: 'Acerca de',
-  copyright:'Copyright @2024 ArtCollab. Todos los derechos resevados.',
-
+  copyright: 'Todos los derechos reservados',
 }
-
 
 export default es
