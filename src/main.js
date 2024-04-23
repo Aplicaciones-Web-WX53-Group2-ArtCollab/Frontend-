@@ -9,6 +9,7 @@ import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
 import i18n from '@/locale/i18n.js'
+import VueMq from 'vue3-mq'
 
 
 import 'primevue/resources/themes/aura-light-green/theme.css'
@@ -27,4 +28,12 @@ app.component('pv-inputicon', InputIcon);
 app.component('pv-inputtext', InputText);
 app.use(i18n);
 
+app.use(VueMq, {
+  breakpoints: {
+    sm: 640,
+    md: 768,
+    lg: Infinity
+  },
+  defaultBreakpoint: 'sm',
+});
 app.mount('#app');
