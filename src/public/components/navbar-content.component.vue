@@ -38,7 +38,7 @@ export default {
             </pv-iconfield>
           </div>
           <div arial-label="login button">
-            <pv-button class=" bg-cyan-600" label="Iniciar Sesion"/>
+            <pv-button class=" bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
           </div>
         </div>
       </template>

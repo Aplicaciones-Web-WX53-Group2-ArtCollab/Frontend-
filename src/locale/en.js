@@ -4,6 +4,7 @@ const en = {
   subscription: 'Subscription',
   monetization: 'Monetization',
   artists: 'Artists',
+  login: 'Log in',
 }
 
 export default en
