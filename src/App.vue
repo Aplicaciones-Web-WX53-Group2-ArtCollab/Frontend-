@@ -1,12 +1,9 @@
 <script setup>
-
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 </script>
 
 <template>
-  <navbar-content/>
+  <navbar-content />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

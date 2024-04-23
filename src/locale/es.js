@@ -1,4 +1,3 @@
-const es = {
-}
+const es = {}
 
-export default es;
+export default es
