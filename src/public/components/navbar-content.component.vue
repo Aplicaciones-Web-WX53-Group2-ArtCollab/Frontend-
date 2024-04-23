@@ -12,9 +12,25 @@ export default {
           label: 'Delete',
           icon: 'pi pi-times'
         }
-      ]
+      ],
+      visible:false
     };
   },
+  methods:{
+    toggle(){
+       this.visible = !this.visible;
+    }
+  },
+  mounted() {
+    if (this.$mq === 'lg') {
+      this.visible = true;
+    }
+  },
+  watch: {
+    '$mq': function(newVal) {
+      this.visible = newVal === 'lg';
+    }
+  }
 };
 </script>
 
@@ -22,8 +38,9 @@ export default {
     <pv-toolbar class="flex justify-content-center items-center toolbar" aria-label="the toolbar content">
       <template #start>
         <div class=" flex gap-7">
-          <div class="flex flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
-            <img src="../../assets/logo.png" width="40" alt="ArtCollab Logo"/>
+          <img src="../../assets/logo.png" width="40" alt="ArtCollab Logo"/>
+           <pv-inputicon class="pi pi-bars text-2xl mt-2 block lg:hidden hover:text-cyan-600 " @click="toggle" />
+          <div v-show="visible" class=" lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links" aria-label="toolbar features content">
             <h2> {{ $t('gender') }} </h2>
             <h2> {{ $t('popular')}} </h2>
             <h2> {{ $t('subscription') }} </h2>
