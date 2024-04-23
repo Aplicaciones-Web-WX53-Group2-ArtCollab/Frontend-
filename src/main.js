@@ -5,6 +5,10 @@ import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
 import  Button  from 'primevue/button';
 import Toolbar from 'primevue/toolbar';
+import 'primevue/resources/themes/aura-light-green/theme.css'
+import 'primeicons/primeicons.css'
+import 'primevue/resources/primevue.min.css'
+
 
 
 
