@@ -1,10 +1,8 @@
 <script>
 
-import NavbarContent from '@/App.vue'
 
 export default {
   name: 'the-hero-monetization',
-  components: { NavbarContent }
 }
 </script>
 

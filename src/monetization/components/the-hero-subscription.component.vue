@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="flex flex-column gap-5 mt-7" aria-label="the susbscription hero content">
-    <h1 class="text-center font-bold text-xl"> Planes de suscripción</h1>
+    <h1 class="text-center font-bold text-xl" aria-label="Subscription plans">{{ $t('subscriptionPlans') }} </h1>
     <subscription-cards/>
   </div>
 </template>
