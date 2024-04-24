@@ -14,7 +14,7 @@
     <div class="flexbox-container">
       <div class="flex-item">
         <div class="social-media">
-          <div class="media-title">Redes sociales</div>
+          <div class="media-title">{{ $t('social_media') }}</div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/x-logo.png" alt="X logo">
             <a href="https://www.x.com/" target="_blank">https://www.x.com/</a>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="artist-books">
-          <div class="artist-books-title">Libros que ha ilustrado</div>
+          <div class="artist-books-title">{{ $t('illustrated_books') }}</div>
           <div class="flex-container-2">
             <img class="normal-image" src="/src/assets/images/marionetta-cover.png" alt="Book 1 image">
             <p>Marionetta</p>
@@ -50,7 +50,7 @@
           <div>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis.</div>
         </div>
         <div class="portfolio">
-          <div class="portfolio-title">Portafolio</div>
+          <div class="portfolio-title">{{ $t('portfolio') }}</div>
           <div class="flex-container">
             <img class="normal-image" src="/src/assets/images/portfolio-1.png" alt="Portfolio first image">
             <img class="normal-image" src="/src/assets/images/portfolio-2.png" alt="Portfolio first image">

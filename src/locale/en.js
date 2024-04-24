@@ -7,6 +7,9 @@ const en = {
   login: 'Log in',
   about: 'About',
   copyright: 'All rights reserved',
+  social_media: 'Social Media',
+  illustrated_books: 'Books Illustrated by Him/Her',
+  portfolio: 'Portfolio',
 }
 
 export default en
