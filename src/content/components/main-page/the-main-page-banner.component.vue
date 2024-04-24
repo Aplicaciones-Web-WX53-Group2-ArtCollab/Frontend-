@@ -46,15 +46,6 @@ const images = ref([
   position: absolute;
   z-index: -1;
 }
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
 .banner img {
   max-width: 100%;
   height: auto;

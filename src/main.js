@@ -3,7 +3,7 @@ import 'primeflex/primeflex.css';
 
 import { createApp } from 'vue';
 import App from './App.vue';
-// import MainPage from '@/content/components/main-page/main-page.vue';
+import MainPage from '@/content/pages/main-page.vue';
 
 import Toolbar from 'primevue/toolbar';
 import Button from 'primevue/button';
