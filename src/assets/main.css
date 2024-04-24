@@ -11,9 +11,10 @@ a,
 
 body{
   background-color:white;
+  color:black;
 }
 
-body .p-component{
+*{
   font-family: 'Archivo', sans-serif;
 }
 
