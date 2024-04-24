@@ -7,6 +7,19 @@ const es = {
   login: 'Iniciar sesión',
   about: 'Acerca de',
   copyright: 'Todos los derechos reservados',
+  price: 'S/.3.99',
+  perMonth: '/mes',
+  artist: 'Artista',
+  profileHighlight: 'Perfil destacado al inicio de la sesión',
+  priority: 'Tener mayor prioridad para trabajar con escritores destacados',
+  subscribe: 'Suscribirse',
+  cancelAnytime: 'Cancela en cualquier momento',
+  freeMonthlyPackage: 'Un paquete mensual gratuito de monedas',
+  earlyAccess: 'Acceso anticipado a nuevas historias',
+  noAds: 'Sin anuncios',
+  storyHighlight: 'Historia destacada en la página principal',
+  storyAds: 'Anuncios de su historia en nuestras páginas',
+  recommendedList: 'Entrar en nuestra lista de historias recomendadas a editoriales',
 }
 
 export default es

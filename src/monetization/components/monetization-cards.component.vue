@@ -1,13 +1,10 @@
 <script>
+
 export default {
-  name: 'monetization-cards'
+  name: 'monetization-cards',
 }
 </script>
 
 <template>
 
 </template>
-
-<style scoped>
-
-</style>

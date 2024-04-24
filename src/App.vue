@@ -1,11 +1,9 @@
 <script setup>
-import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
+import SubscriptionApplication from '@/monetization/pages/subscription-application.component.vue'
 </script>
 
 <template>
-  <navbar-content />
-  <footer-content/>
+  <subscription-application/>
 </template>
 
 <style scoped></style>
