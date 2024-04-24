@@ -39,7 +39,7 @@ const images = ref([
   background-image: url('src/assets/images/banner-background.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.5; /* Ajusta esto al nivel de opacidad que prefieras */
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;

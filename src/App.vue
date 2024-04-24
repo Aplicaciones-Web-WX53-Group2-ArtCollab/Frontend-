@@ -5,8 +5,8 @@ import GenresNavbar from '@/genres/components/the-navbar.component.vue'
 </script>
 
 <template>
-  <main-page-banner/>
   <genres-navbar/>
+  <main-page-banner/>
 </template>
 
 <style scoped>
