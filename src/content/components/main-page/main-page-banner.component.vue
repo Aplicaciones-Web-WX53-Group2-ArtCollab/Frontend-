@@ -14,17 +14,10 @@ const images = ref([
 
 <template>
   <div class="banner">
-<!--    <pv-carousel :value="images" circular :autoplayInterval="30000" >
-      <template #item="slotProps">
-        <div class="image-container">
-          <img :src="slotProps.data" alt="Carousel image" />
-        </div>
-      </template>
-    </pv-carousel>-->
     <pv-galleria :value="images" :numVisible="4" containerStyle="max-width: 640px"
               :showThumbnails="false" :showIndicators="true" :circular="true" :autoPlay="true" :transitionInterval="2000">
       <template #item="slotProps">
-        <img :src="slotProps.item" alt="Carousel image" style="width: 100%; display: block" />
+        <img :src="slotProps.item" alt="galleria image" class="w-full block" />
       </template>
     </pv-galleria>
   </div>
