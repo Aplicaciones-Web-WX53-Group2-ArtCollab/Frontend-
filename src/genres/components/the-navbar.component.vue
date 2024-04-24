@@ -17,7 +17,7 @@ export default {
         <pv-button label="comedy-button" Comedia aria-label="Comedy"/>
       </div>
     </template>
-    <pv-toolbar/>
+  <pv-toolbar/>
 </template>
 
 <style scoped>
