@@ -53,6 +53,15 @@ const en = {
   heroMonetization: {
         title: 'Earn profits from your story',
   },
+  stepsContent: {
+    title: 'Advertising Revenue Sharing Program',
+    creatorsCanEarn: 'Creators can earn 50% from the ads shown in their series!',
+    followSteps: 'Follow these steps to join the advertising revenue sharing program',
+    step1: 'Register with your writer account in the advertising revenue sharing program',
+    step2: 'Reach 20,000 likes and 40,000 global monthly views on your book',
+    step3: 'Apply for a review',
+    startSharing: 'Start sharing your stories now!'
+  }
 }
 
 export default en

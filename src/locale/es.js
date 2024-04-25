@@ -54,6 +54,15 @@ const es = {
   heroMonetization: {
       title: 'Obtén ganancias por tu historia',
   },
+  stepsContent: {
+    title: 'Programa de reparto de ingresos publicitarios',
+    creatorsCanEarn: '¡Los creadores pueden ganar 50% por los anunciones mostrados en sus series!',
+    followSteps: 'Sigue los siguientes pasos para unirte al programa de reparto de ingresos publicitarios',
+    step1: 'Registrate con tu cuenta de escritor en el programa de reparto de ingresos publicitarios',
+    step2: 'Alcanza los 20,000 me gusta y 40,000 vistas globales mensuales en tu libro',
+    step3: 'Aplica para una revisión',
+    startSharing: '¡Comienza a compartir tus historias ahora!'
+  }
 }
 
 export default es
