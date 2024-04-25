@@ -28,21 +28,21 @@ export default {
           <div  class=" block lg:hidden card flex justify-content-center" aria-label="toolbar features content">
             <pv-sidebar   v-model:visible="visible" header="Artcollab">
               <img class="md:hidden" src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
-              <h2> {{ $t('gender') }} </h2>
-              <h2> {{ $t('popular')}} </h2>
-              <h2> {{ $t('subscription') }} </h2>
-              <h2> {{ $t('monetization') }} </h2>
-              <h2 > {{ $t('artists') }} </h2>
-              <pv-button class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+              <h2> {{ $t('navbar.gender') }} </h2>
+              <h2> {{ $t('navbar.popular')}} </h2>
+              <h2> {{ $t('navbar.subscription') }} </h2>
+              <h2> {{ $t('navbar.monetization') }} </h2>
+              <h2 > {{ $t('navbar.artists') }} </h2>
+              <pv-button class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('navbar.login') }} </pv-button>
             </pv-sidebar>
             <pv-button class="bg-transparent ml-7 lg:ml-0 text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" aria-label="Menu" />
           </div>
           <div  class=" hidden  text-center lg:flex lg:flex-row text-xs gap-5 align-items-center navbar-links " aria-label="toolbar features content" >
-            <h2> {{ $t('gender') }} </h2>
-            <h2> {{ $t('popular')}} </h2>
-            <h2> {{ $t('subscription') }} </h2>
-            <h2> {{ $t('monetization') }} </h2>
-            <h2 > {{ $t('artists') }} </h2>
+            <h2> {{ $t('navbar.gender') }} </h2>
+            <h2> {{ $t('navbar.popular')}} </h2>
+            <h2> {{ $t('navbar.subscription') }} </h2>
+            <h2> {{ $t('navbar.monetization') }} </h2>
+            <h2 > {{ $t('navbar.artists') }} </h2>
           </div>
         </div>
         <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
@@ -52,7 +52,7 @@ export default {
           </pv-iconfield>
         </div>
         <div aria-label="login button">
-          <pv-button class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+          <pv-button class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('navbar.login') }} </pv-button>
         </div>
       </div>
     </template>

@@ -9,8 +9,8 @@ export default {
 
 <template>
   <div>
-    <h1 aria-label="Coin Packages"> {{ $t('coinPackages') }} </h1>
-    <h3 class="my-3" aria-label="Unlock Chapters"> {{ $t('unlockChapters') }} </h3>
+    <h1 aria-label="Coin Packages"> {{ $t('coinSection.coinPackages') }} </h1>
+    <h3 class="my-3" aria-label="Unlock Chapters"> {{ $t('coinSection.unlockChapters') }} </h3>
     <coin-cards/>
   </div>
 </template>

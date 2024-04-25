@@ -14,7 +14,7 @@ export default {
         </template>
       </pv-card>
       <div class="bg-gray-200 p-2 ">
-        <p class="text-center font-bold "> {{ $t('priceCoin10') }} </p>
+        <p class="text-center font-bold "> {{ $t('coinCards.priceCoin10') }} </p>
       </div>
     </div>
 
@@ -26,7 +26,7 @@ export default {
         </template>
       </pv-card>
       <div class="bg-gray-200 p-2 ">
-        <p class="text-center font-bold "> {{ $t('priceCoin50') }} </p>
+        <p class="text-center font-bold "> {{ $t('coinCards.priceCoin50') }} </p>
       </div>
     </div>
 
@@ -38,7 +38,7 @@ export default {
         </template>
       </pv-card>
       <div class="bg-gray-200 p-2 ">
-        <p class="text-center font-bold "> {{ $t('priceCoin125') }} </p>
+        <p class="text-center font-bold "> {{ $t('coinCards.priceCoin125') }} </p>
       </div>
     </div>
 
@@ -50,7 +50,7 @@ export default {
         </template>
       </pv-card>
       <div class="bg-gray-200 p-2 ">
-        <p class="text-center font-bold "> {{ $t('priceCoin500') }} </p>
+        <p class="text-center font-bold "> {{ $t('coinCards.priceCoin500') }} </p>
       </div>
     </div>
 
@@ -62,7 +62,7 @@ export default {
         </template>
       </pv-card>
       <div class="bg-gray-200 p-2 ">
-        <p class="text-center font-bold "> {{ $t('priceCoin1000') }} </p>
+        <p class="text-center font-bold "> {{ $t('coinCards.priceCoin1000') }} </p>
       </div>
     </div>
   </div>

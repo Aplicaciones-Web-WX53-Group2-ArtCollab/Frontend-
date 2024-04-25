@@ -1,10 +1,10 @@
 <script setup>
 
-import MonetizationApplication from '@/monetization/pages/monetization-application.component.vue'
+import SubscriptionApplication from '@/monetization/pages/subscription-application.component.vue'
 </script>
 
 <template>
-  <monetization-application/>
+  <subscription-application/>
 </template>
 
 <style scoped></style>
