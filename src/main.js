@@ -27,7 +27,7 @@ import Badge from "primevue/badge";
 import i18n from '@/locale/i18n.js'
 import VueMq from 'vue3-mq'
 
-const app = createApp(App);
+const app = createApp(MainPage);
 
 app.use(PrimeVue)
 app.use(ToastService)
