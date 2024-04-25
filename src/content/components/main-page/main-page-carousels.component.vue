@@ -31,7 +31,7 @@ defineProps({
 
 <template>
   <div class="genre-container mt-5">
-    <h3 class="title cursor-pointer">{{ title }} ></h3>
+    <h3 class="title cursor-pointer">{{ title }} <i class="pi pi-angle-right"></i> </h3>
     <pv-carousel :value="covers" circular :autoplayInterval="3000" :num-visible="3" :num-scroll="1" :responsive-options="responsiveOptions">
       <template #item="slotProps" >
         <div class="image-container flex justify-content-center " >

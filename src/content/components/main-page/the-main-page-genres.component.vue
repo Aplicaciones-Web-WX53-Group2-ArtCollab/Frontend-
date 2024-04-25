@@ -26,13 +26,12 @@ const fantasy_covers = ref([
 
 <template>
   <div class="title-container flex justify-content-center">
-    <h3 class="title cursor-pointer">Genres ></h3>
+    <h3 class="title cursor-pointer">Genres <i class="pi pi-angle-right"></i></h3>
   </div>
 
   <main-page-carousels title="Romance" :covers="romance_covers"/>
 
   <main-page-carousels title="Fantasy" :covers="fantasy_covers"/>
-
 
 </template>
 

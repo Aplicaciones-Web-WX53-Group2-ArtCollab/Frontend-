@@ -15,6 +15,7 @@ import Toolbar from 'primevue/toolbar';
 import Button from 'primevue/button';
 import InputIcon from 'primevue/inputicon'
 import Sidebar from 'primevue/sidebar'
+import Dropdown from 'primevue/dropdown'
 import IconField from 'primevue/iconfield'
 import InputText from 'primevue/inputtext'
 
@@ -32,6 +33,7 @@ app.component('pv-inputicon', InputIcon)
 app.component('pv-sidebar', Sidebar)
 app.component('pv-iconfield', IconField)
 app.component('pv-inputtext', InputText);
+app.component('pv-dropdown', Dropdown)
 app.use(i18n);
 
 app.use(VueMq, {
