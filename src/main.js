@@ -18,13 +18,19 @@ import Sidebar from 'primevue/sidebar'
 import Dropdown from 'primevue/dropdown'
 import IconField from 'primevue/iconfield'
 import InputText from 'primevue/inputtext'
+import FileUpload from 'primevue/fileupload';
+import Toast from "primevue/toast";
+import ToastService from "primevue/toastservice";
+import ProgressBar from "primevue/progressbar";
+import Badge from "primevue/badge";
 
 import i18n from '@/locale/i18n.js'
 import VueMq from 'vue3-mq'
 
-const app = createApp(MainPage);
+const app = createApp(App);
 
 app.use(PrimeVue)
+app.use(ToastService)
 app.component('pv-carousel', Carousel)
 app.component('pv-button', Button)
 app.component('pv-toolbar', Toolbar)
@@ -34,6 +40,11 @@ app.component('pv-sidebar', Sidebar)
 app.component('pv-iconfield', IconField)
 app.component('pv-inputtext', InputText);
 app.component('pv-dropdown', Dropdown)
+app.component('pv-toast', Toast);
+app.component('pv-fileupload', FileUpload);
+app.component('pv-button', Button);
+app.component('pv-progressbar', ProgressBar);
+app.component('pv-badge', Badge);
 app.use(i18n);
 
 app.use(VueMq, {
