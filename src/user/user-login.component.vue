@@ -6,35 +6,39 @@ export default {
     closeLogin() {
       this.toggleLogin();
     },
+    showEmailLogin() {
+      this.$emit('showEmailLogin');
+    },
   },
 }
 
 </script>
 
 <template>
-<section v-if="showLogin" class="user-login w-full flex justify-content-center align-items-center fixed" @click.self="closeLogin">
-  <pv-card class="login-card h-24rem w-20rem">
-    <template #title>
-      <h4 class="text-center font-bold"> {{ $t('login_card_title') }} </h4>
-    </template>
-    <template #content>
-      <h5 class="text-center">
-        {{ $t('login_card_subtitle') }}
-      </h5>
-      <div class ="mt-3 login-buttons flex flex-column gap-3">
-        <pv-button class="w-full bg-white" icon="pi pi-envelope" label="Continuar con Email" plain text/>
-        <pv-button class="w-full bg-white" icon="pi pi-google" label="Continuar con Google" plain text/>
-        <pv-button class="w-full bg-white" icon="pi pi-facebook" label="Continuar con Facebook" plain text/>
-        <pv-button class="w-full bg-white" icon="pi pi-twitter" label="Continuar con Twitter" plain text/>
-      </div>
-    </template>
-    <template #footer>
-      <div class="flex justify-content-center">
-        <h5 class="text-center" v-html="$t('login_card_footer')"/>
-      </div>
-    </template>
-  </pv-card>
-</section>
+  <user-login-email v-if="showEmailLogin" @back="showEmailLogin = false" />
+  <section v-if="showLogin" class="user-login w-full flex justify-content-center align-items-center fixed" @click.self="closeLogin">
+    <pv-card class="login-card h-24rem w-20rem">
+      <template #title>
+        <h4 class="text-center font-bold"> {{ $t('login_card_title') }} </h4>
+      </template>
+      <template #content>
+        <h5 class="text-center">
+          {{ $t('login_card_subtitle') }}
+        </h5>
+        <div class ="mt-3 login-buttons flex flex-column gap-3">
+          <pv-button class="w-full bg-white" icon="pi pi-envelope" label="Continuar con Email" plain text @click="showEmailLogin"/>
+          <pv-button class="w-full bg-white" icon="pi pi-google" label="Continuar con Google" plain text/>
+          <pv-button class="w-full bg-white" icon="pi pi-facebook" label="Continuar con Facebook" plain text/>
+          <pv-button class="w-full bg-white" icon="pi pi-twitter" label="Continuar con Twitter" plain text/>
+        </div>
+      </template>
+      <template #footer>
+        <div class="flex justify-content-center">
+          <h5 class="text-center" v-html="$t('login_card_footer')"/>
+        </div>
+      </template>
+    </pv-card>
+  </section>
 </template>
 
 <style scoped>
