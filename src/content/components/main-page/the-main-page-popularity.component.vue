@@ -19,9 +19,9 @@ const onGenreChange = () => {
 </script>
 
 <template>
-  <div class="popularity-container flex flex-column md:flex-row gap-5">
+  <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5">
     <div class="popular-per-genre">
-      <h3 class="title flex flex-column md:flex-row md:justify-content-between">
+      <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center align-self-start ">Popular per genre</span>
         <pv-dropdown v-model="selectedGenre" :options="genres" placeholder="Select a genre" optionLabel="name" optionValue="id" @onChange="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" />
       </h3>
@@ -38,8 +38,8 @@ const onGenreChange = () => {
       </div>
     </div>
 
-    <div class="top-3 flex flex-column justify-content-center">
-      <h3 class="title flex flex-column md:flex-row md:justify-content-between">
+    <div class="top-3">
+      <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center">Top 3 of today</span>
       </h3>
       <div class="books flex flex-column gap-5">
@@ -60,6 +60,10 @@ const onGenreChange = () => {
 </template>
 
 <style scoped>
+
+.pv-dropdown{
+  height: 3rem;
+}
 
 .popular-per-genre{
   width:50%;
