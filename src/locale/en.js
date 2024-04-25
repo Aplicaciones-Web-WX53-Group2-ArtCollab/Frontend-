@@ -1,3 +1,5 @@
+import login_en from '@/locale/login/login_en.js'
+
 const en = {
   gender: 'Gender',
   popular: 'Popular',
@@ -7,6 +9,8 @@ const en = {
   login: 'Log in',
   about: 'About',
   copyright: 'All rights reserved',
+
+  ...login_en,
 }
 
 export default en

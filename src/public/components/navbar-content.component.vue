@@ -1,6 +1,12 @@
 <script>
 export default {
   name: 'navbar-content',
+  props: ['showLogin', 'toggleLogin'],
+  methods: {
+    openLogin() {
+      this.toggleLogin();
+    },
+  },
   data() {
     return {
       items: [
@@ -52,10 +58,12 @@ export default {
           </pv-iconfield>
         </div>
         <div aria-label="login button">
-          <pv-button class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+          <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+          <user-login ref="login"/>
         </div>
       </div>
     </template>
+
   </pv-toolbar>
 </template>
 
