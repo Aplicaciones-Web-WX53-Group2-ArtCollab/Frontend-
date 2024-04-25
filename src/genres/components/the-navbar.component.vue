@@ -11,9 +11,9 @@ export default {
   <pv-toolbar class="toolbar" aria-label="Toolbar content">
     <template #center>
       <div class="toolbar-links">
-        <a href="/romance" class="link-button" aria-label="Romance">Romance</a>
-        <a href="/fantasy" class="link-button" aria-label="Fantasy">Fantasia</a>
-        <a href="/comedy" class="link-button" aria-label="Comedy">Comedia</a>
+        <RouterLink to="/romance"> Romance </RouterLink>
+        <RouterLink to="/fantasy"> Fantasy </RouterLink>
+        <RouterLink to="/comedy"> Comedy </RouterLink>
       </div>
     </template>
   </pv-toolbar>
@@ -21,6 +21,7 @@ export default {
 
 <style scoped>
 .toolbar {
+  margin-bottom:50px;
   width: 100%;
   position: fixed;
   top: 0;
