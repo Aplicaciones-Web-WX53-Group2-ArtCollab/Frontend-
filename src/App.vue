@@ -1,5 +1,5 @@
 <script setup>
-import GenresNavbar from '@/genres/components/the-navbar.component.vue'
+import GenresNavbar from '@/shared/components/the-navbar.component.vue'
 </script>
 
 <template>
