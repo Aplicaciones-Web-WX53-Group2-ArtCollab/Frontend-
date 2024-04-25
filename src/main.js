@@ -15,8 +15,10 @@ import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
-import Card from 'primevue/card'
-import Password from 'primevue/password'
+import Card from 'primevue/card';
+import Password from 'primevue/password';
+import Checkbox from 'primevue/checkbox'
+import Divider from 'primevue/divider'
 
 import ToastService from "primevue/toastservice";
 import i18n from '@/locale/i18n.js'
@@ -31,6 +33,8 @@ app.component('pv-inputtext', InputText);
 app.component('pv-sidebar', Sidebar);
 app.component('pv-card', Card);
 app.component('pv-password', Password);
+app.component('pv-checkbox', Checkbox);
+app.component('pv-divider', Divider);
 app.use(i18n);
 app.use(ToastService);
 

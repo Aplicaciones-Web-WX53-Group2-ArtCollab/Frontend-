@@ -23,7 +23,6 @@ const toggleEmailLogin = () => {
   <navbar-content :showLogin="showLogin" :toggleLogin="toggleLogin" />
   <user-login :showLogin="showLogin" :toggleLogin="toggleLogin" @showEmailLogin="toggleEmailLogin"/>
   <user-login-email v-if="showEmailLogin" @back="toggleEmailLogin" />
-
   <user-register/>
   <footer-content/>
 </template>

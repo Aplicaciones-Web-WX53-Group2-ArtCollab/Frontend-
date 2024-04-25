@@ -30,7 +30,7 @@ export default {
 
           <label class="text-sm" for="password">{{ $t('login_email_header_2') }}</label>
 
-          <pv-password class="text-sm" id="password" toggle-mask v-model="password" :placeholder="$t('login_email_placeholder_2')" />
+          <pv-password input-style="font-size: 0.875rem" class="text-sm" id="password" toggle-mask v-model="password" :placeholder="$t('login_email_placeholder_2')" />
 
           <div class="flex justify-content-center gap-2 mt-3">
             <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_1')" plain text @click="closeLogin"/>
