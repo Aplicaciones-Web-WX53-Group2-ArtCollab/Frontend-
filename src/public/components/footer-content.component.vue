@@ -12,23 +12,23 @@ export default {
         <img src="../../assets/logo.png" alt="ArtCollab Logo" width="50" />
         <h2> ArtCollab </h2>
       </div>
-       <div class="flex gap-3 flex md:flex-row flex-column md:align-items-center align-items-start" aria-label="Social media links" >
-         <pv-inputicon class="pi pi-facebook text-2xl" aria-label="Link to Facebook"  />
-          <pv-inputicon class="pi pi-twitter text-2xl" aria-label="Link to Twitter" />
-          <pv-inputicon class="pi pi-instagram text-2xl" aria-label="Link to Instagram"/>
-          <pv-inputicon class="pi pi-youtube text-2xl" aria-label="Link to Youtube" />
-       </div>
-        <div aria-label="Footer navigation links" class="flex md:gap-5 gap-3 footer-links flex md:flex-row flex-column md:align-items-center align-items-start">
-          <p> {{ $t('about') }} </p>
-          <p> {{ $t('gender') }} </p>
-          <p> {{ $t('popular') }} </p>
-          <p> {{ $t('subscription') }} </p>
-          <p> {{ $t('monetization') }} </p>
-          <p> {{ $t('artists') }} </p>
-        </div>
+      <div class="flex gap-3 flex md:flex-row flex-column md:align-items-center align-items-start" aria-label="Social media links" >
+        <pv-inputicon class="pi pi-facebook text-2xl" aria-label="Link to Facebook"  />
+        <pv-inputicon class="pi pi-twitter text-2xl" aria-label="Link to Twitter" />
+        <pv-inputicon class="pi pi-instagram text-2xl" aria-label="Link to Instagram"/>
+        <pv-inputicon class="pi pi-youtube text-2xl" aria-label="Link to Youtube" />
+      </div>
+      <div aria-label="Footer navigation links" class="flex md:gap-5 gap-3 footer-links flex md:flex-row flex-column md:align-items-center align-items-start">
+        <p> {{ $t('footer.about') }} </p>
+        <p> {{ $t('footer.gender') }} </p>
+        <p> {{ $t('footer.popular') }} </p>
+        <p> {{ $t('footer.subscription') }} </p>
+        <p> {{ $t('footer.monetization') }} </p>
+        <p> {{ $t('footer.artists') }} </p>
+      </div>
     </div>
     <div  class="copyright mt-3" aria-label="Copyright Information">
-      <p> Copyright &copy; 2024 ArtCollab. {{ $t('copyright') }} </p>
+      <p> Copyright &copy; 2024 ArtCollab. {{ $t('footer.copyright') }} </p>
     </div>
   </footer>
 </template>
