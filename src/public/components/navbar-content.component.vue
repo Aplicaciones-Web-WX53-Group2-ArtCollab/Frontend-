@@ -39,7 +39,7 @@ export default {
               <h2> {{ $t('subscription') }} </h2>
               <h2> {{ $t('monetization') }} </h2>
               <h2 > {{ $t('artists') }} </h2>
-              <pv-button class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+              <pv-button @click="openLogin" class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
             </pv-sidebar>
             <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" aria-label="Menu" />
           </div>
