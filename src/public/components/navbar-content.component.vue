@@ -23,17 +23,17 @@ export default {
   <pv-toolbar class="flex justify-content-center items-center toolbar" aria-label="Toolbar content">
     <template #start>
       <div class=" flex flex-row gap-7 justify-content-center" aria-label="Main navigation section">
-        <img class="lg:block hidden" src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
+        <img class="md:block hidden" src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
         <div class="flex justify-content-center">
           <div  class=" block lg:hidden card flex justify-content-center" aria-label="toolbar features content">
             <pv-sidebar   v-model:visible="visible" header="Artcollab">
-              <img src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
+              <img class="md:hidden" src="../../assets/logo.png" width="40" height="40" alt="ArtCollab Logo"/>
               <h2> {{ $t('gender') }} </h2>
               <h2> {{ $t('popular')}} </h2>
               <h2> {{ $t('subscription') }} </h2>
               <h2> {{ $t('monetization') }} </h2>
               <h2 > {{ $t('artists') }} </h2>
-              <pv-button class=" bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+              <pv-button class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
             </pv-sidebar>
             <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" aria-label="Menu" />
           </div>
@@ -52,7 +52,7 @@ export default {
           </pv-iconfield>
         </div>
         <div aria-label="login button">
-          <pv-button class="lg:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+          <pv-button class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
         </div>
       </div>
     </template>
