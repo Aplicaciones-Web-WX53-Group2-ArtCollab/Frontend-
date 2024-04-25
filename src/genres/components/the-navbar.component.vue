@@ -28,6 +28,7 @@ export default {
   left: 0;
   z-index: 1000;
   background-color: #fff;
+  color:gray;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
