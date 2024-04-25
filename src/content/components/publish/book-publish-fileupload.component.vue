@@ -9,7 +9,7 @@
             <pv-button @click="uploadEvent(uploadCallback)" icon="pi pi-cloud-upload" rounded outlined severity="success" :disabled="!files || files.length === 0"></pv-button>
             <pv-button @click="clearCallback()" icon="pi pi-times" rounded outlined severity="danger" :disabled="!files || files.length === 0"></pv-button>
           </div>
-          <pv-progressbar :value="totalSizePercent" :showValue="false" :class="['md:w-20rem h-1rem w-full md:ml-auto', { 'exceeded-progress-bar': totalSizePercent > 100 }]"
+          <pv-progressbar :value="totalSizePercent" :showValue="false" :class="['md:w-13rem h-1rem w-full md:ml-auto', { 'exceeded-progress-bar': totalSizePercent > 100 }]"
           ><span class="white-space-nowrap">{{ totalSize }}B / 1Mb</span></pv-progressbar
           >
         </div>
@@ -18,7 +18,7 @@
         <div v-if="files.length > 0">
           <h5>Pending</h5>
           <div class="flex flex-wrap p-0 sm:p-5 gap-5">
-            <div v-for="(file, index) of files" :key="file.name + file.type + file.size" class="card m-0 px-6 flex flex-column border-1 surface-border align-items-center gap-3">
+            <div v-for="(file, index) of files" :key="file.name + file.type + file.size" class="card m-0 px-3 flex flex-column border-1 surface-border align-items-center gap-2">
               <div>
                 <img role="presentation" :alt="file.name" :src="file.objectURL" width="100" height="50" />
               </div>
