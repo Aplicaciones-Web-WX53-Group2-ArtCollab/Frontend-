@@ -12,12 +12,13 @@ export default {
 </script>
 
 <template>
-    <navbar-content/>
-    <the-hero-monetization/>
-    <the-steps-content/>
-    <footer-content/>
+      <navbar-content/>
+      <the-hero-monetization/>
+      <the-steps-content/>
+      <footer-content/>
 </template>
 
 <style scoped>
+
 
 </style>

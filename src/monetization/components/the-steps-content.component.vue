@@ -7,11 +7,11 @@ export default {
 <template>
  <div class="p-9 my-2">
     <div class="mt-8">
-      <h2 class="text-center font-bold"> Programa de reparto de ingresos publicitarios </h2>
+      <h2 class="text-center font-bold text-sm lg:text-md"> Programa de reparto de ingresos publicitarios </h2>
     </div>
    <div class="mt-8">
-     <h2 class="text-center font-semibold"> ¡Los creadores pueden ganar  50% por los anunciones mostrados en sus series!</h2>
-     <h2 class="text-center font-semibold"> Sigue los siguientes pasos para  unirte al programa de reparto de ingresos publicitarios</h2>
+     <h2 class="text-center font-semibold text-xs lg:text-md"> ¡Los creadores pueden ganar  50% por los anunciones mostrados en sus series!</h2>
+     <h2 class="text-center font-semibold text-xs lg:text-md"> Sigue los siguientes pasos para  unirte al programa de reparto de ingresos publicitarios</h2>
    </div>
 
    <div class="flex flex-column lg:flex-row justify-content-center align-content-center mt-8">
@@ -42,7 +42,7 @@ export default {
    </div>
  </div>
   <div class="flex justify-content-center align-content-center  my-7">
-    <pv-button class="button-content p-4 px-5 text-xl"> ¡Comienza a compartir tus historias ahora! </pv-button>
+    <pv-button class="button-content p-4 px-5 text-xs md:text-md lg:text-xl border-none"> ¡Comienza a compartir tus historias ahora! </pv-button>
   </div>
 </template>
 
