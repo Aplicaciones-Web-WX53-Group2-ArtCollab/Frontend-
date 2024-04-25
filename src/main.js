@@ -5,7 +5,7 @@ import 'primeicons/primeicons.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 import MainPage from '@/content/pages/main-page.vue';
-import BookPublishPage from '@/content/pages/book-publish-page.vue'
+import BookPublishPage from '@/content/pages/book-publish-page-1.vue'
 
 
 import 'primevue/resources/themes/aura-light-green/theme.css';
@@ -28,7 +28,7 @@ import Badge from "primevue/badge";
 import i18n from '@/locale/i18n.js'
 import VueMq from 'vue3-mq'
 
-const app = createApp(BookPublishPage);
+const app = createApp(MainPage);
 
 app.use(PrimeVue)
 app.use(ToastService)
