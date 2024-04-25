@@ -12,7 +12,7 @@ export default {
     <div class="flex flex-column  ">
       <h1 class="text-center"> {{$t('heroMonetization.title')}} </h1>
       <div class="xl:mt-0">
-        <img src="../../assets/coins.png" class="image-content  absolute mx-4 md:mx-6 lg:mx-8 w-10rem  lg:w-13rem xl:w-12rem"/>
+        <img src="../../../assets/coins.png" class="image-content  absolute mx-4 md:mx-6 lg:mx-8 w-10rem  lg:w-13rem xl:w-12rem"/>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <script>
-import CoinCards from '@/monetization/components/coin-cards.component.vue'
+import CoinCards from '@/monetization/components/monetization-content/coin-cards.component.vue'
 
 export default {
   name: 'the-coin-section',

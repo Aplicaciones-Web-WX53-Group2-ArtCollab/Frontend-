@@ -1,7 +1,7 @@
 <script>
 
 
-import SubscriptionCards from '@/monetization/components/subscription-cards.component.vue'
+import SubscriptionCards from '@/monetization/components/subscripton-content/subscription-cards.component.vue'
 
 export default {
   name: 'the-hero-subscription',

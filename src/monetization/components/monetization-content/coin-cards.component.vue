@@ -9,7 +9,7 @@ export default {
     <div>
       <pv-card class="border-noround p-5 w-18rem">
         <template #content>
-          <img class="ml-6" src="../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
+          <img class="ml-6" src="../../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
           <h3 class="text-center"> 10 </h3>
         </template>
       </pv-card>
@@ -21,7 +21,7 @@ export default {
     <div>
       <pv-card class="border-noround p-5 w-18rem">
         <template #content>
-          <img class="ml-6" src="../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
+          <img class="ml-6" src="../../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
           <h3 class="text-center"> 50 </h3>
         </template>
       </pv-card>
@@ -33,7 +33,7 @@ export default {
     <div>
       <pv-card class="border-noround p-5 w-18rem">
         <template #content>
-          <img class="ml-6" src="../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
+          <img class="ml-6" src="../../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
           <h3 class="text-center"> 125 </h3>
         </template>
       </pv-card>
@@ -45,7 +45,7 @@ export default {
     <div>
       <pv-card class="border-noround p-5 w-18rem">
         <template #content>
-          <img class="ml-6" src="../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
+          <img class="ml-6" src="../../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
           <h3 class="text-center"> 500 </h3>
         </template>
       </pv-card>
@@ -57,7 +57,7 @@ export default {
     <div>
       <pv-card class="border-noround p-5 w-18rem">
         <template #content>
-          <img class="ml-6" src="../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
+          <img class="ml-6" src="../../../assets/coin.png" width="80" alt="Coin image" aria-label="Coin image"/>
           <h3 class="text-center"> 1000 </h3>
         </template>
       </pv-card>
