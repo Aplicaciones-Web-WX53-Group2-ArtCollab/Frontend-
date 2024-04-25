@@ -4,7 +4,7 @@ import { Book } from '@/genres/models/book.entity.js'
 
 
 export default {
-  name: 'romance-books-cards',
+  name: 'all-books-cards',
   data(){
     return{
       books: [],
@@ -12,7 +12,7 @@ export default {
     }
   },
   async created() {
-    this.bookApiFake.getRomanceBooks().then((response) => {
+    this.bookApiFake.getAllBooks().then((response) => {
       for (const bookData of response.data){
         const { name, image, author}= bookData;
         const book = new Book(name, image, author);
@@ -22,7 +22,7 @@ export default {
       console.error('Error fetching animals:', error);
     });
 
-    }
+  }
 
 }
 </script>
@@ -30,39 +30,39 @@ export default {
 
 <template>
   <div>
-    <label>RomanceBooksCards</label>
-      <div class="romance-books-cards">
-        <div v-for="(book, index) in books" :key="index">
-          <pv-card class="card">
-            <template #header>
-              <img class="header" :src="book.getImage()" alt="Book cover" />
-            </template>
-            <template #title>
-              {{ book.getName() }}
-            </template>
-            <template #subtitle >
-              {{ book.getAuthor() }}
-            </template>
-            <template #footer>
-              <pv-rating class="rating" :cancel="false" :stars="1">
-                <template #onicon>
-                  <i class="pi pi-heart-fill">13.8 M</i>
-                </template>
-                <template #officon>
-                  <i class="pi pi-heart">13.7 M</i>
-                </template>
-              </pv-rating>
+    <label>AllBooksCards</label>
+    <div class="all-books-cards">
+      <div v-for="(book, index) in books" :key="index">
+        <pv-card class="card">
+          <template #header>
+            <img class="header" :src="book.getImage()" alt="Book cover" />
+          </template>
+          <template #title>
+            {{ book.getName() }}
+          </template>
+          <template #subtitle >
+            {{ book.getAuthor() }}
+          </template>
+          <template #footer>
+            <pv-rating class="rating" :cancel="false" :stars="1">
+              <template #onicon>
+                <i class="pi pi-heart-fill">13.8 M</i>
+              </template>
+              <template #officon>
+                <i class="pi pi-heart">13.7 M</i>
+              </template>
+            </pv-rating>
 
-            </template>
-          </pv-card>
-        </div>
+          </template>
+        </pv-card>
       </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 
-.romance-books-cards {
+.all-books-cards {
   display: grid;
   grid-template-columns:  15rem 15rem 15rem ;
   gap: 50px;
@@ -86,17 +86,16 @@ export default {
   object-fit: cover;
 }
 @media (max-width: 600px) {
-  .romance-books-cards {
+  .all-books-cards {
     margin: 50px; /* Reduced margin for small devices */
     grid-template-columns: 1fr; /* Single column layout */
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .romance-books-cards {
+  .all-books-cards {
     grid-template-columns: repeat(2, 1fr); /* Two column layout for tablets */
     margin: 50px; /* Adjusted margin for medium devices */
   }
 }
-
 </style>

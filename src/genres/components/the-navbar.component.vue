@@ -11,9 +11,9 @@ export default {
   <pv-toolbar class="toolbar" aria-label="Toolbar content">
     <template #center>
       <div class="toolbar-links">
-        <RouterLink to="/romance"> Romance </RouterLink>
-        <RouterLink to="/fantasy"> Fantasy </RouterLink>
-        <RouterLink to="/comedy"> Comedy </RouterLink>
+        <RouterLink class="link-button" to="/romance"> Romance </RouterLink>
+        <RouterLink class="link-button" to="/fantasy"> Fantasy </RouterLink>
+        <RouterLink class="link-button" to="/comedy"> Comedy </RouterLink>
       </div>
     </template>
   </pv-toolbar>
