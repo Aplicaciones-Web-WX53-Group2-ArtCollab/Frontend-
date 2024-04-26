@@ -14,10 +14,12 @@ import Button from 'primevue/button';
 import Divider from 'primevue/divider';
 import FileUpload from 'primevue/fileupload';
 import Toast from "primevue/toast";
+import Carousel from 'primevue/carousel'
 import ToastService from "primevue/toastservice";
 import ProgressBar from "primevue/progressbar";
 import Badge from "primevue/badge";
 import Dropdown from "primevue/dropdown";
+import Galleria from 'primevue/galleria'
 import i18n from '@/locale/i18n.js'
 import InputText from "primevue/inputtext";
 
@@ -34,6 +36,8 @@ app.component('pv-progressbar', ProgressBar);
 app.component('pv-badge', Badge);
 app.component('pv-dropdown', Dropdown);
 app.component('pv-inputtext', InputText);
+app.component('pv-carousel', Carousel);
+app.component('pv-galleria', Galleria);
 
 app.use(PrimeVue)
 //app.use(router)

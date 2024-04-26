@@ -26,7 +26,7 @@ const fantasy_covers = ref([
 
 <template>
   <div class="title-container flex justify-content-center mt-5">
-    <h3 class="title cursor-pointer">Genres <i class="pi pi-angle-right"></i></h3>
+    <h3 class="title cursor-pointer">{{$t('genres')}} <i class="pi pi-angle-right"></i></h3>
   </div>
 
   <main-page-carousels title="Romance" :image="romance_covers"/>

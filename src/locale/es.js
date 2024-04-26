@@ -1,3 +1,5 @@
+import main_page_es from '@/locale/main-page/main_page_es.js'
+
 const es = {
   navbar:{
    gender: 'Género',
@@ -18,6 +20,8 @@ const es = {
   social_media: 'Redes sociales',
   illustrated_books: 'Libros que ha ilustrado',
   portfolio: 'Portafolio',
+
+  ...main_page_es,
 }
 
 export default es
