@@ -13,11 +13,11 @@ export default {
 </script>
 
 <template>
-  <div class="artist-profile">
+  <div class="artist-profile ">
     <div class="banner">
       <div class="banner-background"></div>
       <div class="profile-image">
-        <img src="/src/assets/images/artist-profile-image.png" alt="Artist profile image">
+        <img src="/src/assets/images/artist-profile-image.png" width="496" alt="Artist profile image">
         <div class="text">Miriam Bonastre</div>
       </div>
     </div>
@@ -27,19 +27,19 @@ export default {
           <div class="media-title">{{ $t('social_media') }}</div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/x-logo.png" alt="X logo">
-            <a href="https://www.x.com/" target="_blank">https://www.x.com/</a>
+            <a href="https://www.x.com/" target="_blank"><p> https://www.x.com/ </p></a>
           </div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/instagram-logo.png" alt="Instagram logo">
-            <a href="https://www.instagram.com/" target="_blank">https://www.instagram.com/</a>
+            <a href="https://www.instagram.com/" target="_blank"><p> https://www.instagram.com/</p></a>
           </div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/facebook-logo.png" alt="Facebook logo">
-            <a href="https://www.facebook.com/" target="_blank">https://www.facebook.com/</a>
+            <a href="https://www.facebook.com/" target="_blank"><p>https://www.facebook.com/</p></a>
           </div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/tiktok-logo.png" alt="Tiktok logo">
-            <a href="https://www.tiktok.com/" target="_blank">https://www.tiktok.com/</a>
+            <a href="https://www.tiktok.com/" target="_blank"><p>https://www.tiktok.com/</p></a>
           </div>
         </div>
         <div class="artist-books">
@@ -57,7 +57,9 @@ export default {
       <div class="flex-item">
         <div class="bio">
           <div class="bio-title">Bio</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis.</div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis.</p>
+          </div>
         </div>
         <div class="portfolio">
           <div class="portfolio-title">{{ $t('portfolio') }}</div>
@@ -73,12 +75,6 @@ export default {
 </template>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
 
 .banner {
   position: relative;
@@ -92,13 +88,6 @@ html, body {
   height: 40vh; /* Altura del 75% del viewport height */
   background-color: #f8cd7c;
   z-index: 1; /* z-index menor para que esté detrás del otro fondo */
-}
-
-.profile-image {
-  position: relative; /* Asegúrate de que .elemento tenga una posición que no sea 'static' para que z-index funcione */
-  text-align:center;
-  padding: 20px;
-  z-index: 3; /* z-index aún mayor para que esté delante de ambos fondos */
 }
 
 .profile-image img {
@@ -129,7 +118,12 @@ html, body {
   font: 20px/30px Archivo, sans-serif;
   color: black;
 }
-
+.profile-image {
+  position: relative; /* Asegúrate de que .elemento tenga una posición que no sea 'static' para que z-index funcione */
+  text-align:center;
+  padding: 20px;
+  z-index: 3; /* z-index aún mayor para que esté delante de ambos fondos */
+}
 .flex-container-2 {
   display: flex;
   justify-content: flex-start;
@@ -200,5 +194,66 @@ html, body {
   justify-content: center;
   color: black;
   text-decoration: underline;
+}
+
+@media (width<=540px) {
+    .profile-image img{
+      width: 350px;
+    }
+    .social-media p{
+      font-size: 10px;
+    }
+    .bio p{
+      font-size: 10px;
+    }
+    .banner-background{
+      height: 35vh;
+    }
+}
+@media (width<=430px) {
+  .profile-image img{
+    width: 330px;
+  }
+  .social-media p{
+    font-size: 8px;
+  }
+  .bio p{
+    font-size: 10px;
+  }
+  .banner-background{
+    height: 35vh;
+    width:450px;
+  }
+}
+
+@media (width<=375px) {
+  .profile-image img{
+    width: 320px;
+  }
+  .social-media p{
+    font-size: 8px;
+  }
+  .bio p{
+    font-size: 10px;
+  }
+  .banner-background{
+    height: 45vh;
+    width:400px;
+  }
+}
+@media (width<=344px) {
+  .profile-image img{
+    width: 300px;
+  }
+  .social-media p{
+    font-size: 8px;
+  }
+  .bio p{
+    font-size: 10px;
+  }
+  .banner-background{
+    height: 30vh;
+    width:350px;
+  }
 }
 </style>
