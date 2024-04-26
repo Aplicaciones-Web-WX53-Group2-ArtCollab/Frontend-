@@ -68,8 +68,10 @@ export default {
         </div>
         <div class="published-book" >
           <div class="published-book-title">{{ $t('published_books') }}</div>
-          <div class="flex-container" v-for="(book, index) in books" :key="index">
-            <img class="normal-image" :src="book.getImage() " alt="Book image">
+          <div class="book-container">
+            <div v-for="(book, index) in books" :key="index">
+              <img class="normal-image" :src="book.getImage() " alt="Book image">
+            </div>
           </div>
         </div>
       </div>
@@ -94,28 +96,29 @@ html, body {
   top: 5%;
   left: 0;
   width: 100%;
-  height: 40vh; /* Altura del 75% del viewport height */
-  background-color: #f8cd7c;
-  z-index: 1; /* z-index menor para que esté detrás del otro fondo */
+  height: 40vh;
+  background-color: lightcoral;
+  z-index: 1;
 }
 
 .profile-image {
-  position: relative; /* Asegúrate de que .elemento tenga una posición que no sea 'static' para que z-index funcione */
+  position: relative;
   text-align:center;
   padding: 20px;
-  z-index: 3; /* z-index aún mayor para que esté delante de ambos fondos */
+  z-index: 3;
 }
 
 .profile-image img {
   position: relative;
-  z-index: 1; /* z-index menor para que la imagen esté detrás del texto */
+  width: 300px;
+  z-index: 1;
 }
 
 .text {
   position: relative;
   color: black;
   font: bold 30px/30px Archivo, sans-serif;
-  z-index: 2; /* z-index mayor para que el texto esté delante de la imagen */
+  z-index: 2;
   top:-10%;
 }
 
@@ -127,7 +130,7 @@ html, body {
   width: 100%;
 }
 
-/* Estilos para los elementos flex dentro del contenedor */
+
 .flex-item {
   padding: 10px;
   max-width: 60vw;
@@ -142,28 +145,28 @@ html, body {
   max-width: 20vw;
   margin: 15px 0 15px 0;
 }
-.
+.book-container{
+  display: grid;
+  grid-template-columns:  33.33% 33.33% 33.33% ;
+  gap: 10px;
+  grid-auto-rows: auto;
+}
 .flex-container img {
-  margin-right: 10px; /* Espacio entre las cajas */
-  margin-bottom: 10px; /* Espacio entre las cajas */
-  margin-top: 10px; /* Espacio entre las cajas */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .small-image {
-  width: 10%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 10%;
+  height: auto;
   margin: 10px 10px 10px 0;
 }
 
 .normal-image {
-  width: 25%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 100%;
+  height: 100%;
   margin: 10px 10px 10px 0;
-}
-
-.large-image {
-  width: 30%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .bio {
@@ -171,7 +174,7 @@ html, body {
 }
 
 .bio-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -180,19 +183,11 @@ html, body {
 }
 
 .published-book-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
 }
 
 .media-title {
-  font-weight: 600; /* Semibold */
-}
-
-.user-books {
-  margin-top: 20px;
-}
-
-.use-books-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
 }
 
 .flex-container p {
