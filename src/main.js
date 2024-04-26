@@ -5,6 +5,7 @@ import App from './App.vue';
 
 import 'primevue/resources/themes/aura-light-green/theme.css';
 import "primeflex/primeflex.css";
+import 'primeicons/primeicons.css';
 import PrimeVue from 'primevue/config'
 //import router from '@/router.js'
 import Card from 'primevue/card'
@@ -22,6 +23,7 @@ import Dropdown from "primevue/dropdown";
 import Galleria from 'primevue/galleria'
 import i18n from '@/locale/i18n.js'
 import InputText from "primevue/inputtext";
+import Editor from 'primevue/editor';
 
 const app = createApp(App);
 
@@ -38,6 +40,7 @@ app.component('pv-dropdown', Dropdown);
 app.component('pv-inputtext', InputText);
 app.component('pv-carousel', Carousel);
 app.component('pv-galleria', Galleria);
+app.component('pv-editor', Editor);
 
 app.use(PrimeVue)
 //app.use(router)
