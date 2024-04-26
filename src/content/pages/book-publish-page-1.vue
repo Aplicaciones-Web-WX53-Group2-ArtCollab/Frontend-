@@ -4,6 +4,7 @@ import FooterContent from '@/public/components/footer-content.component.vue'
 import BookPublishDropdown from '@/content/components/publish/book-publish-dropdown.component.vue'
 import BookPublishFileupload from '@/content/components/publish/book-publish-fileupload.component.vue'
 import BookInput from '@/content/components/publish/book-publish-input.component.vue'
+import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
 
 import { ref } from 'vue';
 
@@ -15,20 +16,7 @@ console.log(`dynamicHeight: ${dynamicHeight.value}`);
 
 <template>
   <navbar-content/>
-  <div class="container3 flex justify-content-center align-items-center bg-orange-300">
-    <div class="banner">
-      <div class="banner-1 flex flex-row justify-content-center align-items-center">
-        <p class="bg-cyan-600">1</p>
-        <div>Libros</div>
-      </div>
-      <div class="banner-2 flex flex-row justify-content-center align-items-center">
-        <i class="pi pi-arrow-right"></i>
-        <p class="bg-cyan-600">2</p>
-        <div>Capitulos</div>
-      </div>
-    </div>
-  </div>
-
+  <book-banner/>
   <div class="container flex justify-content-center align-items-center">
     <div class="flex flex-row">
       <div class="thumbnail-fileupload">
@@ -82,10 +70,6 @@ console.log(`dynamicHeight: ${dynamicHeight.value}`);
   width: 40rem;
 }
 
-.container3 {
-  margin: 1rem 0 2rem 0;
-}
-
 .flex.flex-row {
   display: flex;
   flex-direction: row;
@@ -102,28 +86,6 @@ console.log(`dynamicHeight: ${dynamicHeight.value}`);
 
 .summary-input {
   margin-bottom: 1rem; /* Añade un margen inferior */
-}
-
-.banner {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color:white;
-}
-
-.banner p{
-  width: 40px; /* Ajusta estos valores según tus necesidades */
-  height: 40px;
-  border-radius: 50%; /* Esto hace que el elemento sea completamente redondo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 1rem 0 2rem; /* Ajusta los márgenes */
-}
-
-.banner-1 {
-  margin-right: 8rem; /* Ajusta el margen derecho para separar de los otros elementos */
 }
 
 label {
