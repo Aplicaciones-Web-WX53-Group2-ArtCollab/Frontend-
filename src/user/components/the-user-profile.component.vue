@@ -1,13 +1,31 @@
 <script>
+import { BookApiFake } from '@/user/services/book-api-fake.service.js'
+import { Book } from '@/user/models/book.entity.js'
+
 export default {
   name: 'the-user-profile',
   data() {
     return {
+      books: [],
+      bookApiFake:new BookApiFake(),
       social_media: 'Social Media',
       illustrated_books: 'Illustrated Books',
       portfolio: 'Portfolio'
     };
+  },
+  async created() {
+    this.bookApiFake.getBook().then((response) => {
+      for (const bookData of response.data){
+        const { image }= bookData;
+        const book = new Book(image);
+        this.books.push(book);
+      }
+    }).catch((error) => {
+      console.error('Error fetching books:', error);
+    });
+
   }
+
 };
 
 </script>
@@ -43,18 +61,15 @@ export default {
           </div>
         </div>
       </div>
-
       <div class="flex-item">
         <div class="bio">
           <div class="bio-title">Bio</div>
           <div>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis.</div>
         </div>
-        <div class="published-book">
+        <div class="published-book" >
           <div class="published-book-title">{{ $t('published_books') }}</div>
-          <div class="flex-container">
-            <img class="normal-image" src=" " alt="Book image">
-            <img class="normal-image" src=" " alt="Book image">
-            <img class="normal-image" src=" " alt="Book image">
+          <div class="flex-container" v-for="(book, index) in books" :key="index">
+            <img class="normal-image" :src="book.getImage() " alt="Book image">
           </div>
         </div>
       </div>
@@ -127,7 +142,7 @@ html, body {
   max-width: 20vw;
   margin: 15px 0 15px 0;
 }
-
+.
 .flex-container img {
   margin-right: 10px; /* Espacio entre las cajas */
   margin-bottom: 10px; /* Espacio entre las cajas */
