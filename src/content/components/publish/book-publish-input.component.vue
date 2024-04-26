@@ -8,6 +8,9 @@ const props = defineProps({
     type: Number,
     default: 40,
   },
+  borderStyle: String,
+  outlineStyle: String,
+  placeholderStyle: String,
 });
 
 const lineHeight = 40; // Ajusta este valor según la altura de tu línea de texto
@@ -16,8 +19,10 @@ const paddingBottom = computed(() => props.height - lineHeight);
 
 <template>
   <div class="input-container">
-    <label class="placeholder-label" v-if="!value">{{ props.placeholder }}</label>
-    <pv-inputtext id="username" v-model="value" :style="{ height: props.height + 'px', width: '100%', paddingBottom: paddingBottom + 'px' }" aria-describedby="username-help" />
+    <label class="placeholder-label" v-if="!value" :style="props.placeholderStyle">{{ props.placeholder }}</label>
+    <pv-inputtext id="username" v-model="value"
+                  :style="{ height: props.height + 'px', width: '100%', paddingBottom: paddingBottom + 'px', border: props.borderStyle, outline: props.outlineStyle }"
+                  aria-describedby="username-help" />
   </div>
 </template>
 
@@ -34,6 +39,7 @@ const paddingBottom = computed(() => props.height - lineHeight);
   pointer-events: none;
   color: #999;
 }
+
 #username {
   padding-top: 0;
   padding-left: 0.5rem;
