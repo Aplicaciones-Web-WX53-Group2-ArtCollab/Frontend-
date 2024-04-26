@@ -11,7 +11,7 @@ import { ref } from 'vue';
 const titlePlaceholder = ref('Menos de 50 caracteres');
 const summaryPlaceholder = ref('Menos de 500 caracteres');
 const dynamicHeight = ref(400);
-console.log(`dynamicHeight: ${dynamicHeight.value}`);
+
 </script>
 
 <template>
