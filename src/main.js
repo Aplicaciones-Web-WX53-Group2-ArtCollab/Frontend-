@@ -20,6 +20,8 @@ import Password from 'primevue/password';
 import Checkbox from 'primevue/checkbox'
 import Divider from 'primevue/divider'
 import Carousel from 'primevue/carousel'
+import Image from 'primevue/image'
+import Galleria from 'primevue/galleria'
 
 import ToastService from "primevue/toastservice";
 import i18n from '@/locale/i18n.js'
@@ -37,6 +39,8 @@ app.component('pv-password', Password);
 app.component('pv-checkbox', Checkbox);
 app.component('pv-divider', Divider);
 app.component('pv-carousel', Carousel);
+app.component('pv-image', Image);
+app.component('pv-galleria', Galleria);
 app.use(i18n);
 app.use(ToastService);
 

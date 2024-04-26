@@ -2,8 +2,8 @@
 import { ref } from 'vue';
 import FooterContent from '@/public/components/footer-content.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import UserLogin from '@/user/components/user-login.component.vue'
-import UserLoginEmail from '@/user/components/user-login-email.component.vue'
+import UserLogin from '@/user/components/the-user-login.component.vue'
+import UserLoginEmail from '@/user/components/the-user-login-email.component.vue'
 
 const showLogin = ref(false);
 const showEmailLogin = ref(false);
