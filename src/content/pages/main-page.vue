@@ -23,5 +23,3 @@ import TheMainPagePopularArtist from '@/content/components/main-page/the-main-pa
 <style scoped>
 
 </style>
-
-<!--TODO: i18n for main page-->
