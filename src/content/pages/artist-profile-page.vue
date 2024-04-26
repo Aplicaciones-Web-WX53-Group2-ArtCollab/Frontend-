@@ -1,13 +1,15 @@
-<script setup>
-import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
-import ArtistProfile from '@/content/components/profiles/the-artist-profile.component.vue'
+<script>
+import TheArtistProfile from '.././components/profiles/the-artist-profile.component.vue'
+export default {
+  name: 'artist-profile-page',
+  components: {
+    TheArtistProfile,
+  }
+}
 </script>
 
 <template>
-  <navbar-content/>
-  <artist-profile/>
-  <footer-content/>
+  <the-artist-profile/>
 </template>
 
 <style scoped>

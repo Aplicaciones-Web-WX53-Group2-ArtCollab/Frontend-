@@ -1,4 +1,14 @@
-<script setup>
+<script>
+export default {
+  name: 'the-artist-profile',
+  data() {
+    return {
+      social_media: 'Social Media',
+      illustrated_books: 'Illustrated Books',
+      portfolio: 'Portfolio'
+    };
+  }
+};
 
 </script>
 
@@ -89,7 +99,6 @@ html, body {
   text-align:center;
   padding: 20px;
   z-index: 3; /* z-index aún mayor para que esté delante de ambos fondos */
-  //background-color: pink;
 }
 
 .profile-image img {
@@ -118,7 +127,6 @@ html, body {
   padding: 10px;
   max-width: 60vw;
   font: 20px/30px Archivo, sans-serif;
-  //font-weight: 600;
   color: black;
 }
 

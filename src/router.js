@@ -1,4 +1,5 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+/*
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import RomanceBooksCards from '@/genres/components/romance-book-card.component.vue'
 import FantasyBooksCards from '@/genres/components/fantasy-book-card.component.vue'
@@ -10,11 +11,12 @@ const routes = [
   { path: '/romance', component: RomanceBooksCards},
   { path: '/fantasy', component: FantasyBooksCards},
   { path: '/comedy', component: ComedyBooksCard },
+  { path: '/artist', component:() => import('./content/pages/artist-profile-page.vue')},
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
-export default router
+export default router*/

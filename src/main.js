@@ -4,10 +4,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 
 import 'primevue/resources/themes/aura-light-green/theme.css';
-import 'primeicons/primeicons.css'
 import "primeflex/primeflex.css";
 import PrimeVue from 'primevue/config'
-import router from '@/router.js'
+//import router from '@/router.js'
 import Card from 'primevue/card'
 import Rating from 'primevue/rating'
 import Toolbar from 'primevue/toolbar';
@@ -19,6 +18,7 @@ import ToastService from "primevue/toastservice";
 import ProgressBar from "primevue/progressbar";
 import Badge from "primevue/badge";
 import Dropdown from "primevue/dropdown";
+import i18n from '@/locale/i18n.js'
 import InputText from "primevue/inputtext";
 
 const app = createApp(App);
@@ -36,6 +36,7 @@ app.component('pv-dropdown', Dropdown);
 app.component('pv-inputtext', InputText);
 
 app.use(PrimeVue)
-app.use(router)
+//app.use(router)
 app.use(ToastService)
+app.use(i18n)
 app.mount('#app')

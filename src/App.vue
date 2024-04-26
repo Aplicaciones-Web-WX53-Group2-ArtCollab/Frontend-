@@ -1,10 +1,10 @@
 <script setup>
 
-import GenresApplication from '@/genres/pages/genres-page.component.vue'
+import ArtistProfilePage from '.././src/content/pages/artist-profile-page.vue'
 </script>
 
 <template>
-  <genres-application/>
+  <artist-profile-page/>
 </template>
 
 <style scoped>
