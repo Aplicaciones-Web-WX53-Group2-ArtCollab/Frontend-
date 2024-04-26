@@ -1,6 +1,6 @@
 <script >
-import { BookApiFake } from '@/genres/services/book-api-fake.services.js'
-import { Book } from '@/genres/models/book.entity.js'
+import { BookApiFake } from '@/content/services/book-api-fake.services.js'
+import { Book } from '@/content/models/book.entity.js'
 
 
 export default {

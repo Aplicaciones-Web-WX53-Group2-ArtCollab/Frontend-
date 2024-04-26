@@ -1,6 +1,6 @@
 <script >
 
-import GenresNavbar from '@/genres/components/the-navbar.component.vue'
+import GenresNavbar from '@/content/components/genres/the-navbar.component.vue'
 import FooterContent from '@/public/components/footer-content.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 export default {
