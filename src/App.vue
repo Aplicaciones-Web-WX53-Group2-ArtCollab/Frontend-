@@ -1,13 +1,10 @@
 <script setup>
 
-import GenresNavbar from '@/genres/components/the-navbar.component.vue'
+import GenresApplication from '@/genres/pages/genres-page.component.vue'
 </script>
 
 <template>
-  <genres-navbar/>
-  <main>
-    <router-view></router-view>
-  </main>
+  <genres-application/>
 </template>
 
 <style scoped>
