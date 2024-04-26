@@ -12,6 +12,10 @@ const en = {
   about: 'About',
   copyright: 'All rights reserved',
 
+  social_media: 'Social Media',
+  illustrated_books: 'Illustrated books',
+  published_books: 'Published books',
+
   ...login_en,
   ...register_en,
   ...recover_en,
