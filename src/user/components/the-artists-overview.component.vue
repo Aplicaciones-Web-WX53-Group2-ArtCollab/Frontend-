@@ -22,7 +22,7 @@ const artist_profile_images = ref([
 </script>
 
 <template>
-  <section class="w-full">
+  <section class="w-full" aria-label="Artist Overview">
     <pv-galleria :value="artist_profile_banner" :numVisible="1" :circular="true" :auto-play="true" :transition-interval="3000" :showIndicators="true" :showItemNavigators="true" :showThumbnails="false">
       <template #item="slotProps">
         <img :src="slotProps.item.url" alt="Artist Profile Banner" class="w-full md:h-full object-cover h-15rem">

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <user-login-email v-if="showEmailLogin" @back="showEmailLogin = false" />
+  <the-user-login-email v-if="showEmailLogin" @back="showEmailLogin = false" />
   <section v-if="showLogin" class="user-login w-full flex justify-content-center align-items-center fixed" @click.self="closeLogin">
     <pv-card class="login-card h-24rem w-20rem">
       <template #title>
