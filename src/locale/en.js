@@ -1,4 +1,6 @@
 import login_en from '@/locale/login/login_en.js'
+import register_en from '@/locale/register/register_en.js'
+import recover_en from '@/locale/recover/recover_en.js'
 
 const en = {
   gender: 'Gender',
@@ -11,6 +13,8 @@ const en = {
   copyright: 'All rights reserved',
 
   ...login_en,
+  ...register_en,
+  ...recover_en,
 }
 
 export default en
