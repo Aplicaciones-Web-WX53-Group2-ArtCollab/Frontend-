@@ -1,12 +1,15 @@
 export class Book{
 
-  constructor(image){
-
+  constructor(name, image){
     this.image= image;
+    this.name = name;
   }
 
 
   getImage(){
     return this.image;
+  }
+  getName(){
+    return this.name;
   }
 }
