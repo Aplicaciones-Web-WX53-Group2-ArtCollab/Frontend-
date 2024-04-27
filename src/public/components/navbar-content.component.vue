@@ -59,7 +59,7 @@ export default {
         </div>
         <div aria-label="login button">
           <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
-          <user-login ref="login"/>
+          <the-user-login ref="login"/>
         </div>
       </div>
     </template>
