@@ -22,9 +22,11 @@ import Divider from 'primevue/divider'
 import Carousel from 'primevue/carousel'
 import Image from 'primevue/image'
 import Galleria from 'primevue/galleria'
+import DataView from 'primevue/dataview';
 
 import ToastService from "primevue/toastservice";
 import i18n from '@/locale/i18n.js'
+import Rating from 'primevue/rating'
 
 const app = createApp(App);
 app.use(PrimeVue);
@@ -41,6 +43,8 @@ app.component('pv-divider', Divider);
 app.component('pv-carousel', Carousel);
 app.component('pv-image', Image);
 app.component('pv-galleria', Galleria);
+app.component('pv-dataView', DataView);
+app.component('pv-rating', Rating);
 app.use(i18n);
 app.use(ToastService);
 

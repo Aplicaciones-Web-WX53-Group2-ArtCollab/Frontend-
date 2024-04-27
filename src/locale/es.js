@@ -12,6 +12,10 @@ const es = {
   about: 'Acerca de',
   copyright: 'Todos los derechos reservados',
 
+  social_media: 'Redes sociales',
+  illustrated_books: 'Libros que ha ilustrado',
+  published_books: 'Libros publicados',
+
   ...login_es,
   ...register_es,
   ...recover_es,
