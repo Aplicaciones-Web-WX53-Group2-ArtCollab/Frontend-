@@ -15,6 +15,7 @@ const en = {
   social_media: 'Social Media',
   illustrated_books: 'Illustrated books',
   published_books: 'Published books',
+  portfolio: 'Portfolio',
 
   ...login_en,
   ...register_en,

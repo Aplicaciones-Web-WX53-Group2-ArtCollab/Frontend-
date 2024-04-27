@@ -15,6 +15,7 @@ const es = {
   social_media: 'Redes sociales',
   illustrated_books: 'Libros que ha ilustrado',
   published_books: 'Libros publicados',
+  portfolio: 'Portafolio',
 
   ...login_es,
   ...register_es,
