@@ -22,10 +22,11 @@ const onFileChange = (event) => {
 </script>
 
 <template>
-  <div class="edit-cover relative w-11rem h-12rem mx-3 my-3 md:my-0 border-round">
+  <div class="edit-cover relative w-19rem h-21rem mx-3 my-3 md:my-0 border-round">
     <img src="../../../assets/images/Boulevard-Cover.jpg" class="w-10 h-auto relative">
-    <div class="pencil-icon absolute border-circle w-2rem h-2rem bg-cyan-500 text-white-alpha-90 flex align-items-center justify-content-center bottom-0 left-0">
-      <i class="pi pi-pencil" @click="onIconClick"/>
+    <div
+      class="pencil-icon absolute border-circle w-2rem h-2rem bg-cyan-500 text-white-alpha-90 flex align-items-center justify-content-center bottom-0 left-0 ml-3">
+      <i class="pi pi-pencil" @click="onIconClick" />
     </div>
     <input type="file" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none" />
   </div>

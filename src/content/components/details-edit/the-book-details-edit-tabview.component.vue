@@ -10,7 +10,7 @@ const defaultValue2 = ref('Lorem ipsum dolor sit amet, consectetur adipiscing el
     <pv-tabview id='tv'>
       <div class="flex flex-column">
         <pv-tabpanel header="Detalles de la historia">
-          <div class="flex align-items-center justify-content-center mb-5">
+          <div class="flex align-items-center justify-content-center mb-5 mt-3">
             <div class="flex flex-column">
               <label class="text-2xl font-bold" for="titulo">Título</label>
               <pv-textarea v-model="defaultValue" rows="1" cols="50" />

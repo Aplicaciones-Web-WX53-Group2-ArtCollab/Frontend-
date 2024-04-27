@@ -4,7 +4,7 @@
 
 <template>
   <div class="card">
-    <pv-toolbar class="mt-2 mb-4 border-none border-bottom-3 border-700 border-noround">
+    <pv-toolbar class="mt-2 mb-6 border-none border-bottom-3 border-700 border-noround">
       <template #start>
         <i class="pi pi-chevron-left"></i>
         <div class="flex flex-column ml-4">
