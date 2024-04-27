@@ -26,10 +26,10 @@ export default {
           {{ $t('login_card_subtitle') }}
         </h5>
         <div class ="mt-3 login-buttons flex flex-column gap-3">
-          <pv-button class="w-full bg-white" icon="pi pi-envelope" label="Continuar con Email" plain text @click="showEmailLogin"/>
-          <pv-button class="w-full bg-white" icon="pi pi-google" label="Continuar con Google" plain text/>
-          <pv-button class="w-full bg-white" icon="pi pi-facebook" label="Continuar con Facebook" plain text/>
-          <pv-button class="w-full bg-white" icon="pi pi-twitter" label="Continuar con Twitter" plain text/>
+          <pv-button class="w-full bg-white" icon="pi pi-envelope" :label="$t('login_email_button')" plain text @click="showEmailLogin"/>
+          <pv-button class="w-full bg-white" icon="pi pi-google" :label="$t('login_google_button')" plain text/>
+          <pv-button class="w-full bg-white" icon="pi pi-facebook" :label="$t('login_facebook_button')" plain text/>
+          <pv-button class="w-full bg-white" icon="pi pi-twitter" :label="$t('login_twitter_button')" plain text/>
         </div>
       </template>
       <template #footer>
