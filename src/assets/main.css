@@ -18,6 +18,28 @@ body{
   font-family: 'Archivo', sans-serif;
 }
 
+/*!* selected *!*/
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+  background: none;
+  border-bottom: 2px solid #F25C05;
+  color: black;
+  font-weight: bold;
+}
+.p-tabview .p-tabview-nav li{
+  background: none;
+}
+/* not selected */
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  color: black;
+  border-bottom: 2px;
+  font-weight: normal;
+}
+/*!* hover *!*/
+.p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+  background: #ec9867;
+}
+
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
