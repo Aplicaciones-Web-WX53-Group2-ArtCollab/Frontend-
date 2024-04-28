@@ -1,27 +1,41 @@
 <script>
+import TheUserLogin from '@/user/components/the-user-login.component.vue'
+import TheUserLoginEmail from '@/user/components/the-user-login-email.component.vue'
+
 export default {
   name: 'navbar-content',
-  props: ['showLogin', 'toggleLogin'],
+  components: {
+    TheUserLoginEmail,
+    TheUserLogin,
+  },
+  props: {
+    showLogin: {
+      type: Boolean,
+      default: false
+    },
+    showEmailLogin: {
+      type: Boolean,
+      default: false
+    }
+  },
   methods: {
     openLogin() {
-      this.toggleLogin();
+      this.$emit('update:showLogin', true);
+    },
+    handleCloseLogin() {
+      this.$emit('update:showLogin', false);
+    },
+    handleShowEmailLogin() {
+      this.$emit('update:showEmailLogin', true);
+    },
+    handleHideEmailLogin() {
+      this.$emit('update:showEmailLogin', false);
+    },
+    handleGoBack() {
+      this.$emit('update:showLogin', true);
+      this.$emit('update:showEmailLogin', false);
     },
   },
-  data() {
-    return {
-      items: [
-        {
-          label: 'Update',
-          icon: 'pi pi-refresh'
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-times'
-        }
-      ],
-      visible:false,
-    };
-  }
 };
 </script>
 
@@ -65,6 +79,17 @@ export default {
     </template>
 
   </pv-toolbar>
+  <the-user-login
+    :showLogin="showLogin"
+    v-if="showLogin"
+    @update:showLogin="handleCloseLogin"
+    @update:showEmailLogin="handleShowEmailLogin"
+  />
+
+  <the-user-login-email v-if="showEmailLogin" :showEmailLogin="showEmailLogin" @back="handleGoBack" @update:showEmailLogin="handleHideEmailLogin" />
+
+
+
 </template>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <script>
 export default {
-  name: 'user-login-email',
-  props: ['showLogin', 'toggleLogin'],
+  name: 'the-user-login-email',
+  props: ['showLogin', 'showEmailLogin'],
   data() {
     return {
       password: '',
@@ -9,15 +9,19 @@ export default {
   },
   methods: {
     closeLogin() {
+      this.$emit('update:showEmailLogin', false);
+    },
+    goBack() {
       this.$emit('back');
     },
   },
+  emits: ['update:showEmailLogin'],
 }
 
 </script>
 
 <template>
-  <section class="user-login-email w-full flex justify-content-center align-items-center fixed" @click.self="closeLogin">
+  <section v-if="showEmailLogin" class="user-login-email w-full flex justify-content-center align-items-center fixed" @click.self="closeLogin">
     <pv-card class="login-card h-24rem w-20rem">
       <template #title>
         <h4 class="text-center font-bold"> {{ $t('login_email_title') }} </h4>
@@ -33,7 +37,7 @@ export default {
             <pv-password input-style="font-size: 0.875rem" class="text-sm" id="password" toggle-mask v-model="password" :placeholder="$t('login_email_placeholder_2')" aria-label="Contraseña"/>
 
             <div class="flex justify-content-center gap-2 mt-3">
-              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_1')" plain text @click="closeLogin" aria-label="Cerrar inicio de sesión"/>
+              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_1')" plain text @click="goBack" aria-label="Cerrar inicio de sesión"/>
               <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_2')" plain text aria-label="Iniciar sesión"/>
             </div>
           </div>
@@ -59,6 +63,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 

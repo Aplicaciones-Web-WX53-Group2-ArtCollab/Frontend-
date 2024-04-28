@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'user-recover-password'
+  name: 'the-user-recover-password'
 }
 
 </script>
