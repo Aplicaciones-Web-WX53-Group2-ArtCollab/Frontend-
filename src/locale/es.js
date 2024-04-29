@@ -8,17 +8,11 @@ const es = {
     about: 'Acerca de',
     copyright: 'Todos los derechos reservados',
     artist: 'Artista',
-    subs: 'Suscripcion' ,
-    email: 'Correo electronico',
-    password: 'Contraseña',
-    name: 'Nombre',
-    account: 'Cuenta',
-    textaccount: 'Cambia la informacion de tu cuenta y la configuracion de privacidad',
-    change: 'Cambiar',
-    delete: 'Cancelar',
-    submit: 'Enviar',
-    want: 'O deseas',
-    changeprofile: 'Cambiar tu perfil',
+    room:'Esta es tu sala de artistas',
+    chat: 'Iniciar un Nuevo Chat',
+    newchat: 'Nuevo chat con',
+    text: 'Tu: Perfecto',
+    deleteroom: 'Eliminar la sala'
 }
 
 export default es

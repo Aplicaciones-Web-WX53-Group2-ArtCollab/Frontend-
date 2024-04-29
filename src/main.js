@@ -12,6 +12,8 @@ import InputIcon from 'primevue/inputicon';
 import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
 import i18n from '@/locale/i18n.js'
+import Image from 'primevue/image';
+
 
 
 import 'primeicons/primeicons.css'
@@ -29,6 +31,7 @@ app.component('pv-inputicon', InputIcon);
 app.component('pv-inputtext', InputText);
 app.component('pv-sidebar', Sidebar);
 app.component('pv-button', Button);
+app.component('pv-image', Image);
 
 
 app.use(i18n);

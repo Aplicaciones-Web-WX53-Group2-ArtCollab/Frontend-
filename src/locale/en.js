@@ -8,17 +8,11 @@ const en = {
     about: 'About',
     copyright: 'All rights reserved',
     artist: 'Artist',
-    subs: 'Subscription',
-    email: 'Email',
-    password: 'Password',
-    name: 'Name',
-    account: 'Account',
-    textaccount: 'Change your account information and privacy settings',
-    change: 'Change',
-    delete: 'Cancel',
-    submit: 'Submit',
-    want: 'Or do you want',
-    changeprofile: 'Change your profile'
+    room: 'This is your artist room',
+    chat: 'Start a New Chat',
+    newchat: 'New chat with',
+    text: 'You: Perfect',
+    deleteroom: 'Delete the room'
 }
 
 export default en
