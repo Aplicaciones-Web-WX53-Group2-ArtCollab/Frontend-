@@ -29,8 +29,7 @@ export default {
 
 
 <template>
-  <div>
-    <label>RomanceBooksCards</label>
+  <div class="flex justify-content-center align-content-center">
       <div class="romance-books-cards">
         <div v-for="(book, index) in books" :key="index">
           <pv-card class="card">

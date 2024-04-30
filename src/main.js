@@ -13,6 +13,7 @@ import Rating from 'primevue/rating'
 import Toolbar from 'primevue/toolbar';
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
+import Sidebar from 'primevue/sidebar';
 import FileUpload from 'primevue/fileupload';
 import Toast from "primevue/toast";
 import Carousel from 'primevue/carousel'
@@ -47,6 +48,7 @@ app.component('pv-editor', Editor);
 app.component('pv-tabview', TabView);
 app.component('pv-tabpanel', TabPanel);
 app.component('pv-textarea', Textarea);
+app.component('pv-sidebar', Sidebar);
 
 app.use(PrimeVue)
 app.use(router)

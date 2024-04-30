@@ -47,7 +47,7 @@ export default {
         </div>
         <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
           <pv-iconfield icon-position="left" >
-            <pv-inputicon class="pi pi-search text-black-alpha-90 text-2xl absolute mt-1 top-0"></pv-inputicon>
+            <pv-inputicon class="pi pi-search text-black-alpha-90 text-xl mx-2 absolute mt-2 top-2"></pv-inputicon>
             <pv-inputtext  class="pl-6" />
           </pv-iconfield>
         </div>

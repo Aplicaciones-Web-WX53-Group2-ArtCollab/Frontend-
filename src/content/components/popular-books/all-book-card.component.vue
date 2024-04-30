@@ -29,8 +29,7 @@ export default {
 
 
 <template>
-  <div>
-    <label>AllBooksCards</label>
+  <div class="flex justify-content-center align-content-center">
     <div class="all-books-cards">
       <div v-for="(book, index) in books" :key="index">
         <pv-card class="card">
@@ -87,15 +86,15 @@ export default {
 }
 @media (max-width: 600px) {
   .all-books-cards {
-    margin: 50px; /* Reduced margin for small devices */
-    grid-template-columns: 1fr; /* Single column layout */
+    margin: 50px;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
   .all-books-cards {
-    grid-template-columns: repeat(2, 1fr); /* Two column layout for tablets */
-    margin: 50px; /* Adjusted margin for medium devices */
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px;
   }
 }
 </style>
