@@ -12,7 +12,7 @@ export default {
 
 <template>
   <navbar-content/>
-  <genres-navbar class="my-5"/>
+  <genres-navbar class="my-7"/>
   <main>
     <router-view></router-view>
   </main>

@@ -1,6 +1,6 @@
 <script >
-import { BookApiFake } from '@/content/services/book-api-fake.services.js'
 import { Book } from '@/content/models/book.entity.js'
+import { BookInternalService } from '@/content/services/book-internal.service.js'
 
 
 export default {
@@ -8,20 +8,24 @@ export default {
   data(){
     return{
       books: [],
-      bookApiFake:new BookApiFake()
+      book: new Book(),
+      bookApiFake:new BookInternalService()
     }
   },
   async created() {
-    this.bookApiFake.getFantasyBooks().then((response) => {
-      for (const bookData of response.data){
-        const { name, image, author}= bookData;
-        const book = new Book(name, image, author);
-        this.books.push(book);
-      }
+    this.bookApiFake.getAllBooks().then((response) => {
+       response.data.forEach((bookData) => {
+        const { title, description,datePublish,type,id, imgUrl,likes,views  }= bookData;
+        if(bookData.type === 'book'){
+          this.book = new Book(title, description,datePublish,type,id, imgUrl,likes,views);
+          this.books.push(this.book);
+        }
+    });
+      let randomIndex = Math.floor(Math.random() * this.books.length);
+      this.books = this.books.slice(randomIndex, randomIndex + 6);
     }).catch((error) => {
       console.error('Error fetching animals:', error);
     });
-
   }
 
 }
@@ -34,21 +38,18 @@ export default {
       <div v-for="(book, index) in books" :key="index">
         <pv-card class="card">
           <template #header>
-            <img class="header" :src="book.getImage()" alt="Book cover" />
+            <img class="header" :src="book.imgUrl" alt="Book cover" />
           </template>
           <template #title>
-            {{ book.getName() }}
-          </template>
-          <template #subtitle >
-            {{ book.getAuthor() }}
+            {{ book.title }}
           </template>
           <template #footer>
             <pv-rating class="rating" :cancel="false" :stars="1">
               <template #onicon>
-                <i class="pi pi-heart-fill">13.8 M</i>
+                <i class="pi pi-heart-fill">{{book.view}} M</i>
               </template>
               <template #officon>
-                <i class="pi pi-heart">13.7 M</i>
+                <i class="pi pi-heart">{{book.likes}} M</i>
               </template>
             </pv-rating>
 

@@ -1,6 +1,6 @@
 <script >
-import { BookApiFake } from '@/content/services/book-api-fake.services.js'
 import { Book } from '@/content/models/book.entity.js'
+import { BookInternalService } from '@/content/services/book-internal.service.js'
 
 
 export default {
@@ -8,93 +8,60 @@ export default {
   data(){
     return{
       books: [],
-      bookApiFake:new BookApiFake()
+      book: new Book(),
+      bookApiFake:new BookInternalService()
     }
   },
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
-      for (const bookData of response.data){
-        const { name, image, author}= bookData;
-        const book = new Book(name, image, author);
-        this.books.push(book);
-      }
+      response.data.forEach((bookData) => {
+        const { title, description,datePublish,type,id, imgUrl,likes,views  }= bookData;
+        if(bookData.type === 'book'){
+          this.book = new Book(title, description,datePublish,type,id, imgUrl,likes,views);
+          this.books.push(this.book);
+        }
+      });
+      let randomIndex = Math.floor(Math.random() * this.books.length);
+      this.books = this.books.slice(randomIndex, randomIndex + 4);
     }).catch((error) => {
-      console.error('Error fetching books:', error);
+      console.error('Error fetching animals:', error);
     });
-
   }
 
 }
 </script>
 
-
 <template>
-  <div class="flex justify-content-center align-content-center">
-    <div class="all-books-cards">
-      <div v-for="(book, index) in books" :key="index">
-        <pv-card class="card">
-          <template #header>
-            <img class="header" :src="book.getImage()" alt="Book cover" />
-          </template>
-          <template #title>
-            {{ book.getName() }}
-          </template>
-          <template #subtitle >
-            {{ book.getAuthor() }}
-          </template>
-          <template #footer>
-            <pv-rating class="rating" :cancel="false" :stars="1">
-              <template #onicon>
-                <i class="pi pi-heart-fill">13.8 M</i>
-              </template>
-              <template #officon>
-                <i class="pi pi-heart">13.7 M</i>
-              </template>
-            </pv-rating>
+<div class="flex justify-content-center align-content-center my-8">
+  <div class="flex flex-column lg:flex-row  gap-6">
+    <div class="w-20rem flex flex-column gap-4">
+      <div>
+        <img width="240" :src="book.imgUrl" alt="Book cover" />
+      </div>
+      <div>
+        <h3>{{ book.title }}</h3>
+        <p> {{book.description}}</p>
+      </div>
+      </div>
 
-          </template>
-        </pv-card>
+    <div class="flex flex-column gap-4">
+      <div v-for="(book, index) in books" :key="index" class="flex gap-4">
+        <div>
+            <img width="100" :src="book.imgUrl" alt="Book cover" />
+          </div>
+          <div class="flex gap-4">
+            <p class="font-bold"> {{index+2}}</p>
+            <h3> {{ book.title }}</h3>
+          </div>
       </div>
     </div>
+
+
   </div>
+</div>
 </template>
 
 <style scoped>
 
-.all-books-cards {
-  display: grid;
-  grid-template-columns:  15rem 15rem 15rem ;
-  gap: 50px;
-  grid-auto-rows: auto;
-  margin: 200px;
-  margin-top: 100px;
 
-}
-
-.card {
-
-  justify-content: space-around;
-
-}
-
-.header {
-
-  background-color: #f1f1f1;
-  width: 15rem;
-  height: 20rem;
-  object-fit: cover;
-}
-@media (max-width: 600px) {
-  .all-books-cards {
-    margin: 50px;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .all-books-cards {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 50px;
-  }
-}
 </style>
