@@ -74,11 +74,13 @@ export default {
               <h2> {{ $t('subscription') }} </h2>
               <h2> {{ $t('monetization') }} </h2>
               <h2 > {{ $t('artists') }} </h2>
+              <!--            TODO: configurar routing-->
               <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
                 <pv-button class="bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
                 <pv-button class="flex items-center gap-2">
                   <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
                   <span>{{ loggedInUser.username }}</span>
+                  <!--            TODO: configurar routing para el perfil de escritor y publicar-->
                 </pv-button>
               </div>
               <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
@@ -95,6 +97,7 @@ export default {
             <h2> {{ $t('subscription') }} </h2>
             <h2> {{ $t('monetization') }} </h2>
             <h2 > {{ $t('artists') }} </h2>
+<!--            TODO: configurar routing-->
           </div>
         </div>
         <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
@@ -109,6 +112,7 @@ export default {
             <pv-button class="flex items-center gap-2 hidden">
               <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
               <span>{{ loggedInUser.username }}</span>
+              <!--            TODO: configurar routing-->
             </pv-button>
           </div>
           <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
