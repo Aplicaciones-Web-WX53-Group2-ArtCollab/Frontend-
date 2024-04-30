@@ -24,7 +24,7 @@ export default {
     <div class="flexbox-container">
       <div class="flex-item">
         <div class="social-media">
-          <div class="media-title">{{ $t('social_media') }}</div>
+          <div class="media-title">{{ $t('artistProfile.social_media') }}</div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/x-logo.png" alt="X logo">
             <a href="https://www.x.com/" target="_blank"><p> https://www.x.com/ </p></a>
@@ -43,7 +43,7 @@ export default {
           </div>
         </div>
         <div class="artist-books">
-          <div class="artist-books-title">{{ $t('illustrated_books') }}</div>
+          <div class="artist-books-title">{{ $t('artistProfile.illustrated_books') }}</div>
           <div class="flex-container-2">
             <img class="normal-image" src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/marionetta-cover.png?raw=true" alt="Book 1 image">
             <p>Marionetta</p>
@@ -62,7 +62,7 @@ export default {
           </div>
         </div>
         <div class="portfolio">
-          <div class="portfolio-title">{{ $t('portfolio') }}</div>
+          <div class="portfolio-title">{{ $t('artistProfile.portfolio') }}</div>
           <div class="flex-container">
             <img class="normal-image" src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-1.png?raw=true" alt="Portfolio first image">
             <img class="normal-image" src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-2.png?raw=true" alt="Portfolio first image">

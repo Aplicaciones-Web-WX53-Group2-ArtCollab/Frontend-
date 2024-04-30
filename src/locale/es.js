@@ -11,11 +11,13 @@ const es = {
   login: 'Iniciar sesión',
   about: 'Acerca de',
   copyright: 'Todos los derechos reservados',
-
-  social_media: 'Redes sociales',
-  illustrated_books: 'Libros que ha ilustrado',
   published_books: 'Libros publicados',
-  portfolio: 'Portafolio',
+
+  artistProfile:{
+    social_media: 'Redes sociales',
+    illustrated_books: 'Libros que ha ilustrado',
+    portfolio: 'Portafolio',
+  },
 
   ...login_es,
   ...register_es,
