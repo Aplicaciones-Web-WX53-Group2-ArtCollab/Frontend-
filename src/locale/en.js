@@ -9,6 +9,7 @@ const en = {
   monetization: 'Monetization',
   artists: 'Artists',
   login: 'Log in',
+  publish: 'Publish',
   about: 'About',
   copyright: 'All rights reserved',
   published_books: 'Published books',

@@ -6,8 +6,7 @@ const login_en = {
   login_facebook_button: 'Log in with Facebook',
   login_twitter_button: 'Log in with Twitter',
   login_email_button: 'Log in with email',
-
-
+  login_email_error_message: 'The email or password is incorrect',
   login_email_title: 'Log in with email',
   login_email_header_1: 'Email',
   login_email_header_2: 'Password',

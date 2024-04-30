@@ -1,6 +1,7 @@
 <script>
 import TheUserLogin from '@/user/components/the-user-login.component.vue'
 import TheUserLoginEmail from '@/user/components/the-user-login-email.component.vue'
+import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
 
 export default {
   name: 'navbar-content',
@@ -21,25 +22,40 @@ export default {
   data() {
     return {
       visible: false,
+      loggedInUser:null,
+      userServices: new UserEndpointService(),
     };
   },
   methods: {
     openLogin() {
       this.$emit('update:showLogin', true);
     },
+
     handleCloseLogin() {
       this.$emit('update:showLogin', false);
     },
+
     handleShowEmailLogin() {
       this.$emit('update:showEmailLogin', true);
     },
+
     handleHideEmailLogin() {
       this.$emit('update:showEmailLogin', false);
     },
+
     handleGoBack() {
       this.$emit('update:showLogin', true);
       this.$emit('update:showEmailLogin', false);
     },
+
+    getLoggedInUser(){
+      this.userServices.getLoggedInUser().then((response) => {
+        this.loggedInUser = response.data[0];
+      });
+    }
+  },
+  mounted() {
+    this.getLoggedInUser();
   },
 };
 </script>
@@ -58,7 +74,18 @@ export default {
               <h2> {{ $t('subscription') }} </h2>
               <h2> {{ $t('monetization') }} </h2>
               <h2 > {{ $t('artists') }} </h2>
-              <pv-button @click="openLogin" class="md:hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+              <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
+                <pv-button class="bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
+                <pv-button class="flex items-center gap-2">
+                  <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
+                  <span>{{ loggedInUser.username }}</span>
+                </pv-button>
+              </div>
+              <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
+              <div v-else>
+                <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+                <the-user-login ref="login"/>
+              </div>
             </pv-sidebar>
             <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" aria-label="Menu" />
           </div>
@@ -76,9 +103,19 @@ export default {
             <pv-inputtext  class="pl-6" />
           </pv-iconfield>
         </div>
-        <div aria-label="login button">
-          <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
-          <the-user-login ref="login"/>
+        <div aria-label="login button" class="hidden md:block">
+          <div v-if="loggedInUser" class="flex gap-3">
+            <pv-button class="md:block hidden bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
+            <pv-button class="flex items-center gap-2 hidden">
+              <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
+              <span>{{ loggedInUser.username }}</span>
+            </pv-button>
+          </div>
+          <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
+          <div v-else>
+            <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+            <the-user-login ref="login"/>
+          </div>
         </div>
       </div>
     </template>

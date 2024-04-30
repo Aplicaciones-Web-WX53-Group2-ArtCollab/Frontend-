@@ -432,6 +432,15 @@
     }
   ],
   "login": [
-    {}
+    {
+      "id": "47f5",
+      "email": "flor-salvador01@gmail.com",
+      "password": "flor123",
+      "username": "flor_salvador_01",
+      "imgURL": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/c67583889d63d5be31314130243591969b6449a2/frontend/src/assets/images/flor-profile.png?raw=true",
+      "name": "Flor M. Salvador",
+      "type": "writer",
+      "subscription_id": "1"
+    }
   ]
 }

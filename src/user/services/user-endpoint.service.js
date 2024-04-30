@@ -17,5 +17,11 @@ export class UserEndpointService {
     return axios.post(`${this.baseUrl}${this.readerUrl}`, reader)
   }
 
+  loginUser(reader){
+    return axios.post(`${this.baseUrl}${this.loginUrl}`, reader)
+  }
 
+  getLoggedInUser(){
+    return axios.get(`${this.baseUrl}${this.loginUrl}`)
+  }
 }

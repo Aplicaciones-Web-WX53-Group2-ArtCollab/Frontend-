@@ -9,6 +9,7 @@ const es = {
   monetization: 'Monetización',
   artists: 'Artistas',
   login: 'Iniciar sesión',
+  publish: 'Publicar',
   about: 'Acerca de',
   copyright: 'Todos los derechos reservados',
   published_books: 'Libros publicados',

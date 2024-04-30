@@ -6,7 +6,7 @@ const login_es = {
   login_facebook_button: 'Iniciar sesión con Facebook',
   login_twitter_button: 'Iniciar sesión con Twitter',
   login_email_button: 'Iniciar sesión con Email',
-
+  login_email_error_message: 'El correo electrónico o la contraseña son incorrectos',
   login_email_title: 'Iniciar sesión con correo electrónico',
   login_email_header_1: 'Correo electrónico',
   login_email_header_2: 'Contraseña',
