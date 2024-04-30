@@ -29,7 +29,7 @@
 
 <script>
 import axios from 'axios';
-import { Book } from '@/user/models/book.entity.js'
+import { Book } from '@/shared/models/book.entity.js'
 import { BookApiFake } from '@/shared/services/book-api-fake.service.js'
 
 export default {

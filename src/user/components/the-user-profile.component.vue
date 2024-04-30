@@ -1,6 +1,6 @@
 <script>
 import { BookApiFake } from '@/shared/services/book-api-fake.service.js'
-import { Book } from '@/user/models/book.entity.js'
+import { Book } from '@/shared/models/book.entity.js'
 
 export default {
   name: 'the-user-profile',

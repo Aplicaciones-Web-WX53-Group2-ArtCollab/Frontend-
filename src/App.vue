@@ -4,6 +4,7 @@ import NavbarContent from '@/public/components/navbar-content.component.vue'
 
 import TheArtistsOverview from '@/user/components/the-artists-overview.component.vue'
 import { ref } from 'vue'
+import TheUserRegister from '@/user/components/the-user-register.component.vue'
 
 const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
 const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
@@ -20,7 +21,7 @@ const handleShowEmailLoginUpdate = (value) => {
 <template>
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
-  <the-artists-overview/>
+  <the-user-register/>
   <footer-content/>
 </template>
 

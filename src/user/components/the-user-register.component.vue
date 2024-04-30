@@ -4,6 +4,8 @@ export default {
 
   data() {
     return {
+      email: '',
+      username: '',
       password: '',
       confirm_password: '',
       artist: false,
@@ -14,28 +16,58 @@ export default {
       },
     };
   },
+  computed: {
+    //las propiedades Computed son funciones que se ejecutan cada vez que una de las propiedades que utiliza cambia
+    isEmailValid() {
+      const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; //Expresión regular para validar el correo electrónico. Referencia: https://regexr.com/3e48o
+      console.log(re.test(this.email));
+      return re.test(this.email);
+    },
+
+    isPasswordValid() {
+      console.log(this.password.length >= 6 && this.password.length <= 16)
+      return this.password.length >= 6 && this.password.length <= 16;
+    },
+
+    isConfirmPasswordValid() {
+      return this.password === this.confirm_password;
+    },
+
+    isUsernameValid() {
+      console.log(this.username.length <= 20);
+      return this.username.length <= 20;
+    },
+
+    isFormValid() {
+      return this.isEmailValid && this.isPasswordValid && this.isConfirmPasswordValid && this.isUsernameValid;
+    },
+  },
 }
 
 </script>
 
 <template>
-  <section class="flex justify-content-center align-items-center">
+  <section class="flex justify-content-center align-items-center" aria-label="Registro de usuario">
     <div class="register-container pt-7 pb-7">
       <h4>{{ $t('register_title') }}</h4>
         <div class="register-form pl-6 pt-4">
           <div class="flex flex-column gap-3">
             <label class="uppercase" for="email">{{ $t('register_email') }} *</label>
-            <pv-inputtext class="input-text" id="email" :placeholder="$t('register_email_placeholder')" aria-label="Correo electrónico"/>
+            <pv-inputtext :invalid="!isEmailValid" v-model="email" class="input-text" id="email" :placeholder="$t('register_email_placeholder')" aria-label="Correo electrónico"/>
+            <small v-if="!isEmailValid" class="text-red-500">{{ $t('register_email_invalid') }}</small>
 
             <label class="uppercase" for="password">{{ $t('register_password') }} *</label>
-            <pv-password :input-style="password_input_style" id="password" toggle-mask :placeholder="$t('register_password_placeholder')" v-model="password"
+            <pv-password :input-style="password_input_style" :invalid="!isPasswordValid" id="password" toggle-mask :placeholder="$t('register_password_placeholder')" v-model="password"
             :prompt-label="$t('register_password_prompt')" :weak-label="$t('register_password_weak')" :medium-label="$t('register_password_medium')" :strong-label="$t('register_password_strong')" aria-label="Contraseña"/>
+            <small v-if="!isPasswordValid" class="text-red-500">{{ $t('register_password_invalid') }}</small>
 
             <label class="uppercase" for="confirm-password">{{ $t('register_password_confirm') }} *</label>
-            <pv-password :input-style="password_input_style" class="password" id="confirm-password" toggle-mask :placeholder="$t('register_password_confirm_placeholder')" v-model="confirm_password" :feedback="false" aria-label="Confirmar contraseña"/>
+            <pv-password :input-style="password_input_style" :invalid="!isConfirmPasswordValid" class="password" id="confirm-password" toggle-mask :placeholder="$t('register_password_confirm_placeholder')" v-model="confirm_password" :feedback="false" aria-label="Confirmar contraseña"/>
+            <small v-if="!isConfirmPasswordValid" class="text-red-500">{{ $t('register_password_confirm_invalid') }}</small>
 
             <label class="uppercase" for="username">{{ $t('register_username') }} *</label>
-            <pv-inputtext class="input-text" id="username" :placeholder="$t('register_username_placeholder')" aria-label="Nombre de usuario"/>
+            <pv-inputtext class="input-text" :invalid="!isUsernameValid" v-model="username" id="username" :placeholder="$t('register_username_placeholder')" aria-label="Nombre de usuario"/>
+            <small v-if="!isUsernameValid" class="text-red-500">{{ $t('register_username_invalid') }}</small>
 
             <div class="flex align-items-center">
               <pv-checkbox v-model="artist" inputId="is_artist" :binary="true" aria-label="Artista"/>
@@ -46,8 +78,9 @@ export default {
             <h4>{{ $t('register_data_policy') }}</h4>
 
             <div class="flex justify-content-center gap-2 mt-3 mb-3">
-              <pv-button class="register-button w-full w-10rem" :label="$t('register_button')" plain text aria-label="Botón de registro"/>
+              <pv-button class="register-button w-full w-10rem" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" />
             </div>
+<!--            TODO: Configure route to main page-->
 
             <pv-divider align="center" type="solid" >
               <b>{{ $t('register_footer') }}</b>
