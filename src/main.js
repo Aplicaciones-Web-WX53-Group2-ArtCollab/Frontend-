@@ -7,7 +7,7 @@ import 'primevue/resources/themes/aura-light-green/theme.css';
 import "primeflex/primeflex.css";
 import 'primeicons/primeicons.css';
 import PrimeVue from 'primevue/config'
-//import router from '@/router.js'
+import router from '@/router.js'
 import Card from 'primevue/card'
 import Rating from 'primevue/rating'
 import Toolbar from 'primevue/toolbar';
@@ -43,7 +43,7 @@ app.component('pv-galleria', Galleria);
 app.component('pv-editor', Editor);
 
 app.use(PrimeVue)
-//app.use(router)
+app.use(router)
 app.use(ToastService)
 app.use(i18n)
 app.mount('#app')

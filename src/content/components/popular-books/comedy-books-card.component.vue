@@ -87,15 +87,15 @@ export default {
 }
 @media (max-width: 600px) {
   .comedy-books-cards {
-    margin: 50px; /* Reduced margin for small devices */
-    grid-template-columns: 1fr; /* Single column layout */
+    margin: 50px;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
   .comedy-books-cards {
-    grid-template-columns: repeat(2, 1fr); /* Two column layout for tablets */
-    margin: 50px; /* Adjusted margin for medium devices */
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px;
   }
 }
 </style>

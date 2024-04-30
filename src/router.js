@@ -1,17 +1,13 @@
-/*
+
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import RomanceBooksCards from '@/genres/components/romance-book-card.component.vue'
-import FantasyBooksCards from '@/genres/components/fantasy-book-card.component.vue'
-import ComedyBooksCard from '@/genres/components/comedy-books-card.component.vue'
-import AllBookCard from '@/genres/components/all-book-card.component.vue'
+
 
 const routes = [
-  { path: '/', component: AllBookCard},
-  { path: '/romance', component: RomanceBooksCards},
-  { path: '/fantasy', component: FantasyBooksCards},
-  { path: '/comedy', component: ComedyBooksCard },
-  { path: '/artist', component:() => import('./content/pages/artist-profile-page.vue')},
+  { path: '/', component: () => import('./content/pages/genres-page.component.vue')},
+  { path: '/romance', component:()=> import('./content/components/popular-books/romance-book-card.component.vue')},
+  { path: '/fantasy', component:() => import('./content/components/popular-books/fantasy-book-card.component.vue')},
+  { path: '/comedy', component: () => import('./content/components/popular-books/comedy-books-card.component.vue')},
 ]
 
 const router = createRouter({
@@ -19,4 +15,4 @@ const router = createRouter({
   routes,
 })
 
-export default router*/
+export default router
