@@ -9,6 +9,7 @@ export default {
     return{
       books: [],
       book: new Book(),
+      bookPopular: new Book(),
       bookApiFake:new BookInternalService()
     }
   },
@@ -19,8 +20,13 @@ export default {
         if(bookData.type === 'book'){
           this.book = new Book(title, description,datePublish,type,id, imgUrl,likes,views);
           this.books.push(this.book);
+          if(bookData.views > this.bookPopular.views){
+            this.bookPopular = bookData;
+          }
         }
+
       });
+      this.books = this.books.filter(book => book.id !== this.bookPopular.id);
       let randomIndex = Math.floor(Math.random() * this.books.length);
       this.books = this.books.slice(randomIndex, randomIndex + 4);
     }).catch((error) => {
@@ -36,11 +42,11 @@ export default {
   <div class="flex flex-column lg:flex-row  gap-6">
     <div class="w-20rem flex flex-column gap-4">
       <div>
-        <img width="240" :src="book.imgUrl" alt="Book cover" />
+        <img width="240" :src="bookPopular.imgUrl" alt="Book cover" />
       </div>
       <div>
-        <h3>{{ book.title }}</h3>
-        <p> {{book.description}}</p>
+        <h3>{{ bookPopular.title }}</h3>
+        <p> {{bookPopular.description}}</p>
       </div>
       </div>
 
