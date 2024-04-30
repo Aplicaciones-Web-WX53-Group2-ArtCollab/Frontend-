@@ -18,6 +18,11 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      visible: false,
+    };
+  },
   methods: {
     openLogin() {
       this.$emit('update:showLogin', true);
