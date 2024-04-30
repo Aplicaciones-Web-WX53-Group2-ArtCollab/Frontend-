@@ -1,9 +1,12 @@
 <script>
+import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+
 export default {
   name: 'the-user-register',
 
   data() {
     return {
+      userServices: new UserEndpointService(),
       email: '',
       username: '',
       password: '',
@@ -16,16 +19,15 @@ export default {
       },
     };
   },
+
   computed: {
-    //las propiedades Computed son funciones que se ejecutan cada vez que una de las propiedades que utiliza cambia
+    //las propiedades Computed son funciones que se ejecutan cada vez que una de las propiedades que utiliza cambia. Lo que permite actualizar el estado de la aplicación en tiempo real.
     isEmailValid() {
       const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; //Expresión regular para validar el correo electrónico. Referencia: https://regexr.com/3e48o
-      console.log(re.test(this.email));
       return re.test(this.email);
     },
 
     isPasswordValid() {
-      console.log(this.password.length >= 6 && this.password.length <= 16)
       return this.password.length >= 6 && this.password.length <= 16;
     },
 
@@ -34,12 +36,33 @@ export default {
     },
 
     isUsernameValid() {
-      console.log(this.username.length <= 20);
-      return this.username.length <= 20;
+      return this.username.length <= 20 && this.username.length >= 1;
     },
 
     isFormValid() {
       return this.isEmailValid && this.isPasswordValid && this.isConfirmPasswordValid && this.isUsernameValid;
+    },
+  },
+
+  methods: {
+    register() {
+      if (this.isFormValid) {
+        this.userServices.createUser({
+          email: this.email,
+          username: this.username,
+          password: this.password,
+          imgURL:'',
+          name:'',
+          type:this.artist ? 'artist' : 'reader',
+          subscription_id: '',
+        }
+        // ).then(() => {
+        //   this.$router.push({ name: 'home' });
+        // }
+        ).catch((error) => {
+          console.error(error);
+        });
+      }
     },
   },
 }
@@ -54,7 +77,7 @@ export default {
           <div class="flex flex-column gap-3">
             <label class="uppercase" for="email">{{ $t('register_email') }} *</label>
             <pv-inputtext :invalid="!isEmailValid" v-model="email" class="input-text" id="email" :placeholder="$t('register_email_placeholder')" aria-label="Correo electrónico"/>
-            <small v-if="!isEmailValid" class="text-red-500">{{ $t('register_email_invalid') }}</small>
+            <small v-if="!isEmailValid" class="text-red-500" aria-label="">{{ $t('register_email_invalid') }}</small>
 
             <label class="uppercase" for="password">{{ $t('register_password') }} *</label>
             <pv-password :input-style="password_input_style" :invalid="!isPasswordValid" id="password" toggle-mask :placeholder="$t('register_password_placeholder')" v-model="password"
@@ -78,7 +101,7 @@ export default {
             <h4>{{ $t('register_data_policy') }}</h4>
 
             <div class="flex justify-content-center gap-2 mt-3 mb-3">
-              <pv-button class="register-button w-full w-10rem" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" />
+              <pv-button class="register-button w-full w-10rem" @click="register" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" />
             </div>
 <!--            TODO: Configure route to main page-->
 

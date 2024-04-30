@@ -32,14 +32,14 @@
   "commission": [
     {
       "id": 1,
-      "amount": 100.00,
+      "amount": 100,
       "content": "Lorem ipsum",
       "get_date": "2024-04-09",
       "rewards_id": 1
     },
     {
       "id": 2,
-      "amount": 200.00,
+      "amount": 200,
       "content": "Dolor sit amet",
       "get_date": "2024-04-10",
       "rewards_id": 2
@@ -97,6 +97,27 @@
       "password": "password2",
       "type": "type2",
       "suscription_id": 2
+    },
+    {
+      "id": "b326",
+      "email": "gustavo.huilca.3@gmail.com",
+      "username": "gustavohc",
+      "password": "gustavoabc",
+      "artist": true,
+      "imgURL": "",
+      "name": "",
+      "type": "artist",
+      "subscription_id": ""
+    },
+    {
+      "id": "c275",
+      "email": "gustavo@gmail.com",
+      "username": "gustavoas",
+      "password": "abc123",
+      "imgURL": "",
+      "name": "",
+      "type": "reader",
+      "subscription_id": ""
     }
   ],
   "reward": [
@@ -373,8 +394,6 @@
       "id": 20,
       "portfolio_id": 20
     }
-
-
   ],
   "templateState": [
     {
@@ -413,8 +432,6 @@
     }
   ],
   "login": [
-    {
-
-    }
+    {}
   ]
 }

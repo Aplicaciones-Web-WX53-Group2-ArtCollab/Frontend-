@@ -1,19 +1,19 @@
 import axios from 'axios'
 
-export class UserEndpoint {
+export class UserEndpointService {
   baseUrl = 'http://localhost:3000'
   readerUrl = '/reader'
   loginUrl = '/login'
 
-  getReaders(){
+  getUsers(){
     return axios.get(`${this.baseUrl}${this.readerUrl}`)
   }
 
-  getReaderById(id){
+  getUserById(id){
     return axios.get(`${this.baseUrl}${this.readerUrl}/${id}`)
   }
 
-  createReader(reader){
+  createUser(reader){
     return axios.post(`${this.baseUrl}${this.readerUrl}`, reader)
   }
 
