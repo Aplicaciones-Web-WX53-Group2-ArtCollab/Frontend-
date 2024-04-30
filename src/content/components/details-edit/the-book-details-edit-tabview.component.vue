@@ -9,37 +9,37 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
   <div class="card">
     <pv-tabview id='tv' class="details-tabview lg:max-w-full md:max-w-20rem">
       <div class="flex flex-column">
-        <pv-tabpanel header="Detalles de la historia">
+        <pv-tabpanel :header="$t('editDetails.storyDetails')">
           <div class="flex align-items-center justify-content-center mb-5 mt-3">
-            <div class="titulo flex flex-column">
-              <label class="text-2xl font-bold" for="titulo">Título</label>
+            <div class="title flex flex-column">
+              <label class="text-2xl font-bold" for="title">{{ $t('editDetails.title') }}</label>
               <pv-textarea v-model="defaultValue" rows="1" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
             </div>
           </div>
           <div class="flex align-items-center justify-content-center mb-5">
-            <div class="descripcion flex flex-column">
-              <label class="text-2xl font-bold" for="titulo">Descripción</label>
+            <div class="description flex flex-column">
+              <label class="text-2xl font-bold" for="description">{{ $t('editDetails.description') }}</label>
               <pv-textarea v-model="defaultValue2" rows="14" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
             </div>
           </div>
         </pv-tabpanel>
       </div>
-      <pv-tabpanel header="Tabla de contenidos">
+      <pv-tabpanel :header="$t('editDetails.contentTable')">
         <pv-card class="shadow-none">
               <template #content>
                 <div class="table-of-contents flex flex-row gap-8">
                   <div class="chapters flex flex-column pr-8 mr-6">
-                    <p class="pb-2">Prólogo</p>
-                    <p class="pb-2">Capítulo 1</p>
-                    <p class="pb-2">Capítulo 2</p>
-                    <p class="pb-2">Capítulo 3</p>
-                    <p class="pb-2">Capítulo 4</p>
-                    <p class="pb-2">Capítulo 5</p>
-                    <p class="pb-2">Capítulo 6</p>
-                    <p class="pb-2">Capítulo 7</p>
-                    <p class="pb-2">Capítulo 8</p>
-                    <p class="pb-2">Capítulo 9</p>
-                    <p class="pb-2">Capítulo 10</p>
+                    <p class="pb-2">{{ $t('editDetails.prologue') }}</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 1</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 2</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }}3</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 4</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 5</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 6</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 7</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 8</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 9</p>
+                    <p class="pb-2">{{ $t('editDetails.chapter') }} 10</p>
                   </div>
                   <div class="flex flex-column pl-8 ml-6">
                     <div class="right-side flex flex-row gap-2 pb-2">
@@ -124,7 +124,7 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
               </template>
         </pv-card>
       </pv-tabpanel>
-      <pv-tabpanel header="Ingresos obtenidos">
+      <pv-tabpanel :header="$t('editDetails.earned')">
       </pv-tabpanel>
     </pv-tabview>
   </div>

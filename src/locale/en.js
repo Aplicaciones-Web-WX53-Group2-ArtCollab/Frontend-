@@ -38,6 +38,7 @@ const en = {
     earned: 'Earned income',
     title: 'Title',
     description: 'Description',
+    cancel: 'Cancel',
     save: 'Save',
     prologue: 'Prologue',
     chapter: 'Chapter',

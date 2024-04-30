@@ -39,6 +39,7 @@ const es = {
     title: 'Título',
     description: 'Descripción',
     save: 'Guardar',
+    cancel: 'Cancelar',
     prologue: 'Prólogo',
     chapter: 'Capítulo',
   },
