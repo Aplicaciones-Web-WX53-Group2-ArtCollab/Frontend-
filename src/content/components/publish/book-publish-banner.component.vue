@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="container3 flex justify-content-center align-items-center bg-orange-300">
-    <div class="banner">
+  <div class="container3 flex justify-content-center align-items-center bg-orange-300 mt-3 mb-5">
+    <div class="banner flex flex-row justify-content-center align-content-center text-white">
       <div class="banner-1 flex flex-row justify-content-center align-items-center">
         <p class="bg-cyan-600">1</p>
         <div>Libros</div>
@@ -19,28 +19,23 @@
 </template>
 
 <style scoped>
-.container3 {
-  margin: 1rem 0 2rem 0;
-}
-.banner {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color:white;
-}
-
 .banner p{
-  width: 40px; /* Ajusta estos valores según tus necesidades */
+  width: 40px;
   height: 40px;
-  border-radius: 50%; /* Esto hace que el elemento sea completamente redondo */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem 0 2rem; /* Ajusta los márgenes */
+  margin: 0 1rem 0 2rem;
 }
 
 .banner-1 {
-  margin-right: 8rem; /* Ajusta el margen derecho para separar de los otros elementos */
+  margin-right: 8rem;
+}
+
+@media (max-width: 576px) {
+  .banner-1 {
+    margin-right: 0;
+  }
 }
 </style>
