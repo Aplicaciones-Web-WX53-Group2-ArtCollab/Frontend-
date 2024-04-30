@@ -7,19 +7,19 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
 
 <template>
   <div class="card">
-    <pv-tabview id='tv'>
+    <pv-tabview id='tv' class="details-tabview lg:max-w-full md:max-w-20rem">
       <div class="flex flex-column">
         <pv-tabpanel header="Detalles de la historia">
           <div class="flex align-items-center justify-content-center mb-5 mt-3">
             <div class="titulo flex flex-column">
               <label class="text-2xl font-bold" for="titulo">Título</label>
-              <pv-textarea v-model="defaultValue" rows="1" cols="50" />
+              <pv-textarea v-model="defaultValue" rows="1" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
             </div>
           </div>
           <div class="flex align-items-center justify-content-center mb-5">
             <div class="descripcion flex flex-column">
               <label class="text-2xl font-bold" for="titulo">Descripción</label>
-              <pv-textarea v-model="defaultValue2" rows="14" cols="50" />
+              <pv-textarea v-model="defaultValue2" rows="14" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
             </div>
           </div>
         </pv-tabpanel>
@@ -136,5 +136,14 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
   align-items:center;
   justify-content:center;
   display:flex;
+}
+
+@media (max-width: 576px) {
+  .details-textarea {
+    max-width: 15rem;
+  }
+  .details-tabview {
+    max-width: 16rem;
+  }
 }
 </style>
