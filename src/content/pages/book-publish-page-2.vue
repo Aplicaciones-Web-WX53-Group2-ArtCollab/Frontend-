@@ -13,9 +13,9 @@ import BookPublishEditor from '@/content/components/publish/the-book-publish-edi
   <book-banner/>
   <div class="buttons flex justify-content-end flex-wrap">
     <div class="px-6">
-      <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">Publicar</pv-button>
-      <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">Guardar</pv-button>
-      <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">Vista Previa</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">{{ $t('bookPublish.publish') }}</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">{{ $t('bookPublish.save') }}</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">{{ $t('bookPublish.preview') }}</pv-button>
     </div>
   </div>
   <div class="input flex align-items-center justify-content-center">
@@ -31,7 +31,7 @@ import BookPublishEditor from '@/content/components/publish/the-book-publish-edi
   <book-publish-editor/>
   <div class="flex align-items-center justify-content-center">
     <div class="image-fileupload flex flex-column gap-2 m-5">
-      <label for="titulo" class="text-center font-bold text-xl">Subir ilustraciones</label>
+      <label for="titulo" class="text-center font-bold text-xl">{{ $t('bookPublish.uploadIllustrations') }}</label>
       <book-file-upload/>
     </div>
   </div>
