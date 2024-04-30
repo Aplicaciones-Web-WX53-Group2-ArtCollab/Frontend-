@@ -24,6 +24,9 @@ import Galleria from 'primevue/galleria'
 import i18n from '@/locale/i18n.js'
 import InputText from "primevue/inputtext";
 import Editor from 'primevue/editor';
+import TabView from 'primevue/tabview';
+import TabPanel from 'primevue/tabpanel';
+import Textarea from 'primevue/textarea'
 
 const app = createApp(App);
 
@@ -41,6 +44,9 @@ app.component('pv-inputtext', InputText);
 app.component('pv-carousel', Carousel);
 app.component('pv-galleria', Galleria);
 app.component('pv-editor', Editor);
+app.component('pv-tabview', TabView);
+app.component('pv-tabpanel', TabPanel);
+app.component('pv-textarea', Textarea);
 
 app.use(PrimeVue)
 app.use(router)

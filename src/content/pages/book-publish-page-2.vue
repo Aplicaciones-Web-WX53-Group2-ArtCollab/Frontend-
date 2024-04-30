@@ -11,9 +11,16 @@ import BookPublishEditor from '@/content/components/publish/the-book-publish-edi
 <template>
   <navbar-content/>
   <book-banner/>
+  <div class="buttons flex justify-content-end flex-wrap">
+    <div class="px-6">
+      <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">Publicar</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">Guardar</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">Vista Previa</pv-button>
+    </div>
+  </div>
   <div class="input flex align-items-center justify-content-center">
     <div class="mt-2 w-10">
-      <book-input class="text-xl" borderStyle="none" outlineStyle="none" placeholder="Capítulo sin titulo" placeholderStyle="text-align: center; width: 100%;" size="large" />
+      <book-input class="text-xl" borderStyle="none" outlineStyle="none" placeholder="Capítulo sin título 1" placeholderStyle="text-align: center; width: 100%;" size="large" />
     </div>
   </div>
   <div class="divider flex align-items-center justify-content-center">

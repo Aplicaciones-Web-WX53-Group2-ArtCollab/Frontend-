@@ -19,7 +19,7 @@ export default {
         this.books.push(book);
       }
     }).catch((error) => {
-      console.error('Error fetching animals:', error);
+      console.error('Error fetching books:', error);
     });
 
   }
