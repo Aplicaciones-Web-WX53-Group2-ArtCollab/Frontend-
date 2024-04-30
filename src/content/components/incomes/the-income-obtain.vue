@@ -28,7 +28,7 @@ export default {
     </pv-toolbar>
     <div class="flex flex-col md:flex-row mt-6 lg:justify-content-between">
       <div class=" flex ml-6">
-      <img src="/src/assets/Boulevard.png" alt="Boulevard" width="265" height="372" />
+      <img src="/src/assets/images/Boulevard-Cover.jpg" alt="Boulevard" width="265" height="372" />
       </div>
       <div class=" flex lg:mr-8 md:ml-6 ">
       <div class="rectangle-container">
@@ -38,7 +38,7 @@ export default {
           <pv-tabpanel :header="$t('recent')">
           </pv-tabpanel>
           <pv-tabpanel :header="$t('income')">
-            <img src="/src/assets/Money.png" alt="Ingresos Obtenidos" width="350" height="246" />
+            <img src="/src/assets/images/Income-money.png" alt="Ingresos Obtenidos" width="350" height="246" />
           </pv-tabpanel>
         </pv-tabview>
       </div>
