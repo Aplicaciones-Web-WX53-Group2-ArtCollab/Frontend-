@@ -35,8 +35,8 @@ export default {
 </script>
 
 <template>
-  <div class="artist-profile ">
-    <div class="banner">
+  <div class="artist-profile" aria-label="Artist profile">
+    <div class="banner" aria-label="Artist banner">
       <div class="banner-background"></div>
       <div class="profile-image">
         <img
@@ -45,9 +45,9 @@ export default {
         <div class="text">Miriam Bonastre</div>
       </div>
     </div>
-    <div class="flexbox-container">
-      <div class="flex-item">
-        <div class="social-media">
+    <div class="flexbox-container" aria-label="Artist information container">
+      <div class="flex-item" aria-label="Artist social media and books">
+        <div class="social-media" aria-label="Artist social media">
           <div class="media-title">{{ $t('artistProfile.social_media') }}</div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/x-logo.png" alt="X logo">
@@ -66,7 +66,7 @@ export default {
             <a href="https://www.tiktok.com/" target="_blank"><p>https://www.tiktok.com/</p></a>
           </div>
         </div>
-        <div class="artist-books">
+        <div class="artist-books" aria-label="Artist books">
           <div class="artist-books-title">{{ $t('artistProfile.illustrated_books') }}</div>
           <div class="flex-container-2">
             <img class="normal-image"
@@ -82,9 +82,9 @@ export default {
           </div>
         </div>
       </div>
-      <div class="flex-item">
-        <div class="bio">
-          <div class="bio-title">Bio</div>
+      <div class="flex-item" aria-label="Artist biography and portfolio">
+        <div class="bio" aria-label="Biography">
+          <div class="bio-title" aria-label="Biography title">Bio</div>
           <div>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi,
               vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam
@@ -92,7 +92,7 @@ export default {
               litora eros sociis iaculis.</p>
           </div>
         </div>
-        <div class="portfolio">
+        <div class="portfolio" aria-label="Artist portfolio">
           <div class="portfolio-title">{{ $t('artistProfile.portfolio') }}</div>
           <div class="flex-container">
             <img class="normal-image" :src="portfolioImage1" alt="Portfolio first image">
