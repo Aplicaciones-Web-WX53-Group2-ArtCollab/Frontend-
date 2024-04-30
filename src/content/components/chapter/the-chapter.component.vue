@@ -123,8 +123,8 @@ export default {
   <div class="flex justify-content-center">
   <div class="flex-column flex justify-content-center">
     <p class ="text-center lg:text-2xl text-black-alpha-90">{{ $t('caps') }}</p>
-    <img class="responsive-image" src="/src/assets/comictext.png" alt="ArtCollab Logo" width="800" height="1000" />
-    <img class="responsive-image" src="/src/assets/comic.png" alt="ArtCollab Logo" width="800" height="1000" />
+    <img class="responsive-image" src="/src/assets/images/comic-text.png" alt="ArtCollab Logo" width="800" height="1000" />
+    <img class="responsive-image" src="/src/assets/images/comic-image.png" alt="ArtCollab Logo" width="800" height="1000" />
   </div>
   </div>
   <div class="flex justify-content-center text-black-alpha-90 mt-4">
