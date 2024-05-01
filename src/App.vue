@@ -1,7 +1,7 @@
 <script setup>
 
 
-import MainPage from '@/content/pages/main-page.vue'
+import MainPage from '@/shared/pages/main-page.vue'
 </script>
 
 <template>

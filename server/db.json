@@ -92,32 +92,66 @@
   ],
   "reader": [
     {
-      "id": "1",
-      "name": "John Doe",
-      "username": "johndoe",
-      "email": "john@example.com",
-      "password": "password1",
-      "type": "type1",
-      "suscription_id": 1
-    },
-    {
-      "id": "2",
-      "name": "Jane Smith",
-      "username": "janesmith",
-      "email": "jane@example.com",
-      "password": "password2",
-      "type": "type2",
-      "suscription_id": 2
-    },
-    {
       "id": "3",
       "name": "Miriam Bonastre",
       "username": "miriam123",
       "email": "miriam_bonastre@gmail.com",
       "password": "password321",
-      "type": "type3",
-      "suscription_id": 1
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/miriam.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "4",
+      "name": "Laia López",
+      "username": "laialopez",
+      "email": "laia_lopez@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/lala-lopez.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "5",
+      "name": "Gabriel Picolo",
+      "username": "gabriel_picolo",
+      "email": "gabriel_picolo@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/picolo.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "6",
+      "name": "Mireia Martínez",
+      "username": "mireia_martinez",
+      "email": "mireia_martinez@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/Mieria.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "7",
+      "name": "Cristina Cid",
+      "username": "jordi_puig",
+      "email": "cristina@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/cid.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "8",
+      "name": "MMIvens",
+      "username": "mmivens",
+      "email": "mmivens@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/mmivens.png?raw=true",
+      "subscription_id": 1
     }
+
   ],
   "reward": [
     {
@@ -266,7 +300,7 @@
     {
       "title": "La Metamorfosis",
       "description": "La Metamorfosis es una novela corta escrita por Franz Kafka que sigue la historia de Gregor Samsa, quien se despierta una mañana convertido en un insecto.",
-      "date_publish": "2024-04-19",
+      "date_publish": "2024-04-03",
       "type": "book",
       "likes": 187,
       "views": 312,
@@ -344,7 +378,7 @@
     {
       "title": "El Alquimista",
       "description": "El Alquimista es una novela escrita por Paulo Coelho que sigue la historia de Santiago, un joven pastor que emprende un viaje en busca de su tesoro personal.",
-      "date_publish": "2024-04-25",
+      "date_publish": "2024-04-10",
       "type": "book",
       "likes": 120,
       "views": 512,
@@ -357,7 +391,7 @@
     {
       "title": "Sunset",
       "description": "An illustration depicting a beautiful sunset over the ocean.",
-      "date_publish": "2024-04-26",
+      "date_publish": "2024-04-02",
       "type": "ilustration",
       "likes": 254,
       "views": 547,
@@ -370,7 +404,7 @@
     {
       "title": "El Señor de los Anillos",
       "description": "El Señor de los Anillos es una trilogía escrita por J.R.R. Tolkien que sigue la aventura de Frodo Bolsón y su misión de destruir el Anillo Único.",
-      "date_publish": "2024-04-27",
+      "date_publish": "2024-04-01",
       "type": "book",
       "likes": 1540,
       "views": 3120,
@@ -383,7 +417,7 @@
     {
       "title": "Starry Night",
       "description": "An illustration depicting a starry night sky with a silhouette of trees.",
-      "date_publish": "2024-04-28",
+      "date_publish": "2024-04-01",
       "type": "ilustration",
       "likes": 740,
       "views": 1248,

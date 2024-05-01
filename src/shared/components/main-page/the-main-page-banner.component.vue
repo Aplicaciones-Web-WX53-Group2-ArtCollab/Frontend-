@@ -1,5 +1,4 @@
 <script>
-import { ref } from 'vue'
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
 
@@ -41,7 +40,7 @@ export default {
     <pv-galleria :value="bookImages" :numVisible="4" containerStyle="max-width: 640px"
               :showThumbnails="false" :showIndicators="true" :circular="true" :autoPlay="true" :transitionInterval="2000">
       <template #item="slotProps">
-        <img :src="slotProps.item" alt="galleria image" class="w-full block banner-image"  />
+        <img :src="slotProps.item" alt="galleria image" class="w-full block banner-image cursor-pointer"  />
       </template>
     </pv-galleria>
   </div>
@@ -63,7 +62,7 @@ export default {
 
 .banner::after {
   content: "";
-  background-image: url('src/assets/images/banner-background.png');
+  background-image: url('../../../assets/images/banner-background.png');
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -75,7 +74,7 @@ export default {
   z-index: -1;
 }
 .banner img {
-  height: 600px;
+  height: 450px;
 
   margin:auto;
 }

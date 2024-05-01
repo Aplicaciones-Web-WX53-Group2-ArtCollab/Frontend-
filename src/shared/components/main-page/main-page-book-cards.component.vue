@@ -42,7 +42,7 @@ export default {
 
 <template>
   <div class="book-card flex flex-row gap-5 align-items-center">
-    <img :src="bookCover" alt="Book cover" class="cursor-pointer"/>
+    <img :src="bookCover" alt="Book cover" class="cursor-pointer" height="300px" width="200px"/>
     <h1 class="position">{{ position }}</h1>
     <div class="book-info flex flex-column md:align-content-center">
       <p class="book-genre cursor-pointer">{{ bookGenre }}</p>

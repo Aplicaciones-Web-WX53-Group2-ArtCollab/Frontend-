@@ -1,0 +1,112 @@
+<script>
+import { ref } from 'vue'
+import MainPageBookCards from '@/shared/components/main-page/main-page-book-cards.component.vue'
+import { BookInternalService } from '@/content/services/book-internal.service.js'
+import { Book } from '@/content/models/book.entity.js'
+
+export default {
+  name: 'the-main-page-popularity',
+  components: {
+    MainPageBookCards
+  },
+  computed: {
+    booksPopularPerGenre() {
+      return this.books.slice()
+        .sort((a, b) => new Date(b._likes) - new Date(a._likes))
+        .slice(3, 6);
+    },
+    booksTop3() {
+    return this.books.slice()
+        .sort((a, b) => new Date(b._views) - new Date(a._views))
+        .slice(0, 3);
+    }
+  },
+  data() {
+    return {
+      bookApiFake: new BookInternalService(),
+      books: [],
+      selectedGenre : ref(),
+      genres : ref([
+        { id: 1, name: 'Romance' },
+        { id: 2, name: 'Fantasy' },
+        { id: 3, name: 'Science Fiction' },
+        { id: 4, name: 'Mystery' },
+        { id: 5, name: 'Horror' },
+        { id: 6, name: 'Thriller' }
+      ])
+    }
+  },
+  methods: {
+    onGenreChange(){
+      console.log(this.selectedGenre);
+    }
+  },
+  async created() {
+    this.bookApiFake.getAllBooks().then((response) => {
+      response.data.forEach((bookData) => {
+        const { title, description, datePublish, type, id, imgUrl, likes, views } = bookData;
+        if (bookData.type === 'book') {
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views);
+          this.books.push(this.book);
+        }
+      });
+    }).catch((error) => {
+      console.error('Error fetching books:', error);
+    });
+  }
+}
+
+</script>
+
+<template>
+  <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5">
+    <div class="popular-per-genre">
+      <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
+        <span class="font-bold flex md:align-self-center align-self-start ">{{$t('popular_per_genre')}}</span>
+        <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @onChange="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" />
+      </h3>
+      <div class="books flex flex-column gap-5">
+        <main-page-book-cards
+          v-for="(book, index) in booksPopularPerGenre"
+          :key="book"
+          :book-cover="book._imgUrl"
+          :position="index+1"
+          :book-title="book._title"
+          book-writer="Writer"
+          book-illustrator="Illustrator"
+        />
+      </div>
+    </div>
+
+    <div class="top-3">
+      <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
+        <span class="font-bold flex md:align-self-center">{{$t('top_3')}}</span>
+      </h3>
+      <div class="books flex flex-column gap-5">
+        <main-page-book-cards
+          v-for="(book, index) in booksTop3"
+          :key="book"
+          :book-cover="book._imgUrl"
+          :position="index+1"
+          book-genre="Genre"
+          :book-title="book._title"
+          book-writer="Writer"
+          book-illustrator="Illustrator"
+        />
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<style scoped>
+
+.pv-dropdown{
+  height: 3rem;
+}
+
+.popular-per-genre{
+  width:50%;
+}
+
+</style>
