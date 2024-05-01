@@ -94,43 +94,64 @@
   ],
   "reader": [
     {
-      "id": "1",
-      "name": "John Doe",
-      "username": "johndoe",
-      "email": "john@example.com",
-      "password": "password1",
-      "type": "type1",
-      "suscription_id": 1
-    },
-    {
-      "id": "2",
-      "name": "Jane Smith",
-      "username": "janesmith",
-      "email": "jane@example.com",
-      "password": "password2",
-      "type": "type2",
-      "suscription_id": 2
-    },
-    {
-      "id": "b326",
-      "email": "gustavo.huilca.3@gmail.com",
-      "username": "gustavohc",
-      "password": "gustavoabc",
-      "artist": true,
-      "imgURL": "",
-      "name": "",
+      "id": "3",
+      "name": "Miriam Bonastre",
+      "username": "miriam123",
+      "email": "miriam_bonastre@gmail.com",
+      "password": "password321",
       "type": "artist",
-      "subscription_id": ""
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/miriam.png?raw=true",
+      "subscription_id": 1
     },
     {
-      "id": "c275",
-      "email": "gustavo@gmail.com",
-      "username": "gustavoas",
-      "password": "abc123",
-      "imgURL": "",
-      "name": "",
-      "type": "reader",
-      "subscription_id": ""
+      "id": "4",
+      "name": "Laia López",
+      "username": "laialopez",
+      "email": "laia_lopez@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/lala-lopez.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "5",
+      "name": "Gabriel Picolo",
+      "username": "gabriel_picolo",
+      "email": "gabriel_picolo@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/picolo.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "6",
+      "name": "Mireia Martínez",
+      "username": "mireia_martinez",
+      "email": "mireia_martinez@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/Mieria.png?raw=true"
+      "subscription_id": 1
+    },
+    {
+      "id": "7",
+      "name": "Cristina Cid",
+      "username": "jordi_puig",
+      "email": "cristina@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/cid.png?raw=true",
+      "subscription_id": 1
+    },
+    {
+      "id": "8",
+      "name": "MMIvens",
+      "username": "mmivens",
+      "email": "mmivens@gmail.com",
+      "password": "password123",
+      "type": "artist",
+      "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/mmivens.png?raw=true",
+      "subscription_id": 1
     }
   ],
   "reward": [
