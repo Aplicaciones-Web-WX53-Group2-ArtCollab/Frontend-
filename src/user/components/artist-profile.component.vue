@@ -1,6 +1,6 @@
 <script>
 import { Portfolio } from '@/user/models/portfolio.entity.js'
-import { PotfolioEndpoint } from '@/user/services/portfolio-endpoint.service.js'
+import { PortfolioEndpoint } from '@/user/services/portfolio-endpoint.service.js'
 export default {
   name: 'the-artist-profile',
   data() {
@@ -12,7 +12,7 @@ export default {
       portfolioImage3: '',
       portfolios: [],
       portfolio: new Portfolio(),
-      portfolioApiFake: new PotfolioEndpoint()
+      portfolioApiFake: new PortfolioEndpoint()
     }
   },
   async created() {
