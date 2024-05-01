@@ -30,7 +30,7 @@ export default {
       let randomIndex = Math.floor(Math.random() * this.books.length);
       this.books = this.books.slice(randomIndex, randomIndex + 4);
     }).catch((error) => {
-      console.error('Error fetching animals:', error);
+      console.error('Error fetching books:', error);
     });
   }
 

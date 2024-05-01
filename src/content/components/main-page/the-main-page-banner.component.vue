@@ -1,12 +1,36 @@
-<script setup>
+<script>
 import { ref } from 'vue'
+import { BookInternalService } from '@/content/services/book-internal.service.js'
+import { Book } from '@/content/models/book.entity.js'
 
-const images = ref([
-  'https://picsum.photos/id/237/200/300',
-  'https://picsum.photos/id/237/200/300',
-  'https://picsum.photos/id/237/200/300',
-  'https://picsum.photos/id/237/200/300'
-]);
+export default {
+  name: 'the-main-page-banner',
+  data() {
+    return {
+      bookApiFake: new BookInternalService(),
+      books: [],
+    }
+  },
+  computed: {
+    bookImages() {
+      return this.books.slice(0, 5).map(book => book.imgUrl);
+    }
+  },
+  async created() {
+    this.bookApiFake.getAllBooks().then((response) => {
+      response.data.forEach((bookData) => {
+        const { title, description, datePublish, type, id, imgUrl, likes, views } = bookData;
+        if (bookData.type === 'book') {
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views);
+          this.books.push(this.book);
+        }
+      });
+    }).catch((error) => {
+      console.error('Error fetching books:', error);
+    });
+  }
+}
+
 /*TODO:
   - Cambiar las imágenes por carátulas de libros sacadas de la api
 */
@@ -14,10 +38,10 @@ const images = ref([
 
 <template>
   <div class="banner">
-    <pv-galleria :value="images" :numVisible="4" containerStyle="max-width: 640px"
+    <pv-galleria :value="bookImages" :numVisible="4" containerStyle="max-width: 640px"
               :showThumbnails="false" :showIndicators="true" :circular="true" :autoPlay="true" :transitionInterval="2000">
       <template #item="slotProps">
-        <img :src="slotProps.item" alt="galleria image" class="w-full block" />
+        <img :src="slotProps.item" alt="galleria image" class="w-full block banner-image"  />
       </template>
     </pv-galleria>
   </div>
@@ -29,8 +53,12 @@ const images = ref([
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
   position: relative;
+}
+
+.banner-image{
+  width: 300px; /* Cambia esto al ancho que desees */
+  height: 500px; /* Cambia esto al alto que desees */
 }
 
 .banner::after {
@@ -47,8 +75,8 @@ const images = ref([
   z-index: -1;
 }
 .banner img {
-  max-width: 100%;
-  height: auto;
+  height: 600px;
+
   margin:auto;
 }
 
