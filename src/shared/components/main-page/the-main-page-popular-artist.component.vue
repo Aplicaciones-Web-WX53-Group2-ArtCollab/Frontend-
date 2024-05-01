@@ -1,7 +1,5 @@
 <script>
 import MainPageCarousels from '@/shared/components/main-page/main-page-carousels.component.vue'
-import { BookInternalService } from '@/content/services/book-internal.service.js'
-import { Book } from '@/content/models/book.entity.js'
 import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { Reader } from '@/shared/models/reader.entity.js'
 
@@ -32,7 +30,6 @@ export default {
         if (userData.type === 'artist') {
           this.artist = new Reader(id, name,  username, email, password, type, imgUrl, subscription_id);
           this.artists.push(this.artist);
-          console.log(this.artists);
         }
       });
     }).catch((error) => {

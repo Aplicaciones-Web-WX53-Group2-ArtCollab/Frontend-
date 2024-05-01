@@ -12,48 +12,49 @@ export default {
   computed: {
     booksPopularPerGenre() {
       return this.books.slice()
-        .sort((a, b) => new Date(b._likes) - new Date(a._likes))
-        .slice(3, 6);
+        .filter(book => book._genre === this.currentGenre)
+        .sort((a, b) => b._views - a._views)
+        .slice(0, 3)
     },
+
     booksTop3() {
     return this.books.slice()
-        .sort((a, b) => new Date(b._views) - new Date(a._views))
+        .sort((a, b) => b._views - a._views)
         .slice(0, 3);
     }
   },
   data() {
     return {
       bookApiFake: new BookInternalService(),
+      currentGenre: 'drama',
       books: [],
       selectedGenre : ref(),
       genres : ref([
-        { id: 1, name: 'Romance' },
-        { id: 2, name: 'Fantasy' },
-        { id: 3, name: 'Science Fiction' },
-        { id: 4, name: 'Mystery' },
-        { id: 5, name: 'Horror' },
-        { id: 6, name: 'Thriller' }
+        { id: 'drama', name: 'Drama' },
+        { id: 'fantasía', name: 'Fantasía' },
       ])
-    }
-  },
-  methods: {
-    onGenreChange(){
-      console.log(this.selectedGenre);
     }
   },
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description, datePublish, type, id, imgUrl, likes, views } = bookData;
+        const { title, description, datePublish, type, id, imgUrl, likes, views, genre } = bookData;
         if (bookData.type === 'book') {
-          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views);
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views, genre);
           this.books.push(this.book);
         }
       });
     }).catch((error) => {
       console.error('Error fetching books:', error);
     });
-  }
+  },
+  methods: {
+    onGenreChange(){
+      this.currentGenre = this.selectedGenre;
+      console.log(this.currentGenre);
+    }
+  },
+
 }
 
 </script>
@@ -63,7 +64,7 @@ export default {
     <div class="popular-per-genre">
       <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center align-self-start ">{{$t('popular_per_genre')}}</span>
-        <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @onChange="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" />
+        <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @change="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" />
       </h3>
       <div class="books flex flex-column gap-5">
         <main-page-book-cards
@@ -88,7 +89,7 @@ export default {
           :key="book"
           :book-cover="book._imgUrl"
           :position="index+1"
-          book-genre="Genre"
+          :book-genre="book._genre"
           :book-title="book._title"
           book-writer="Writer"
           book-illustrator="Illustrator"

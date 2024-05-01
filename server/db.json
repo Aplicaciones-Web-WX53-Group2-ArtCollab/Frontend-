@@ -191,7 +191,8 @@
       "template_History_id": 1,
       "imgUrl": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/Boulevard-Cover.jpg?raw=true",
       "id": "1",
-      "portfolio_id": 1
+      "portfolio_id": 1,
+      "genre": "Drama"
     },
     {
       "title": "Kid and Balloons",
@@ -217,7 +218,8 @@
       "template_History_id": 3,
       "imgUrl": "https://tse4.mm.bing.net/th?id=OIP.nwenpbzxiX1rdwotc1lv5QHaK-&pid=Api&P=0&h=180",
       "id": "3",
-      "portfolio_id": 3
+      "portfolio_id": 3,
+      "genre": "fantasía"
     },
     {
       "title": "El principito",
@@ -230,7 +232,8 @@
       "template_History_id": 4,
       "imgUrl": "https://tse1.mm.bing.net/th?id=OIP.fHF9K1mCC7iI22YtYRm33QHaJd&pid=Api&P=0&h=180",
       "id": "4",
-      "portfolio_id": 4
+      "portfolio_id": 4,
+      "genre": "fantasía"
     },
     {
       "title": "Space Exploration",
@@ -256,7 +259,8 @@
       "template_History_id": 7,
       "imgUrl": "https://covers.alibrate.com/b/59872e9ccba2bce50c1cbcd7/34fe7d67-f9d6-421c-85f6-6ebc81532936/share",
       "id": "7",
-      "portfolio_id": 7
+      "portfolio_id": 7,
+      "genre": "fantasía"
     },
     {
       "title": "Cityscape",
@@ -282,7 +286,8 @@
       "template_History_id": 9,
       "imgUrl": "https://i.pinimg.com/originals/1d/53/f4/1d53f4a35b9004b3d1ce731a226f30e0.jpg",
       "id": "9",
-      "portfolio_id": 9
+      "portfolio_id": 9,
+      "genre": "romance"
     },
     {
       "title": "Enchanted Forest",
@@ -308,7 +313,8 @@
       "template_History_id": 11,
       "imgUrl": "https://tse2.mm.bing.net/th?id=OIP.gsFT5jQkEOx-UDeaEVakPAHaLU&pid=Api&P=0&h=180",
       "id": "11",
-      "portfolio_id": 11
+      "portfolio_id": 11,
+      "genre": "drama"
     },
     {
       "title": "Underwater World",
@@ -334,7 +340,8 @@
       "template_History_id": 13,
       "imgUrl": "https://tse3.mm.bing.net/th?id=OIP.o7EweG8Sy9Qq7zLhRWYkmgHaMo&pid=Api&P=0&h=180",
       "id": "13",
-      "portfolio_id": 13
+      "portfolio_id": 13,
+      "genre": "drama"
     },
     {
       "title": "Fantasy Castle",
@@ -360,7 +367,8 @@
       "template_History_id": 15,
       "imgUrl": "https://tse2.mm.bing.net/th?id=OIP.L9GCrCznPuEmHSIHTIltkQHaLZ&pid=Api&P=0&h=180",
       "id": "15",
-      "portfolio_id": 15
+      "portfolio_id": 15,
+      "genre": "drama"
     },
     {
       "title": "Forest Spirit",
@@ -386,7 +394,8 @@
       "template_History_id": 17,
       "imgUrl": "https://tse1.mm.bing.net/th?id=OIP.uKXYEcaOZMGtNhEBVV77HgHaLH&pid=Api&P=0&h=180",
       "id": "17",
-      "portfolio_id": 17
+      "portfolio_id": 17,
+      "genre": "drama"
     },
     {
       "title": "Sunset",
@@ -412,7 +421,8 @@
       "template_History_id": 19,
       "imgUrl": "https://tse3.mm.bing.net/th?id=OIP.0-k_Byjyd50llciwHceNKQHaLd&pid=Api&P=0&h=180",
       "id": "19",
-      "portfolio_id": 19
+      "portfolio_id": 19,
+      "genre": "fantasía"
     },
     {
       "title": "Starry Night",

@@ -11,10 +11,11 @@ export default {
   },
   computed: {
     romanceBooks() {
-      return this.books.slice(6,10).map(book => book.imgUrl);
+      return this.books.filter(book => book._genre === 'drama').map(book => book.imgUrl);
     },
+
     fantasyBooks() {
-      return this.books.slice(2.6).map(book => book.imgUrl);
+      return this.books.filter(book => book._genre === 'fantasía').map(book => book.imgUrl);
     }
   },
   data() {
@@ -27,9 +28,9 @@ export default {
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description, datePublish, type, id, imgUrl, likes, views } = bookData;
+        const { title, description, datePublish, type, id, imgUrl, likes, views, genre } = bookData;
         if (bookData.type === 'book') {
-          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views);
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views, genre);
           this.books.push(this.book);
         }
       });
@@ -46,7 +47,7 @@ export default {
     <h3 class="title cursor-pointer">{{$t('genres')}} <i class="pi pi-angle-right"></i></h3>
   </div>
 
-  <main-page-carousels title="Romance" :image="romanceBooks"/>
+  <main-page-carousels title="Drama" :image="romanceBooks"/>
 
   <main-page-carousels :title="$t('fantasy')" :image="fantasyBooks"/>
 

@@ -1,6 +1,6 @@
 export class Book {
 
-  constructor(title = null, description = null, datePublish = null, type = null, id = null, imgUrl =  null, likes = null, views =  null) {
+  constructor(title = null, description = null, datePublish = null, type = null, id = null, imgUrl =  null, likes = null, views =  null, genre=null){
     this._title = title;
     this._description = description;
     this._datePublish = datePublish;
@@ -9,6 +9,7 @@ export class Book {
     this._imgUrl = imgUrl;
     this._likes=likes;
     this._views=views;
+    this._genre=genre;
   }
 
   get title() {
