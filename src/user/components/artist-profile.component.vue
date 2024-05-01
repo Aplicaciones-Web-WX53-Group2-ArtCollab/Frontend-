@@ -42,6 +42,9 @@ export default {
         <img
           src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/artist-profile-image.png?raw=true"
           width="496" alt="Artist profile image">
+        <div class="edit-button">
+          <pv-button class="bg-cyan-400 border-transparent px-5 lg:ml-6 md:ml-6">Editar perfil</pv-button>
+        </div>
         <div class="text">Miriam Bonastre</div>
       </div>
     </div>
@@ -124,6 +127,14 @@ export default {
 .profile-image img {
   position: relative;
   z-index: 1; /* z-index menor para que la imagen esté detrás del texto */
+}
+
+.edit-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 30rem;
+  z-index: 2;
 }
 
 .text {
@@ -236,6 +247,7 @@ export default {
 
   .social-media p {
     font-size: 10px;
+    max-width: 2rem;
   }
 
   .bio p {
@@ -244,6 +256,35 @@ export default {
 
   .banner-background {
     height: 35vh;
+  }
+
+  .edit-button {
+    margin-top: 25rem;
+    margin-left: 7rem;
+  }
+
+  .banner {
+    margin-bottom: 2rem;
+  }
+
+  .small-image {
+    width: 40%;
+    height: auto;
+  }
+
+  .flex-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flex-container-2 p {
+    font-size: 10px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
