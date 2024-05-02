@@ -12,8 +12,11 @@ const en = {
     chat: 'Start a New Chat',
     newchat: 'New chat with',
     text: 'You: Perfect',
-    deleteroom: 'Delete the room'
-    
+    deleteroom: 'Delete the room',
+    room: "Artists Room",
+    profile: "Profile",
+    search: "Search",
+    settings: "Multimedia, files and links"
 }
 
 export default en
