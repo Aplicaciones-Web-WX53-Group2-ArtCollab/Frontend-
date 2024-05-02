@@ -13,6 +13,7 @@ const en = {
     newchat: 'New chat with',
     text: 'You: Perfect',
     deleteroom: 'Delete the room'
+    
 }
 
 export default en
