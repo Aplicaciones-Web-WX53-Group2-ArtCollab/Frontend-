@@ -1,4 +1,5 @@
 import main_page_en from './main-page/main_page_en'
+import publish_en from '@/locale/publish/publish_en.js'
 
 const en = {
  navbar:{
@@ -17,20 +18,6 @@ const en = {
     about: 'About',
     copyright: 'All rights reserved',
   },
-  bookPublish:{
-    book: 'Book',
-    chapters: 'Chapters',
-    thumbnail: 'Thumbnail',
-    genre: 'Genre',
-    title: 'Title',
-    summary: 'Summary',
-    createBook: 'Create Book',
-    publish: 'Publish',
-    save: 'Save',
-    preview: 'Preview',
-    uploadIllustrations: 'Upload Illustrations',
-    dragAndDrop: 'Drag and drop files to here to upload.',
-  },
   editDetails:{
     editDetails: 'Edit story details',
     storyDetails: 'Story details',
@@ -45,6 +32,7 @@ const en = {
   },
 
   ...main_page_en,
+  ...publish_en,
 }
 
 export default en

@@ -1,4 +1,5 @@
 import main_page_es from '@/locale/main-page/main_page_es.js'
+import publish_es from '@/locale/publish/publish_es.js'
 
 const es = {
   navbar:{
@@ -17,20 +18,6 @@ const es = {
     about: 'Acerca de',
     copyright: 'Todos los derechos reservados',
   },
-  bookPublish:{
-    book: 'Libro',
-    chapters: 'Capítulos',
-    thumbnail: 'Miniatura',
-    genre: 'Género',
-    title: 'Título',
-    summary: 'Resumen',
-    createBook: 'Crear Libro',
-    publish: 'Publicar',
-    save: 'Guardar',
-    preview: 'Vista previa',
-    uploadIllustrations: 'Subir Ilustraciones',
-    dragAndDrop: 'Arrastra y suelta archivos aquí para subir.',
-  },
   editDetails:{
     editDetails: 'Editar detalles de la historia',
     storyDetails: 'Detalles de la historia',
@@ -45,6 +32,7 @@ const es = {
   },
 
   ...main_page_es,
+  ...publish_es,
 }
 
 export default es
