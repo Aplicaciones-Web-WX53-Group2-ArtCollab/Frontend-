@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "cuenta-info",
+  name: "the-user-configuration",
     data() {
       return {
         showCancel: {
@@ -21,14 +21,14 @@ export default {
 </script>
 
 <template>
-  <div class="back">
+  <div class="back" aria-label="User configuration page">
     <h1>{{$t('account')}}</h1>
   <p class="text-xl">{{$t('textaccount')}}</p>
   <br/>
-  <div class="border border-round">
+  <div class="border border-round" aria-label="Account settings">
     <pv-card>
       <template #content>
-          <div class="text-center or">
+          <div class="text-center or" aria-label="User settings">
             <p class="lg:text-lg text-lg">{{$t('name')}}  <pv-button :disabled="showCancel.username" class="orange-button" @click="toggleCancel('username')" :label="$t('change')" link /> <pv-button class="red-button" v-if="showCancel.username" @click="toggleCancel('username')" :label="$t('delete')" link /></p>
             <p class="lg:text-lg text-lg">{{$t('password')}}  <pv-button :disabled="showCancel.password" class="orange-button" @click="toggleCancel('password')" :label="$t('change')" link /> <pv-button class="red-button" v-if="showCancel.password" @click="toggleCancel('password')" :label="$t('delete')" link /></p>
             <p class="lg:text-lg text-lg">{{$t('email')}}  <pv-button :disabled="showCancel.email" class="orange-button" @click="toggleCancel('email')" :label="$t('change')" link /> <pv-button class="red-button" v-if="showCancel.email" @click="toggleCancel('email')" :label="$t('delete')" link /></p>
@@ -39,7 +39,7 @@ export default {
   </pv-card>
   </div>
   <br/>
-  <div class="text-center text-xl">
+  <div class="text-center text-xl" aria-label="Submit and change profile options">
     <pv-button class="blue" :label="$t('submit')" />
     <br/>
     <br/>
