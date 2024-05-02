@@ -6,11 +6,7 @@ import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/aura-light-green/theme.css'
 
 import { createApp } from 'vue'
-import App from './App.vue'
 
-import PrimeVue from 'primevue/config';
-import  Button  from 'primevue/button';
-import { createApp } from 'vue';
 import App from './App.vue';
 
 import 'primevue/resources/themes/aura-light-green/theme.css';
@@ -18,29 +14,21 @@ import "primeflex/primeflex.css";
 import 'primeicons/primeicons.css';
 import PrimeVue from 'primevue/config'
 import router from '@/router.js'
-import Card from 'primevue/card'
-import Rating from 'primevue/rating'
+
 import Toolbar from 'primevue/toolbar';
-import IconField from 'primevue/iconfield';
-import InputIcon from 'primevue/inputicon';
-import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import Divider from 'primevue/divider';
 import Sidebar from 'primevue/sidebar';
 import Card from 'primevue/card';
 import Password from 'primevue/password';
 import Checkbox from 'primevue/checkbox'
-import Divider from 'primevue/divider'
-import Carousel from 'primevue/carousel'
 import Image from 'primevue/image'
-import Galleria from 'primevue/galleria'
 import DataView from 'primevue/dataview';
 
 import ToastService from "primevue/toastservice";
 import FileUpload from 'primevue/fileupload';
 import Toast from "primevue/toast";
 import Carousel from 'primevue/carousel'
-import ToastService from "primevue/toastservice";
 import ProgressBar from "primevue/progressbar";
 import Badge from "primevue/badge";
 import Dropdown from "primevue/dropdown";
@@ -59,7 +47,6 @@ const app = createApp(App);
 app.use(PrimeVue);
 app.component('pv-button', Button);
 app.component('pv-toolbar', Toolbar);
-app.component('pv-button', Button);
 app.component('pv-card', Card)
 app.component("pv-rating", Rating)
 app.component('pv-divider', Divider);
@@ -78,15 +65,10 @@ app.component('pv-tabview', TabView);
 app.component('pv-tabpanel', TabPanel);
 app.component('pv-textarea', Textarea);
 app.component('pv-sidebar', Sidebar);
-app.component('pv-card', Card);
 app.component('pv-password', Password);
 app.component('pv-checkbox', Checkbox);
-app.component('pv-divider', Divider);
-app.component('pv-carousel', Carousel);
 app.component('pv-image', Image);
-app.component('pv-galleria', Galleria);
 app.component('pv-dataView', DataView);
-app.component('pv-rating', Rating);
 app.use(i18n);
 app.use(ToastService);
 
