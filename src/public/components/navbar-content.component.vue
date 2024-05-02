@@ -1,7 +1,7 @@
 <script>
 import TheUserLogin from '@/user/components/the-user-login.component.vue'
 import TheUserLoginEmail from '@/user/components/the-user-login-email.component.vue'
-import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 
 export default {
   name: 'navbar-content',

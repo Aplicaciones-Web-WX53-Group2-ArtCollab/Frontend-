@@ -1,5 +1,5 @@
 <script>
-import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 
 export default {
   name: 'the-user-login-email',

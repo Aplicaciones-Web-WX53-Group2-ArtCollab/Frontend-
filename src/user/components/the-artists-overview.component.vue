@@ -1,5 +1,5 @@
 <script>
-import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { Reader } from '@/user/models/reader.entity.js'
 import { IllustrationService } from '@/shared/services/illustration.service.js'
 import { Book } from '@/shared/models/book.entity.js'
