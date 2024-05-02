@@ -69,6 +69,7 @@ app.component('pv-password', Password);
 app.component('pv-checkbox', Checkbox);
 app.component('pv-image', Image);
 app.component('pv-dataView', DataView);
+app.use(router);
 app.use(i18n);
 app.use(ToastService);
 
