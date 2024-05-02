@@ -9,22 +9,22 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
   <div class="card">
     <pv-tabview id='tv' class="details-tabview lg:max-w-full md:max-w-20rem">
       <div class="flex flex-column">
-        <pv-tabpanel :header="$t('editDetails.storyDetails')">
+        <pv-tabpanel :header="$t('editDetails.storyDetails')" aria-label="Story Details">
           <div class="flex align-items-center justify-content-center mb-5 mt-3">
             <div class="title flex flex-column">
               <label class="text-2xl font-bold" for="title">{{ $t('editDetails.title') }}</label>
-              <pv-textarea v-model="defaultValue" rows="1" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
+              <pv-textarea v-model="defaultValue" rows="1" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" aria-label="Title" />
             </div>
           </div>
           <div class="flex align-items-center justify-content-center mb-5">
             <div class="description flex flex-column">
               <label class="text-2xl font-bold" for="description">{{ $t('editDetails.description') }}</label>
-              <pv-textarea v-model="defaultValue2" rows="14" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" />
+              <pv-textarea v-model="defaultValue2" rows="14" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" aria-label="Description" />
             </div>
           </div>
         </pv-tabpanel>
       </div>
-      <pv-tabpanel :header="$t('editDetails.contentTable')">
+      <pv-tabpanel :header="$t('editDetails.contentTable')" aria-label="Content Table">
         <pv-card class="shadow-none">
               <template #content>
                 <div class="table-of-contents flex flex-row gap-8">
@@ -124,7 +124,7 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
               </template>
         </pv-card>
       </pv-tabpanel>
-      <pv-tabpanel :header="$t('editDetails.earned')">
+      <pv-tabpanel :header="$t('editDetails.earned')" aria-label="Earned">
       </pv-tabpanel>
     </pv-tabview>
   </div>

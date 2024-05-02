@@ -18,11 +18,11 @@ const paddingBottom = computed(() => props.height - lineHeight);
 </script>
 
 <template>
-  <div class="input-container">
+  <div class="input-container" aria-label="Input Container">
     <label class="placeholder-label" v-if="!value" :style="props.placeholderStyle">{{ props.placeholder }}</label>
     <pv-inputtext id="username" v-model="value"
                   :style="{ height: props.height + 'px', width: '100%', paddingBottom: paddingBottom + 'px', border: props.borderStyle, outline: props.outlineStyle }"
-                  aria-describedby="username-help" />
+                  aria-describedby="username-help" aria-label="Username Input" />
   </div>
 </template>
 
