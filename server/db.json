@@ -77,17 +77,6 @@
       "title": "Portfolio 2",
       "description": "Description 2",
       "quantity": 20
-    },
-    {
-      "id": "1",
-      "reader_id": 1,
-      "create_at": "2024-04-25",
-      "title": "Portfolio 1",
-      "description": "Miriam's portfolio",
-      "quantity": 3,
-      "image_1": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-1.png?raw=true",
-      "image_2": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-2.png?raw=true",
-      "image_3": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-3.png?raw=true"
     }
   ],
   "reader": [
