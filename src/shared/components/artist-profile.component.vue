@@ -42,6 +42,9 @@ export default {
         <img
           src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/artist-profile-image.png?raw=true"
           width="496" alt="Artist profile image">
+        <div class="connect-button">
+          <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">Conectar</pv-button>
+        </div>
         <div class="text">Miriam Bonastre</div>
       </div>
     </div>
@@ -124,6 +127,14 @@ export default {
 .profile-image img {
   position: relative;
   z-index: 1; /* z-index menor para que la imagen esté detrás del texto */
+}
+
+.connect-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 30rem;
+  z-index: 2;
 }
 
 .text {
@@ -245,6 +256,11 @@ export default {
 
   .banner-background {
     height: 35vh;
+  }
+
+  .connect-button {
+    margin-top: 25rem;
+    margin-right: 7rem;
   }
 
   .banner {
