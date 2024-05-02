@@ -1,16 +1,24 @@
-<script>
+<script setup>
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import FooterContent from '@/public/components/footer-content.component.vue'
 import TheChatRoom from '@/collaboration/components/the-chat-room.component.vue'
+import { ref } from 'vue'
 
-export default {
-  name: 'the-page-chat',
-  components: { TheChatRoom,  FooterContent, NavbarContent }
-}
+const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
+const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
+
+const handleShowLoginUpdate = (value) => {
+  showLogin.value = value;
+}; //Esta función se encarga de actualizar el valor de la variable showLogin
+const handleShowEmailLoginUpdate = (value) => {
+  showEmailLogin.value = value;
+}; //Esta función se encarga de actualizar el valor de la variable showEmailLogin
+
 </script>
 
 <template>
-  <navbar-content/>
+  <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
+                  @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <the-chat-room/>
   <footer-content/>
 </template>

@@ -5,11 +5,22 @@ import BookBanner from '@/content/components/publish/book-publish-banner.compone
 import BookInput from '@/content/components/publish/book-publish-input.component.vue'
 import BookFileUpload from '@/content/components/publish/book-publish-fileupload.component.vue'
 import BookPublishEditor from '@/content/components/publish/the-book-publish-editor.component.vue'
+import { ref } from 'vue'
+const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
+const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
+
+const handleShowLoginUpdate = (value) => {
+  showLogin.value = value;
+}; //Esta función se encarga de actualizar el valor de la variable showLogin
+const handleShowEmailLoginUpdate = (value) => {
+  showEmailLogin.value = value;
+}; //Esta función se encarga de actualizar el valor de la variable showEmailLogin
 
 </script>
 
 <template>
-  <navbar-content/>
+  <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
+                  @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <book-banner/>
   <div class="buttons flex justify-content-end flex-wrap">
     <div class="px-6">

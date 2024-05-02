@@ -1,29 +1,10 @@
 <script setup>
-import FooterContent from '@/public/components/footer-content.component.vue'
-import NavbarContent from '@/public/components/navbar-content.component.vue'
-
-import { ref } from 'vue'
-
-import TheArtistProfileEdit from '@/user/components/artist-profile-edit.component.vue'
-import TheUserProfile from '@/user/components/the-user-profile.component.vue'
-
-const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
-const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
-
-const handleShowLoginUpdate = (value) => {
-  showLogin.value = value;
-}; //Esta función se encarga de actualizar el valor de la variable showLogin
-const handleShowEmailLoginUpdate = (value) => {
-  showEmailLogin.value = value;
-}; //Esta función se encarga de actualizar el valor de la variable showEmailLogin
+import MainPage from '@/shared/pages/main-page.vue'
 
 </script>
 
 <template>
-  <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
-                  @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
-  <the-user-profile/>
-  <footer-content/>
+  <main-page/>
 </template>
 
 <style scoped></style>
