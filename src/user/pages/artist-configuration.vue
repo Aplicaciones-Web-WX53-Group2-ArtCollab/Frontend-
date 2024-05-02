@@ -2,6 +2,7 @@
   import NavbarContent from '@/public/components/navbar-content.component.vue'
   import footerContentComponent from '@/public/components/footer-content.component.vue'
   import theUserConfigurationComponent from '../components/the-user-configuration.component.vue';
+  import { ref } from 'vue'
 
   const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
   const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico

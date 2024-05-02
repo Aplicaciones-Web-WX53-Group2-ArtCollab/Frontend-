@@ -1,7 +1,8 @@
 <script setup>
-import ThePreviewchapter from '@/content/components/the-previewchapter.component.vue'
+import thePreviewchapterComponent from '@/content/components/preview-chapter/the-previewchapter.component..vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import FooterContent from '@/public/components/footer-content.component.vue'
+import { ref } from 'vue'
 const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
 const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
 
@@ -18,7 +19,7 @@ const handleShowEmailLoginUpdate = (value) => {
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <navbar-content/>
-    <the-previewchapter/>
+    <the-previewchapter-component/>
   <footer-content/>
 </template>
 

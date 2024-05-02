@@ -21,9 +21,6 @@ const handleShowEmailLoginUpdate = (value) => {
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <genres-navbar class="my-7"/>
-  <main>
-    <router-view></router-view>
-  </main>
   <all-books-cards/>
   <footer-content/>
 </template>
