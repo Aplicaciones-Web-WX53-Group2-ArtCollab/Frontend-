@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'artist-room'
+  name: 'the-artist-room'
 }
 </script>
 

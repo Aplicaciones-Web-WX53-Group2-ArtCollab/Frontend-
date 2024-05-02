@@ -1,13 +1,9 @@
 <script setup>
-import NavbarContent from "@/public/components/navbar-content.component.vue";
-import FooterContent from "@/public/components/footer-content.component.vue";
-import ArtistRoom from "@/components/artist-room.component.vue";
+import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
 </script>
 
 <template>
-  <navbar-content></navbar-content>
-  <artist-room></artist-room>
-  <footer-content></footer-content>
+  <the-page-chat/>
 </template>
 
 <style scoped>
