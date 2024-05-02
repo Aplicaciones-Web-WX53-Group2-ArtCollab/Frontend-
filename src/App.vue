@@ -21,7 +21,7 @@ const handleShowEmailLoginUpdate = (value) => {
 <template>
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
-  <the-artists-overview></the-artists-overview>
+  <the-user-register/>
   <footer-content/>
 </template>
 

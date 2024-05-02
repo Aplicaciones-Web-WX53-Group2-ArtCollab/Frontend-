@@ -41,7 +41,6 @@ export default {
         if (illustrationData.type === 'illustration') {
           this.illustration = new Book(title, description, date_publish, type, id, imgUrl, likes, views);
           this.illustrations.push(this.illustration);
-          console.log(this.illustrations);
         }
       });
     }).catch((error) => {
@@ -66,7 +65,7 @@ export default {
 
     </pv-galleria>
 
-    <div class="artists flex flex-column justify-content-center align-items-center mb-5">
+    <div class="artists flex flex-column justify-content-center align-items-center mb-5" aria-label="Artist Gallery">
       <h3 class="text-2xl font-bold mt-5 mb-5">{{$t('artists')}}</h3>
       <div class="artist-profile-images flex flex-wrap justify-content-center gap-8">
         <div v-for="(image, index) in artist_profile_images" :key="index" class="image-container md:w-3 w-8 flex justify-content-center flex-column justify-content-center">
