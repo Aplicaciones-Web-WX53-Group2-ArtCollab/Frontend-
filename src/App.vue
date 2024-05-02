@@ -26,6 +26,4 @@ const handleShowEmailLoginUpdate = (value) => {
   <footer-content/>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
