@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner" aria-label="Banner de la página principal">
     <pv-galleria :value="bookImages" :numVisible="4" containerStyle="max-width: 640px"
               :showThumbnails="false" :showIndicators="true" :circular="true" :autoPlay="true" :transitionInterval="2000">
       <template #item="slotProps">

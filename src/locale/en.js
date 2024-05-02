@@ -16,6 +16,7 @@ const en = {
     monetization: 'Monetization',
     about: 'About',
     copyright: 'All rights reserved',
+    artists: 'Artists',
   },
   bookPublish:{
     book: 'Book',

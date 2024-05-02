@@ -41,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <div class="recent-books-container mt-5">
+  <div class="recent-books-container mt-5" aria-label="Sección de libros recientes">
     <main-page-carousels :title="$t('recent_books')" :image="recentBooks"/>
   </div>
 </template>

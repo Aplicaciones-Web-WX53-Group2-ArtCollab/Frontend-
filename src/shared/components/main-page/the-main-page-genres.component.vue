@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <div class="title-container flex justify-content-center mt-5">
+  <div class="title-container flex justify-content-center mt-5 " aria-label="libros de los géneros drama y fantasía">
     <h3 class="title cursor-pointer">{{$t('genres')}} <i class="pi pi-angle-right"></i></h3>
   </div>
 
