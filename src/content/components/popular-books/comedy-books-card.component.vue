@@ -24,9 +24,23 @@ export default {
       let randomIndex = Math.floor(Math.random() * this.books.length);
       this.books = this.books.slice(randomIndex, randomIndex + 6);
     }).catch((error) => {
-      console.error('Error fetching animals:', error);
+      console.error('Error fetching data:', error);
     });
+  },
+  methods:{
+     increaseLikes(id,likes){
+        this.bookApiFake.increaseLike(id,likes).then((response) => {
+          const bookEdited = this.books.find(book => book.id === id);
+          if (bookEdited) {
+            bookEdited.likes = response.data.likes;
+          }
+        }).catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }
   }
+
+
 
 }
 </script>
@@ -44,7 +58,7 @@ export default {
             {{ book.title }}
           </template>
           <template #footer>
-            <pv-rating class="rating" :cancel="false" :stars="1">
+            <pv-rating class="rating" :cancel="false" :stars="1" @click="increaseLikes(book.id, book.likes)">
               <template #onicon>
                 <i class="pi pi-heart-fill">{{book.view}} M</i>
               </template>

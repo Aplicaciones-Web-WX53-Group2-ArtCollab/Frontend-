@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'perfil-capitulo',
+  name: 'the-chapter',
 
   data() {
     return {
@@ -100,8 +100,8 @@ export default {
 </script>
 
 <template>
-  <div class="bg-white">
-  <div class="bg-dark-blue">
+  <div class="bg-white" aria-label="Main content area">
+  <div class="bg-dark-blue" aria-label="Header section">
     <pv-toolbar class="flex border-noround text-white-alpha-90 bg-indigo-900	">
       <template #start class="flex justify-content-start">
         <div class="flex justify-content-start">
@@ -120,14 +120,14 @@ export default {
       </template>
     </pv-toolbar>
   </div>
-  <div class="flex justify-content-center">
+  <div class="flex justify-content-center" aria-label="Comic content section">
   <div class="flex-column flex justify-content-center">
     <p class ="text-center lg:text-2xl text-black-alpha-90">{{ $t('caps') }}</p>
     <img class="responsive-image" src="/src/assets/images/comic-text.png" alt="ArtCollab Logo" width="800" height="1000" />
     <img class="responsive-image" src="/src/assets/images/comic-image.png" alt="ArtCollab Logo" width="800" height="1000" />
   </div>
   </div>
-  <div class="flex justify-content-center text-black-alpha-90 mt-4">
+  <div class="flex justify-content-center text-black-alpha-90 mt-4" aria-label="Share section">
     <div class="flex-column">
     <p class="font-bold">{{ $t('share') }}</p>
       <div class="flex">
@@ -143,7 +143,7 @@ export default {
        </div>
     </div>
   </div>
-    <div id="cont">
+    <div id="cont" aria-label="Chapter navigation section">
       <div id="slider-cont">
         <span @click="slideRight" class="btn"></span>
         <div id="slider">
@@ -160,11 +160,11 @@ export default {
         <span @click="slideLeft" class="btn"></span>
       </div>
     </div>
-    <div class="flex justify-content-start text-black-alpha-90 mt-4">
+    <div class="flex justify-content-start text-black-alpha-90 mt-4" aria-label="Author and artist information section">
       <div class="lg:ml-8 "><p class="text-600	">{{ $t('author') }}</p> <br/> <p class="text-lg font-bold">Maria M. Salvador</p></div>
       <div class="lg:ml-8 "><p class="text-600	">{{ $t('artist') }}</p> <br/> <p class="text-lg font-bold ml-2">MMIvens</p></div>
     </div>
-    <div class="flex justify-content-start text-black-alpha-90 mt-4">
+    <div class="flex justify-content-start text-black-alpha-90 mt-4" aria-label="Comments section">
       <p class="text-lg text-black-alpha-90 font-bold">{{ $t('coments') }}</p>
     </div>
     <div>
@@ -176,7 +176,7 @@ export default {
           </pv-button>
         </div>
       </div>
-      <div>
+      <div aria-label="Comment input section">
         <div class="comments-section">
           <div class="flex justify-content-start">
             <pv-tabview class="full-width">

@@ -5,7 +5,7 @@ import MainPage from '@/shared/pages/main-page.vue'
 </script>
 
 <template>
-<!--  <router-view/>-->
+ <router-view/>
   <main-page/>
 </template>
 
