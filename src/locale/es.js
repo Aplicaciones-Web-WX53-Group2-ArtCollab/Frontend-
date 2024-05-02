@@ -16,6 +16,19 @@ const es = {
         copyright: 'Todos los derechos reservados',
         artists: 'Artistas',
     },
+    artistroom:{
+        room: 'Esta es tu sala de artista',
+        chat: 'Iniciar un nuevo chat',
+        newchat: 'Nuevo chat con',
+        text: 'Tu: Perfecto',
+        deleteroom: 'Eliminar la sala',
+    },
+    chatroom:{
+        rooms: "Sala de artistas",
+        profile: "Perfil",
+        search: "Buscar",
+        settings: "Multimedia, archivos y enlaces",
+    }
 }
 
 export default es

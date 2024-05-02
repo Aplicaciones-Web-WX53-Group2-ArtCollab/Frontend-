@@ -11,7 +11,7 @@ export default {
       <div class="flex justify-content-start" aria-label="Navigation bar">
         <pv-button icon="pi pi-chevron-left" class="text-black-alpha-90 border-none bg-transparent"></pv-button>
         <div class="text-black-alpha-90">
-          <p class="text-xl">{{$t('room')}}</p>
+          <p class="text-xl">{{$t('rooms')}}</p>
         </div>
       </div>
     </template>
