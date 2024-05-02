@@ -67,6 +67,167 @@
       "chat_id": 2,
       "isRead": false,
       "isSend": true
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "6S_0qxi"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "OxQWd6h"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "e5KVICM"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "QqTcN18"
+    },
+    {
+      "content": "Hika",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "mFH6a-7"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "T8SW3F0"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "W-YND2R"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "2Uzkd71"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "VzpXwUG"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "gzX0j-L"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "bTUUEjZ"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "rJeMZOD"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "i5koQWo"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "-9CPrvM"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "LbL8g7b"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "uKrFI7u"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "j9WnT14"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "LmeQM4U"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "kwlTbP5"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "vVnLEi_"
+    },
+    {
+      "content": "Hola",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "qZRFL8J"
+    },
+    {
+      "content": "Gustacoooo",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "xK99kAl"
+    },
+    {
+      "content": "Gustacoooo",
+      "chat_id": 1,
+      "isRead": false,
+      "isSend": true,
+      "id": "q2r5ZwF"
     }
   ],
   "portfolio": [
@@ -148,7 +309,6 @@
       "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/mmivens.png?raw=true",
       "subscription_id": 1
     }
-
   ],
   "reward": [
     {

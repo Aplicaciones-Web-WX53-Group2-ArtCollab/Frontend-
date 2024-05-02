@@ -28,6 +28,7 @@ const en = {
         profile: "Profile",
         search: "Search",
         settings: "Multimedia, files and links",
+        notMessage:'Not message found :('
     }
 
 }

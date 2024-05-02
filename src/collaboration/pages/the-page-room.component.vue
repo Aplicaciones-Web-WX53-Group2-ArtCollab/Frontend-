@@ -12,7 +12,7 @@ export default {
 <template>
   <navbar-content/>
   <artist-room/>
-<footer-content/>
+  <footer-content/>
 
 </template>
 
