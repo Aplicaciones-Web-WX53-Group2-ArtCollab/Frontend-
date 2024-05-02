@@ -30,9 +30,6 @@ export default {
   }
 }
 
-/*TODO:
-  - Cambiar las imágenes por carátulas de libros sacadas de la api
-*/
 </script>
 
 <template>
@@ -40,7 +37,9 @@ export default {
     <pv-galleria :value="bookImages" :numVisible="4" containerStyle="max-width: 640px"
               :showThumbnails="false" :showIndicators="true" :circular="true" :autoPlay="true" :transitionInterval="2000">
       <template #item="slotProps">
-        <img :src="slotProps.item" alt="galleria image" class="w-full block banner-image cursor-pointer"  />
+        <router-link to="/book-profile">
+          <img :src="slotProps.item" alt="galleria image" class="w-full block banner-image cursor-pointer"  />
+        </router-link>
       </template>
     </pv-galleria>
   </div>
@@ -56,8 +55,8 @@ export default {
 }
 
 .banner-image{
-  width: 300px; /* Cambia esto al ancho que desees */
-  height: 500px; /* Cambia esto al alto que desees */
+  width: 300px; 
+  height: 500px; 
 }
 
 .banner::after {
