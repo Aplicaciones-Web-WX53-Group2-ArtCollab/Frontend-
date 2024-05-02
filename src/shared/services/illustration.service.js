@@ -2,7 +2,7 @@ import axios from 'axios'
 const http = axios.create({
   baseURL: 'http://localhost:3000'
 })
-export class TemplateEndpointService {
+export class IllustrationService {
   getAllContent() {
     return http.get('/template')
   }

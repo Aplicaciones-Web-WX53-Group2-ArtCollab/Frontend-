@@ -9,9 +9,9 @@
       <hr class="divider">
       <div class="book-list">
         <div v-for="(book, index) in books" :key="index" class="book-row">
-          <img :src="book.getImage()" alt="Book cover" class="book-image">
+          <img :src="book._imgUrl" alt="Book cover" class="book-image">
           <div class="book-info">
-            <h3 class="book-title">{{ book.getName() }}</h3>
+            <h3 class="book-title">{{ book._title }}</h3>
             <p class="book-update">Actualizada abr.02,2024 10:11 AM</p>
             <div class="book-stats">
               <i class="pi pi-eye"> 33M</i>
@@ -28,21 +28,21 @@
 
 
 <script>
-import axios from 'axios';
 import { Book } from '@/shared/models/book.entity.js'
-import { BookApiFake } from '@/shared/services/book-api-fake.service.js'
+import { BookService } from '@/shared/services/book.service.js'
 
 export default {
-  name: 'BooksList',
+  name: 'the-user-books-historial',
   data() {
     return {
       books: [],
-      bookApiFake:new BookApiFake()
+      bookApiFake:new BookService()
     };
   },
   created() {
     this.bookApiFake.getBook().then((response) => {
-        this.books = response.data.map(bookData => new Book(bookData.name, bookData.image));
+        this.books = response.data.map(bookData => new Book(bookData.name,'','','','', bookData.image));
+        console.log(this.books);
       })
       .catch((error) => {
         console.error('Error fetching books:', error);

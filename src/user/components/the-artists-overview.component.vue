@@ -1,7 +1,7 @@
 <script>
 import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
 import { Reader } from '@/user/models/reader.entity.js'
-import { TemplateEndpointService } from '@/shared/services/template-endpoint.service.js'
+import { IllustrationService } from '@/shared/services/illustration.service.js'
 import { Book } from '@/shared/models/book.entity.js'
 
 export default {
@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       userServices: new UserEndpointService(),
-      contentServices: new TemplateEndpointService(),
+      contentServices: new IllustrationService(),
       artists: [],
       illustrations: [],
     };

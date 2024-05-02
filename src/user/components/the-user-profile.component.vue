@@ -1,5 +1,5 @@
 <script>
-import { BookApiFake } from '@/shared/services/book-api-fake.service.js'
+import { BookService } from '@/shared/services/book.service.js'
 import { Book } from '@/shared/models/book.entity.js'
 
 export default {
@@ -7,7 +7,7 @@ export default {
   data() {
     return {
       books: [],
-      bookApiFake:new BookApiFake(),
+      bookApiFake:new BookService(),
       social_media: 'Social Media',
       illustrated_books: 'Illustrated Books',
       portfolio: 'Portfolio'

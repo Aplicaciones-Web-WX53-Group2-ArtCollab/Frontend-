@@ -7,10 +7,6 @@ import 'primevue/resources/themes/aura-light-green/theme.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import ArtistOverview from '@/user/pages/artist-overview.vue'
-import ArtistProfilePage from '@/user/pages/artist-profile-page-1.vue'
-import UserRecoverPassword from '@/user/pages/user-recover-password.vue'
-import UserRegister from '@/user/pages/user-register.vue'
 
 import PrimeVue from 'primevue/config';
 import  Button  from 'primevue/button';
