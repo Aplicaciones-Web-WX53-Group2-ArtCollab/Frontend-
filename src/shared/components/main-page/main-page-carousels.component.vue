@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-  <div class="genre-container mt-7">
+  <div class="genre-container mt-7" aria-label="Carrusel de imágenes de libros">
     <h3 class="title cursor-pointer">{{ title }} <i class="pi pi-angle-right"></i> </h3>
     <pv-carousel :value="image" circular :autoplayInterval="3000" :num-visible="3" :num-scroll="1" :responsive-options="responsiveOptions">
       <template #item="slotProps" >

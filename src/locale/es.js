@@ -17,6 +17,7 @@ const es = {
     monetization: 'Monetización',
     about: 'Acerca de',
     copyright: 'Todos los derechos reservados',
+    artists: 'Artistas',
   },
   editDetails:{
     editDetails: 'Editar detalles de la historia',

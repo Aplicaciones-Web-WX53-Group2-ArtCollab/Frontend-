@@ -51,7 +51,6 @@ export default {
   methods: {
     onGenreChange(){
       this.currentGenre = this.selectedGenre;
-      console.log(this.currentGenre);
     }
   },
 
@@ -60,11 +59,11 @@ export default {
 </script>
 
 <template>
-  <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5">
+  <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5" aria-label="Sección de libros populares">
     <div class="popular-per-genre">
       <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center align-self-start ">{{$t('popular_per_genre')}}</span>
-        <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @change="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" />
+        <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @change="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" aria-label="Seleccionar género de libro"/>
       </h3>
       <div class="books flex flex-column gap-5">
         <main-page-book-cards
@@ -75,6 +74,7 @@ export default {
           :book-title="book._title"
           book-writer="Writer"
           book-illustrator="Illustrator"
+          aria-label="Tarjeta de libro popular por género"
         />
       </div>
     </div>
@@ -93,6 +93,7 @@ export default {
           :book-title="book._title"
           book-writer="Writer"
           book-illustrator="Illustrator"
+          aria-label="Tarjeta de libro popular"
         />
       </div>
     </div>

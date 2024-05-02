@@ -41,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <div class="recent-books-container mt-7">
+  <div class="recent-books-container mt-7" aria-label="Historias recientes">
     <main-page-carousels :title="$t('popular_artists')" :image="popularArtistsImages" :name="popularArtistsNames" height="300px" width="300px"/>
   </div>
 </template>

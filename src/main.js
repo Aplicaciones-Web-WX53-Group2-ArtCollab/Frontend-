@@ -28,6 +28,8 @@ import Editor from 'primevue/editor';
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import Textarea from 'primevue/textarea'
+import InputIcon from 'primevue/inputicon'
+import IconField from 'primevue/iconfield'
 
 const app = createApp(App);
 
@@ -40,8 +42,10 @@ app.component('pv-toast', Toast);
 app.component('pv-fileupload', FileUpload);
 app.component('pv-progressbar', ProgressBar);
 app.component('pv-badge', Badge);
+app.component('pv-iconfield', IconField);
 app.component('pv-dropdown', Dropdown);
 app.component('pv-inputtext', InputText);
+app.component('pv-inputicon', InputIcon);
 app.component('pv-carousel', Carousel);
 app.component('pv-galleria', Galleria);
 app.component('pv-editor', Editor);
