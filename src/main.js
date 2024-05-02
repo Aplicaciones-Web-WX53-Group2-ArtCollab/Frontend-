@@ -84,7 +84,4 @@ app.use(VueMq, {
   },
   defaultBreakpoint: 'sm',
 });
-
-
-
-app.mount('#app')
+app.mount('#app');

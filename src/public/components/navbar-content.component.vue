@@ -34,7 +34,6 @@ export default {
           icon: 'pi pi-times'
         }
       ],
-      visible:false,
     };
   },
   methods: {
