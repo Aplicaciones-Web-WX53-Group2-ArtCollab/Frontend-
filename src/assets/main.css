@@ -9,6 +9,10 @@ a,
   padding: 3px;
 }
 
+body .p-component{
+  font-family: 'Archivo', sans-serif;
+}
+
 body{
   background-color:white;
   color:black;
@@ -44,5 +48,4 @@ body{
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
-
 }

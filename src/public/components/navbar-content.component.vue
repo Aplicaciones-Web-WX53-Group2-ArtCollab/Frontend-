@@ -24,6 +24,17 @@ export default {
       visible: false,
       loggedInUser:null,
       userServices: new UserEndpointService(),
+      items: [
+        {
+          label: 'Update',
+          icon: 'pi pi-refresh'
+        },
+        {
+          label: 'Delete',
+          icon: 'pi pi-times'
+        }
+      ],
+      visible:false,
     };
   },
   methods: {
