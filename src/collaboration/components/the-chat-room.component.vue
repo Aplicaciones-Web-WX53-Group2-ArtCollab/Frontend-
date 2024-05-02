@@ -27,7 +27,7 @@ methods: {
 <template>
 
   <pv-toolbar class="flex border-noround text-white-alpha-90 bg-white">
-    <template #start class="flex justify-content-start">
+    <template #start>
       <div class="flex justify-content-start">
         <pv-button icon="pi pi-chevron-left" class="text-black-alpha-90 border-none bg-transparent"></pv-button>
         <div class="text-black-alpha-90">

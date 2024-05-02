@@ -1,9 +1,9 @@
 <script setup>
-import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
+import ThePageRoom from '@/collaboration/pages/the-page-room.component.vue'
 </script>
 
 <template>
-  <the-page-chat/>
+  <the-page-room/>
 </template>
 
 <style scoped>
