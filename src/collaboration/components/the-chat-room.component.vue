@@ -1,7 +1,7 @@
 <script >
 
 export default {
-  name: 'chat-artistas',
+  name: 'the-chat-room',
   data() {
   return {
     messages: [
