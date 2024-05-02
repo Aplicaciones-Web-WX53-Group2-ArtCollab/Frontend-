@@ -151,7 +151,6 @@
       "imgUrl": "https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/571c1e9ba1adca82c7bce5cd65ce61416c611de7/frontend/src/assets/images/mmivens.png?raw=true",
       "subscription_id": 1
     }
-
   ],
   "reward": [
     {
@@ -253,7 +252,7 @@
       "description": "Harry Potter y la Piedra Filosofal es el primer libro de la serie Harry Potter escrita por J.K. Rowling. Narra la historia de Harry Potter, un joven mago que descubre su verdadera identidad y se aventura en el mundo mágico.",
       "date_publish": "2024-04-15",
       "type": "book",
-      "likes": 3500,
+      "likes": 3506,
       "views": 20300,
       "templateState_id": 7,
       "template_History_id": 7,
@@ -280,7 +279,7 @@
       "description": "Orgullo y Prejuicio es una novela clásica de Jane Austen que sigue la historia de Elizabeth Bennet y su complicada relación con el orgulloso Sr. Darcy.",
       "date_publish": "2024-04-17",
       "type": "book",
-      "likes": 580,
+      "likes": 591,
       "views": 1120,
       "templateState_id": 9,
       "template_History_id": 9,
@@ -307,7 +306,7 @@
       "description": "La Metamorfosis es una novela corta escrita por Franz Kafka que sigue la historia de Gregor Samsa, quien se despierta una mañana convertido en un insecto.",
       "date_publish": "2024-04-03",
       "type": "book",
-      "likes": 187,
+      "likes": 202,
       "views": 312,
       "templateState_id": 11,
       "template_History_id": 11,

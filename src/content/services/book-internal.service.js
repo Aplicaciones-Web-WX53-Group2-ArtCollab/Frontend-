@@ -6,4 +6,7 @@ export class BookInternalService {
     getAllBooks() {
         return http.get('/template')
     }
+    increaseLike(id, like){
+        return http.patch('/template/' + id, {likes: like+1})
+    }
 }
