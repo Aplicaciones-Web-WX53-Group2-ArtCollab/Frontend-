@@ -17,7 +17,7 @@ export default {
     this.bookApiFake.getBook().then((response) => {
       for (const bookData of response.data){
         const { image }= bookData;
-        const book = new Book(image);
+        const book = new Book('','','','','', image);
         this.books.push(book);
       }
     }).catch((error) => {
@@ -70,7 +70,7 @@ export default {
           <div class="published-book-title">{{ $t('published_books') }}</div>
           <div class="book-container">
             <div v-for="(book, index) in books" :key="index">
-              <img class="normal-image" :src="book.getImage() " alt="Book image">
+              <img class="normal-image" :src="book.imgUrl " alt="Book image">
             </div>
           </div>
         </div>

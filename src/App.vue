@@ -3,8 +3,9 @@ import FooterContent from '@/public/components/footer-content.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 
 import { ref } from 'vue'
-import TheUserRegister from '@/user/components/the-user-register.component.vue'
-import TheUserBooksHistorial from '@/user/components/the-user-books-historial.component.vue'
+
+import TheArtistProfileEdit from '@/user/components/artist-profile-edit.component.vue'
+import TheUserProfile from '@/user/components/the-user-profile.component.vue'
 
 const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
 const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
@@ -21,7 +22,7 @@ const handleShowEmailLoginUpdate = (value) => {
 <template>
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
-  <the-user-books-historial/>
+  <the-user-profile/>
   <footer-content/>
 </template>
 

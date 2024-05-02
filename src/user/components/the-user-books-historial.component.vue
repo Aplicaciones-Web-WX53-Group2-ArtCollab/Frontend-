@@ -9,7 +9,7 @@
       <hr class="divider">
       <div class="book-list">
         <div v-for="(book, index) in books" :key="index" class="book-row">
-          <img :src="book._imgUrl" alt="Book cover" class="book-image">
+          <img :src="book.imgUrl" alt="Book cover" class="book-image">
           <div class="book-info">
             <h3 class="book-title">{{ book._title }}</h3>
             <p class="book-update">Actualizada abr.02,2024 10:11 AM</p>

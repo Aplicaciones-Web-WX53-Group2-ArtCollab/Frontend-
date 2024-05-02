@@ -19,7 +19,7 @@ export default {
     this.portfolioApiFake.getAllPortfolios().then((response) => {
       response.data.forEach((portfolioData) => {
         const { id, reader_id, create_at, title, description, quantity, images } = portfolioData;
-        if (portfolioData.id === 3) {
+        if (portfolioData.id === "3") {
           this.portfolio = new Portfolio(id, reader_id, create_at, title, description, quantity, images);
           this.portfolioImage1 = images.image_1;
           this.portfolioImage2 = images.image_2;
