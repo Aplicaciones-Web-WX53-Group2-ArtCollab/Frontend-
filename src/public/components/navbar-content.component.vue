@@ -100,7 +100,7 @@ export default {
               <h2 > {{ $t('artists') }} </h2>
               </router-link>
               <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
-                <router-link to="/publish-1">
+                <router-link to="/my-stories">
                   <pv-button class="bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
                 </router-link>
                   <router-link to="/writer-profile">
@@ -144,7 +144,7 @@ export default {
         </div>
         <div aria-label="login button" class="hidden md:block">
           <div v-if="loggedInUser" class="flex gap-3">
-            <router-link to="/publish-1">
+            <router-link to="/my-stories">
               <pv-button class="md:block hidden bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
             </router-link>
               <router-link to="/writer-profile">
