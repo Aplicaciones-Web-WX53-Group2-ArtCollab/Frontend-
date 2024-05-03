@@ -1,9 +1,8 @@
 <script setup>
-import NavbarContent from '@/public/components/navbar-content.component.vue'
 </script>
 
 <template>
-  <navbar-content />
+  <router-view/>
 </template>
 
 <style scoped></style>

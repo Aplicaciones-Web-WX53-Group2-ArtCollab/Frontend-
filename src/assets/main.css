@@ -1,11 +1,5 @@
 @import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 a,
 .green {
@@ -14,6 +8,41 @@ a,
   transition: 0.4s;
   padding: 3px;
 }
+
+body .p-component{
+  font-family: 'Archivo', sans-serif;
+}
+
+body{
+  background-color:white;
+  color:black;
+}
+
+*{
+  font-family: 'Archivo', sans-serif;
+}
+
+/*!* selected *!*/
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+  background: none;
+  border-bottom: 2px solid #F25C05;
+  color: black;
+  font-weight: bold;
+}
+.p-tabview .p-tabview-nav li{
+  background: none;
+}
+/* not selected */
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  color: black;
+  border-bottom: 2px;
+  font-weight: normal;
+}
+/*!* hover *!*/
+.p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+  background: #ec9867;
+}
+
 
 @media (hover: hover) {
   a:hover {
