@@ -10,7 +10,7 @@ export default {
   <template #content>
     <div class="flex justify-content-between" aria-label="Room header">
     <div class="align-content-center" aria-label="Room title">
-      <h1 class="text-4xl font-bold">{{ $t('room') }}</h1>
+      <h1 class="text-4xl font-bold">{{ $t('artistroom.room') }}</h1>
     </div>
     <div class="sm:flex" aria-label="Artists profiles">
       <div class="column" aria-label="Miriam profile">
@@ -28,17 +28,19 @@ export default {
   <pv-card class="border-noround surface-100 mb-5">
     <template #content>
       <div class=" flex justify-content-end" aria-label="Chat creation">
-        <p>{{ $t('chat') }} <i class="pi pi-plus"></i></p>
+        <p>{{ $t('artistroom.chat') }} <i class="pi pi-plus"></i></p>
       </div>
     </template>
   </pv-card>
   <pv-card class="border-noround surface-100 mb-8">
     <template #content>
-      <div class=" flex justify-content-start" aria-label="New chat message">
-          <img class="sm:w-auto" src="/src/assets/miriam.png" alt="Miriam" width="70" height="70"/>
+      <div class=" flex justify-content-start"  aria-label="New chat message">
+          <router-link to="/chat">
+            <img class="sm:w-auto" src="/src/assets/miriam.png" alt="Miriam" width="70" height="70"/>
+          </router-link>
          <div class="column">
-           <p class="text-bold">{{ $t('newchat') }} Miriam</p>
-           <p>{{ $t('text') }}</p>
+           <p class="text-bold">{{ $t('artistroom.newchat') }} Miriam</p>
+           <p>{{ $t('artistroom.text') }}</p>
          </div>
       </div>
       <div class=" flex justify-content-end text-center" aria-label="Message time">
@@ -48,7 +50,7 @@ export default {
   </pv-card>
   <pv-card class="border-noround text-red-500	">
     <template #content>
-    <p aria-label="Delete room option">{{ $t('deleteroom') }}</p>
+    <p aria-label="Delete room option">{{ $t('artistroom.deleteroom') }}</p>
     </template>
   </pv-card>
   </div>
