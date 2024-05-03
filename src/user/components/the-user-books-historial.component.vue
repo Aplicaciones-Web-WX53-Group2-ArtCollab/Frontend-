@@ -2,7 +2,9 @@
   <div>
     <div class="header">
       <h1 class="main-title">Mis historias</h1>
-      <button class="new-story-button">Historia nueva</button>
+      <router-link to="/publish-1">
+        <button class="new-story-button">Historia nueva</button>
+      </router-link>
     </div>
     <div class="container">
       <h2 class="sub-title">Todas las historias</h2>
@@ -18,7 +20,9 @@
               <i class="pi pi-heart-fill" > 15M</i>
             </div>
           </div>
-          <button class="edit-button">Editar</button>
+          <router-link to="/book-edit">
+            <button class="edit-button">Editar</button>
+          </router-link>
         </div>
       </div>
     </div>
