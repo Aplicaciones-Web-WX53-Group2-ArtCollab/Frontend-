@@ -42,7 +42,7 @@ export default {
     <div class="flexbox-container">
       <div class="flex-item">
         <div class="social-media">
-          <div class="media-title">{{ $t('social_media') }}</div>
+          <div class="media-title">{{ $t('artistProfile.social_media') }}</div>
           <div class="flex-container-2">
             <img class="small-image" src="/src/assets/images/x-logo.png" alt="X logo">
             <a href="https://www.x.com/" target="_blank">https://www.x.com/</a>
