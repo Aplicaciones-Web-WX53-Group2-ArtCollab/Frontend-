@@ -23,7 +23,7 @@ const handleShowEmailLoginUpdate = (value) => {
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <book-banner/>
   <div class="buttons flex justify-content-end flex-wrap">
-    <div class="px-6">
+    <div class="px- gap-3">
       <router-link to="/book-profile">
         <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">{{ $t('publish') }}</pv-button>
       </router-link>

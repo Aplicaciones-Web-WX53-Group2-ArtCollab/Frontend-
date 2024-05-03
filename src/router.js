@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import BookProfileComponent from '@/content/components/profiles/book-profile.component.vue'
 import MainPage from '@/shared/pages/main-page.vue'
 import UserRegister from '@/user/pages/user-register.vue'
 import GenresPage from '@/content/pages/genres-page.component.vue'

@@ -65,7 +65,9 @@ export default {
     <div class="controller" aria-label="Controller">
 
       <div class="flex gap-3" aria-label="Navigation">
+        <router-link to="/artist-room" class="text-black-alpha-80">
         <i class="pi pi-arrow-left text-3xl mt-2" aria-hidden="true"> </i>
+        </router-link>
         <div class="flex flex-column">
           <h3 class="text-gray-500"> {{$t('chatroom.rooms')}} </h3>
           <h2 class="font-bold"> Chat </h2>
