@@ -15,8 +15,8 @@ import ArtistProfilePage_1 from '@/user/pages/artist-profile-page_1.vue'
 import ThePageRoom from '@/collaboration/pages/the-page-room.component.vue'
 import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
 import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
-import TheUserBooksHistorialComponent from '@/user/components/the-user-books-historial.component.vue'
 import AboutPage from '@/content/pages/about-page.vue'
+import UserStories from '@/user/pages/user-stories.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -24,7 +24,7 @@ const routes = [
   { path: '/register', component: UserRegister },
   { path: '/genre', component: GenresPage },
   { path: '/populars', component: GenresPage },
-  { path: '/my-stories', component: TheUserBooksHistorialComponent },
+  { path: '/my-stories', component: UserStories },
   { path: '/subscription', component: SubscriptionApplication },
   { path: '/monetization', component: MonetizationApplication },
   { path: '/artist', component: ArtistOverview },
