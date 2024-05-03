@@ -17,6 +17,7 @@ import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
 import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
 import AboutPage from '@/content/pages/about-page.vue'
 import UserStories from '@/user/pages/user-stories.vue'
+import BookDetailsEditPage_2 from '@/content/pages/book-details-edit-page_2.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -34,6 +35,7 @@ const routes = [
   { path: '/chapter', component: ChapterPage },
   { path: '/writer-profile', component:UserProfilePage },
   { path: '/book-edit', component: BookDetailsEditPage_1 },
+  { path: '/chapter-edit', component: BookDetailsEditPage_2 },
   { path: '/illustrator-profile', component: ArtistProfilePage_1 },
   { path: '/artist-room', component: ThePageRoom },
   { path: '/chat', component: ThePageChat },
