@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export class UserEndpointService {
-  baseUrl = 'http://localhost:3000'
+  baseUrl = 'https://6633c60ff7d50bbd9b4a9f24.mockapi.io'
   readerUrl = '/reader'
   loginUrl = '/login'
 

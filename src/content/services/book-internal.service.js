@@ -1,6 +1,6 @@
 import axios from 'axios'
 const http = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'https://6633c60ff7d50bbd9b4a9f24.mockapi.io'
 })
 export class BookInternalService {
     getAllBooks() {
