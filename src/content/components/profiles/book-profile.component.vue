@@ -142,4 +142,21 @@ export default {
   justify-content: space-between;
   margin: 50px;
 }
+
+@media(width<=530px){
+  .book-header{
+    flex-direction: column;
+  }
+  .book-header img{
+    margin: 0 auto;
+  }
+  .book-content{
+    flex-direction: column;
+  }
+  .book-name{
+    font-size: 1.5rem;
+  }
+
+}
+
 </style>
