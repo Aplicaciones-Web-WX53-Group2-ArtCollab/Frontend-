@@ -37,7 +37,7 @@ export default {
       </template>
       <template #footer>
         <div class="flex justify-content-center">
-          <h5 class="text-center" v-html="$t('login_card_footer')"/>
+          <router-link to="/register"> <h5 class="text-center" v-html="$t('login_card_footer')"/></router-link>
         </div>
       </template>
     </pv-card>

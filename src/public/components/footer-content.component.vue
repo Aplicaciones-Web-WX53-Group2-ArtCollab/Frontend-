@@ -19,12 +19,12 @@ export default {
         <pv-inputicon class="pi pi-youtube text-2xl" aria-label="Link to Youtube" />
       </div>
       <div aria-label="Footer navigation links" class="flex md:gap-5 gap-3 footer-links flex md:flex-row flex-column md:align-items-center align-items-start">
-        <p> {{ $t('footer.about') }} </p>
-        <p> {{ $t('footer.gender') }} </p>
-        <p> {{ $t('footer.popular') }} </p>
-        <p> {{ $t('footer.subscription') }} </p>
-        <p> {{ $t('footer.monetization') }} </p>
-        <p> {{ $t('footer.artists') }} </p>
+       <router-link to="/about"> <p> {{ $t('footer.about') }} </p></router-link>
+       <router-link to="/genre"> <p> {{ $t('footer.gender') }} </p></router-link>
+       <router-link to="/populars"> <p> {{ $t('footer.popular') }} </p></router-link>
+       <router-link to="/subscription"> <p> {{ $t('footer.subscription') }} </p></router-link>
+       <router-link to="/monetization"> <p> {{ $t('footer.monetization') }} </p></router-link>
+       <router-link to="artist"> <p> {{ $t('footer.artists') }} </p> </router-link>
       </div>
     </div>
     <div  class="copyright mt-3" aria-label="Copyright Information">

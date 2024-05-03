@@ -32,9 +32,6 @@ export default {
           type: 'writer',
           subscription_id: '1',
         }
-        // ).then(() => {
-        //   this.$router.push({ name: 'home' });
-        // }
         );
       } else {
         this.loginErrorMessage = this.$t('login_email_error_message');
@@ -66,8 +63,9 @@ export default {
 
             <div class="flex justify-content-center gap-2 mt-3">
               <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_1')" plain text @click="goBack" aria-label="Volver a las opciones de inicio de sesión"/>
-              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_2')" plain text aria-label="Iniciar sesión" @click="login"/>
-<!--              TODO: configurar routing a la pantalla principal-->
+              <router-link to="/" class="w-full">
+              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_2')" plain text aria-label="Iniciar sesión" @click="login; closeLogin"/>
+              </router-link>
             </div>
           </div>
         </div>
@@ -77,7 +75,7 @@ export default {
           <h5 class="text-center cursor-pointer" v-html="$t('login_email_footer_1')"/>
           <div class="flex justify-content-center gap-2">
             <h5 class="text-center" v-html="$t('login_email_footer_2')"/>
-            <h5 class="text-center cursor-pointer text-yellow-900" v-html="$t('login_email_footer_3')"/>
+            <router-link to="/register"> <h5 class="text-center cursor-pointer text-yellow-900" v-html="$t('login_email_footer_3')"/></router-link>
           </div>
         </div>
       </template>

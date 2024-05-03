@@ -43,7 +43,7 @@ export default {
           src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/artist-profile-image.png?raw=true"
           width="496" alt="Artist profile image">
         <div class="connect-button">
-          <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">Conectar</pv-button>
+          <router-link to="/artist-room"> <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">Conectar</pv-button> </router-link>
         </div>
         <div class="text">Miriam Bonastre</div>
       </div>

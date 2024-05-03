@@ -15,6 +15,8 @@ import ArtistProfilePage_1 from '@/user/pages/artist-profile-page_1.vue'
 import ThePageRoom from '@/collaboration/pages/the-page-room.component.vue'
 import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
 import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
+import TheUserBooksHistorialComponent from '@/user/components/the-user-books-historial.component.vue'
+import AboutPage from '@/content/pages/about-page.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -22,6 +24,7 @@ const routes = [
   { path: '/register', component: UserRegister },
   { path: '/genre', component: GenresPage },
   { path: '/populars', component: GenresPage },
+  { path: '/my-stories', component: TheUserBooksHistorialComponent },
   { path: '/subscription', component: SubscriptionApplication },
   { path: '/monetization', component: MonetizationApplication },
   { path: '/artist', component: ArtistOverview },
@@ -35,6 +38,7 @@ const routes = [
   { path: '/artist-room', component: ThePageRoom },
   { path: '/chat', component: ThePageChat },
   { path: '/chapter-preview', component: ChapterpreviewPage },
+  { path: '/about', component: AboutPage},
   { path: '/genre/romance', component:()=> import('./content/pages/the-romance-books.component.vue')},
   { path: '/genre/fantasy', component:() => import('./content/pages/the-fantasy-books.component.vue')},
   { path: '/genre/comedy', component: () => import('./content/pages/the-comedy-books.component.vue')},

@@ -61,6 +61,7 @@ export default {
     getLoggedInUser(){
       this.userServices.getLoggedInUser().then((response) => {
         this.loggedInUser = response.data[0];
+        console.log(this.loggedInUser);
       });
     }
   },
@@ -171,8 +172,6 @@ export default {
   />
 
   <the-user-login-email v-if="showEmailLogin" :showEmailLogin="showEmailLogin" @back="handleGoBack" @update:showEmailLogin="handleHideEmailLogin" />
-
-
 
 </template>
 

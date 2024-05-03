@@ -101,9 +101,8 @@ export default {
             <h4>{{ $t('register_data_policy') }}</h4>
 
             <div class="flex justify-content-center gap-2 mt-3 mb-3">
-              <pv-button class="register-button w-full w-10rem" @click="register" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" />
+              <router-link to="/"> <pv-button class="register-button w-full w-10rem" @click="register" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" /></router-link>
             </div>
-<!--            TODO: Configure route to main page-->
 
             <pv-divider align="center" type="solid" >
               <b>{{ $t('register_footer') }}</b>
