@@ -141,5 +141,33 @@ export default {
 .pi-heart-fill{
   margin-left: 10px;
 }
+
+@media(width<=430px){
+  .header{
+    padding: 0 20px;
+  }
+  .container{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .book-row{
+    flex-direction: column;
+    gap:1rem;
+  }
+  .book-image{
+    width: 100%;
+    height: auto;
+  }
+  .book-info{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .book-stats{
+    font-size: 12px;
+  }
+  .new-story-button, .edit-button{
+    font-size: 12px;
+  }
+}
 </style>
 
