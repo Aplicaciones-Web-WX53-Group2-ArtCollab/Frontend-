@@ -105,8 +105,10 @@ export default {
     <pv-toolbar class="flex border-noround text-white-alpha-90 bg-indigo-900	">
       <template #start class="flex justify-content-start">
         <div class="flex justify-content-start">
-      <img src="/src/assets/logo.png" alt="ArtCollab Logo" width="50" height="50" />
-      <h1>Boulevard</h1>
+          <router-link to="/">
+            <img src="/src/assets/logo.png" alt="ArtCollab Logo" width="50" height="50" />
+          </router-link>
+          <h1>Boulevard</h1>
           <pv-button icon="pi pi-chevron-right" class="text-white border-none bg-transparent"></pv-button>
           <h1 class="lg:text-4xl">{{ $t('chapter') }}</h1>
         </div>
@@ -121,8 +123,12 @@ export default {
       <template #end class="flex justify-content-end">
         <div class="flex">
           <pv-button class="p-button border-none text-white bg-transparent">{{ $t('view') }}</pv-button>
-          <pv-button class="p-button-rounded border-none text-white colorgreen mr-2">{{ $t('post') }}</pv-button>
-          <pv-button class="p-button-rounded border-none text-black-alpha-90 colorblue">{{ $t('back') }}</pv-button>
+          <router-link to="/book-profile">
+            <pv-button class="p-button-rounded border-none text-white colorgreen mr-2">{{ $t('post') }}</pv-button>
+          </router-link>
+          <router-link to="/publish-2">
+            <pv-button class="p-button-rounded border-none text-black-alpha-90 colorblue">{{ $t('back') }}</pv-button>
+          </router-link>
         </div>
       </template>
     </pv-toolbar>

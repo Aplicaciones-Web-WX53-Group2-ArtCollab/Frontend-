@@ -46,9 +46,7 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
                       <i class="pi pi-heart-fill"/>
                       <p>100 K</p>
                       <div class="pencil-icon custom-icon bg-cyan-500 text-white-alpha-90 border-circle">
-                        <router-link to="/chapter-edit">
-                          <i class="pi pi-pencil"/>
-                        </router-link>
+                        <i class="pi pi-pencil"/>
                       </div>
                     </div>
                     <div class="right-side flex flex-row gap-2 pb-2">
@@ -62,7 +60,9 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
                       <i class="pi pi-heart-fill"/>
                       <p>150 K</p>
                       <div class="pencil-icon custom-icon bg-cyan-500 text-white-alpha-90 border-circle">
-                        <i class="pi pi-pencil"/>
+                        <router-link to="/chapter-edit">
+                          <i class="pi pi-pencil"/>
+                        </router-link>
                       </div>
                     </div>
                     <div class="right-side flex flex-row gap-2 pb-2">

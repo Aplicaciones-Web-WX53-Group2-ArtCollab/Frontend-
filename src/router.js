@@ -18,6 +18,7 @@ import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
 import AboutPage from '@/content/pages/about-page.vue'
 import UserStories from '@/user/pages/user-stories.vue'
 import BookDetailsEditPage_2 from '@/content/pages/book-details-edit-page_2.vue'
+import BookProfilePage from '@/content/pages/book-profile-page.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -31,7 +32,7 @@ const routes = [
   { path: '/artist', component: ArtistOverview },
   { path: '/publish-1', component: BookPublishPage_1 },
   { path: '/publish-2', component: BookPublishPage_2 },
-  { path: '/book-profile', component: BookProfileComponent },
+  { path: '/book-profile', component: BookProfilePage },
   { path: '/chapter', component: ChapterPage },
   { path: '/writer-profile', component:UserProfilePage },
   { path: '/book-edit', component: BookDetailsEditPage_1 },
