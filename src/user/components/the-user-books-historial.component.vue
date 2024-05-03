@@ -142,7 +142,7 @@ export default {
   margin-left: 10px;
 }
 
-@media(width<=430px){
+@media(width<=504px){
   .header{
     padding: 0 20px;
   }
