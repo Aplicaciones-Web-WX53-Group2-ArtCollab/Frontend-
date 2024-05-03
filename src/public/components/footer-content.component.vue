@@ -13,10 +13,18 @@ export default {
         <h2> ArtCollab </h2>
       </div>
       <div class="flex gap-3 flex md:flex-row flex-column md:align-items-center align-items-start" aria-label="Social media links" >
-        <pv-inputicon class="pi pi-facebook text-2xl" aria-label="Link to Facebook"  />
-        <pv-inputicon class="pi pi-twitter text-2xl" aria-label="Link to Twitter" />
-        <pv-inputicon class="pi pi-instagram text-2xl" aria-label="Link to Instagram"/>
-        <pv-inputicon class="pi pi-youtube text-2xl" aria-label="Link to Youtube" />
+        <a href="https://www.facebook.com" target="_blank">
+          <pv-inputicon class="pi pi-facebook text-2xl" aria-label="Link to Facebook"  />
+        </a>
+        <a href="https://www.x.com" target="_blank">
+          <pv-inputicon class="pi pi-twitter text-2xl" aria-label="Link to Twitter" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <pv-inputicon class="pi pi-instagram text-2xl" aria-label="Link to Instagram"/>
+        </a>
+        <a href="https://www.youtube.com" target="_blank">
+          <pv-inputicon class="pi pi-youtube text-2xl" aria-label="Link to Youtube" />
+        </a>
       </div>
       <div aria-label="Footer navigation links" class="flex md:gap-5 gap-3 footer-links flex md:flex-row flex-column md:align-items-center align-items-start">
        <router-link to="/about"> <p> {{ $t('footer.about') }} </p></router-link>
@@ -48,5 +56,15 @@ export default {
 }
 .copyright p{
   text-align:center;
+}
+
+a {
+  color: inherit; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
