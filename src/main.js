@@ -6,7 +6,7 @@ import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/aura-light-green/theme.css'
 
 import { createApp } from 'vue'
-import router from '@/router.js'
+import router from '@/router/router.js'
 
 import Divider from 'primevue/divider';
 import Password from 'primevue/password';

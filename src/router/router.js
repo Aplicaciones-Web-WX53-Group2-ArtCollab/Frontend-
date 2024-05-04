@@ -41,9 +41,9 @@ const routes = [
   { path: '/chat', component: ThePageChat },
   { path: '/chapter-preview', component: ChapterpreviewPage },
   { path: '/about', component: AboutPage},
-  { path: '/genre/romance', component:()=> import('./content/pages/the-romance-books.component.vue')},
-  { path: '/genre/fantasy', component:() => import('./content/pages/the-fantasy-books.component.vue')},
-  { path: '/genre/comedy', component: () => import('./content/pages/the-comedy-books.component.vue')},
+  { path: '/genre/romance', component:()=> import('@/content/pages/the-romance-books.component.vue')},
+  { path: '/genre/fantasy', component:() => import('@/content/pages/the-fantasy-books.component.vue')},
+  { path: '/genre/comedy', component: () => import('@/content/pages/the-comedy-books.component.vue')},
 ]
 
 const router = createRouter({
