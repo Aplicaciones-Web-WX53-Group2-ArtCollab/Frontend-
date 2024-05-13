@@ -30,6 +30,8 @@ import TabPanel from 'primevue/tabpanel';
 import Textarea from 'primevue/textarea'
 import InputIcon from 'primevue/inputicon'
 import IconField from 'primevue/iconfield'
+import Dialog from 'primevue/dialog';
+
 
 const app = createApp(App);
 
@@ -53,6 +55,7 @@ app.component('pv-tabview', TabView);
 app.component('pv-tabpanel', TabPanel);
 app.component('pv-textarea', Textarea);
 app.component('pv-sidebar', Sidebar);
+app.component('pv-dialog', Dialog);
 
 app.use(PrimeVue)
 app.use(router)

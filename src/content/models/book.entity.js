@@ -12,6 +12,20 @@ export class Book {
     this._genre=genre;
   }
 
+  toJSON() {
+    return {
+      title: this._title,
+      description: this._description,
+      datePublish: this._datePublish,
+      type: this._type,
+      id: this._id,
+      imgUrl: this._imgUrl,
+      likes: this._likes,
+      views: this._views,
+      genre: this._genre
+    };
+  }
+
   get title() {
     return this._title;
   }
