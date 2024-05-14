@@ -204,14 +204,14 @@
     },
     {
       "title": "Boulevard",
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis. ",
+      "description": "¿Quién dijo que después de la tormenta sale el sol cuando puede haber un rayo? Vuelve el fenómeno literario de mayor éxito de los últimos tiempos en una edición revisada por la autora. Luke Howland, lleno de problemas y sumido en una desesperación profunda, y Hasley Weigel, tan despistada como optimista, no se ajustan al prototipo de pareja perfecta. Como si cada uno fuese un cielo uno es tormenta y el otro un día soleado: él es oscuridad. Ella un rayo de sol. Y, sin embargo, juntos deciden ponerle nombre a lo que habían creado: un boulevard teñido de tonos grisáceos, celestes y azules eléctricos preparándose para la tormenta. Ella era para él y él era para ella. Una historia de amor tan única que te marcará para el resto de tus días.",
       "date_publish": "2024-04-09",
       "type": "book",
       "likes": 17,
       "views": 20,
       "templateState_id": 1,
       "template_History_id": 1,
-      "imgUrl": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/Boulevard-Cover.jpg?raw=true",
+      "imgUrl": "https://m.media-amazon.com/images/I/81mUJVc1MkL._AC_UF1000,1000_QL80_.jpg",
       "id": "1",
       "portfolio_id": 1,
       "genre": "Drama"

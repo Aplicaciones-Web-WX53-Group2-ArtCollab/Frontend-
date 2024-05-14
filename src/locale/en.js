@@ -4,6 +4,7 @@ import recover_en from '@/locale/recover/recover_en.js'
 
 import main_page_en from './main-page/main_page_en'
 import publish_en from '@/locale/publish/publish_en.js'
+import detailsEdit_en from '@/locale/details-edit/details-edit_en.js'
 
 const en = {
   gender: 'Gender',
@@ -43,26 +44,14 @@ const en = {
     copyright: 'All rights reserved',
     artists: 'Artists',
   },
-  editDetails:{
-    editDetails: 'Edit story details',
-    storyDetails: 'Story details',
-    contentTable: 'Table of contents',
-    earned: 'Earned income',
-    title: 'Title',
-    description: 'Description',
-    cancel: 'Cancel',
-    save: 'Save',
-    prologue: 'Prologue',
-    chapter: 'Chapter',
-  },
-    artistroom:{
+  artistroom:{
         room: 'This is your artist room',
         chat: 'Start a New Chat',
         newchat: 'New chat with',
         text: 'You: Perfect',
         deleteroom: 'Delete the room',
     },
-    chatroom:{
+  chatroom:{
         rooms: "Artists Room",
         profile: "Profile",
         search: "Search",
@@ -70,6 +59,7 @@ const en = {
         notMessage:'Not message found :('
     },
 
+  ...detailsEdit_en,
   ...main_page_en,
   ...publish_en,
   subscriptionCards:{

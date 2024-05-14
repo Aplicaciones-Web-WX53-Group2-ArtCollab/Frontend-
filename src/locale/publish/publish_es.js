@@ -10,7 +10,10 @@ const publish_es = {
   save: 'Guardar',
   preview: 'Vista previa',
   uploadIllustrations: 'Subir ilustraciones',
-  dragAndDrop: 'Arrastra y suelta archivos aquí para subir.',
+  chooseImage: 'Elige una imagen para subir | Elige tus imágenes para subir',
+  coverImage: 'Imagen de portada',
+  illustration: 'Ilustración',
+  untitledChapter: 'Capítulo sín título'
 }
 
 export default publish_es;

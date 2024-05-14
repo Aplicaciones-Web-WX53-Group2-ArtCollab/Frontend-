@@ -18,12 +18,12 @@ const saveImageUrl = () => {
       <i class="pi pi-upload text-xl" @click="showDialog = true" />
     </div>
     <div class="flex align-items-center justify-content-center">
-      <p class="max-w-6rem text-center">Elige una imagen para subir</p>
+      <p class="max-w-6rem text-center">{{ $tc('chooseImage', 1) }}</p>
     </div>
   </div>
 
   <div v-if="imageUrl" class="image-display">
-    <img :src="imageUrl" :key="imageUrl" class="max-w-12rem h-auto"/>
+    <img :src="imageUrl" :key="imageUrl" class="max-w-12rem h-auto" :alt="$t('coverImage')"/>
   </div>
 
   <pv-dialog v-model:visible="showDialog" header="Upload Image URL">

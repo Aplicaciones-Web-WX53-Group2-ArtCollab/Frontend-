@@ -6,31 +6,17 @@ import BookFileUpload from '@/content/components/publish/book-publish-fileupload
 
 import { ref } from 'vue';
 
-const defaultValue1 = ref('Capítulo 2');
+const defaultValue1 = ref('Capitulo 1');
 const defaultValue2 = ref('Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis. ');
-const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
-const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico
-
-const handleShowLoginUpdate = (value) => {
-  showLogin.value = value;
-}; //Esta función se encarga de actualizar el valor de la variable showLogin
-const handleShowEmailLoginUpdate = (value) => {
-  showEmailLogin.value = value;
-}; //Esta función se encarga de actualizar el valor de la variable showEmailLogin
-
 </script>
 
 <template>
-  <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
-                  @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
+  <navbar-content/>
   <div class="buttons flex justify-content-end flex-wrap">
     <div class="px-6">
-      <router-link to="/book-edit">
-        <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">{{ $t('save') }}</pv-button>
-      </router-link>
-      <router-link to="/chapter-preview">
-        <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">{{ $t('preview') }}</pv-button>
-      </router-link>
+      <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">{{ $t('publish') }}</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">{{ $t('save') }}</pv-button>
+      <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">{{ $t('preview') }}</pv-button>
     </div>
   </div>
   <div class="input flex align-items-center justify-content-center">

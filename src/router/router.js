@@ -6,17 +6,17 @@ import SubscriptionApplication from '@/monetization/pages/subscription-applicati
 import MonetizationApplication from '@/monetization/pages/monetization-application.component.vue'
 import ArtistOverview from '@/user/pages/artist-overview.vue'
 import BookPublishPage_1 from '@/content/pages/book-publish-page_1.vue'
-import BookPublishPage_2 from '@/content/pages/book-publish-page_2.vue'
+import ChapterPublishPage from '@/content/pages/chapter-publish-page.vue'
 import ChapterPage from '@/content/pages/chapter-page.vue'
 import UserProfilePage from '@/user/pages/user-profile-page.component.vue'
-import BookDetailsEditPage_1 from '@/content/pages/book-details-edit-page_1.vue'
+import BookDetailsEditPage from '@/content/pages/book-details-edit-page.vue'
 import ArtistProfilePage_1 from '@/user/pages/artist-profile-page_1.vue'
 import ThePageRoom from '@/collaboration/pages/the-page-room.component.vue'
 import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
 import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
 import AboutPage from '@/content/pages/about-page.vue'
 import UserStories from '@/user/pages/user-stories.vue'
-import BookDetailsEditPage_2 from '@/content/pages/book-details-edit-page_2.vue'
+import ChapterDetailsEditPage from '@/content/pages/chapter-details-edit-page.vue'
 import BookProfilePage from '@/content/pages/book-profile-page.vue'
 
 const routes = [
@@ -30,12 +30,12 @@ const routes = [
   { path: '/monetization', component: MonetizationApplication },
   { path: '/artist', component: ArtistOverview },
   { path: '/publish-1', component: BookPublishPage_1 },
-  { path: '/publish-2', component: BookPublishPage_2 },
+  { path: '/publish-2', component: ChapterPublishPage },
   { path: '/book-profile', component: BookProfilePage },
   { path: '/chapter', component: ChapterPage },
   { path: '/writer-profile', component:UserProfilePage },
-  { path: '/book-edit', component: BookDetailsEditPage_1 },
-  { path: '/chapter-edit', component: BookDetailsEditPage_2 },
+  { path: '/book-edit', component: BookDetailsEditPage },
+  { path: '/chapter-edit', component: ChapterDetailsEditPage },
   { path: '/illustrator-profile', component: ArtistProfilePage_1 },
   { path: '/artist-room', component: ThePageRoom },
   { path: '/chat', component: ThePageChat },
