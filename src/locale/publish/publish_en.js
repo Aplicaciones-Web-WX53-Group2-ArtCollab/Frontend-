@@ -10,7 +10,10 @@ const publish_en = {
   save: 'Save',
   preview: 'Preview',
   uploadIllustrations: 'Upload Illustrations',
-  dragAndDrop: 'Drag and drop files to here to upload.',
+  chooseImage: 'Choose an image to upload | Choose your images to upload',
+  coverImage: 'Cover Image',
+  illustration: 'Illustration',
+  untitledChapter: 'Untitled chapter'
 }
 
 export default publish_en;

@@ -2,8 +2,8 @@
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import FooterContent from '@/public/components/footer-content.component.vue'
 import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
-import BookFileUpload from '@/content/components/publish/book-publish-fileupload.component.vue'
 import BookPublishEditor from '@/content/components/publish/the-book-publish-editor.component.vue'
+import BookIllustrationsUpload from '@/content/components/publish/book-publish-illustrations-upload.component.vue'
 
 </script>
 
@@ -19,7 +19,7 @@ import BookPublishEditor from '@/content/components/publish/the-book-publish-edi
   </div>
   <div class="input flex align-items-center justify-content-center">
     <div class="mt-2 w-10">
-      <book-input class="text-xl" borderStyle="none" outlineStyle="none" placeholder="Capítulo sin título 1" placeholderStyle="text-align: center; width: 100%;" size="large" />
+      <pv-inputtext class="text-xl w-full border-transparent text-center" :placeholder="$t('untitledChapter')" />
     </div>
   </div>
   <div class="divider flex align-items-center justify-content-center">
@@ -31,7 +31,7 @@ import BookPublishEditor from '@/content/components/publish/the-book-publish-edi
   <div class="flex align-items-center justify-content-center">
     <div class="image-fileupload flex flex-column gap-2 m-5">
       <label for="titulo" class="text-center font-bold text-xl">{{ $t('uploadIllustrations') }}</label>
-      <book-file-upload/>
+      <book-illustrations-upload/>
     </div>
   </div>
   <footer-content/>
