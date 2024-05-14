@@ -1,5 +1,6 @@
 import main_page_es from '@/locale/main-page/main_page_es.js'
 import publish_es from '@/locale/publish/publish_es.js'
+import detailsEdit_es from '@/locale/details-edit/details-edit_es.js'
 
 const es = {
   navbar:{
@@ -19,19 +20,8 @@ const es = {
     copyright: 'Todos los derechos reservados',
     artists: 'Artistas',
   },
-  editDetails:{
-    editDetails: 'Editar detalles de la historia',
-    storyDetails: 'Detalles de la historia',
-    contentTable: 'Tabla de contenidos',
-    earned: 'Ingresos obtenidos',
-    title: 'Título',
-    description: 'Descripción',
-    save: 'Guardar',
-    cancel: 'Cancelar',
-    prologue: 'Prólogo',
-    chapter: 'Capítulo',
-  },
 
+  ...detailsEdit_es,
   ...main_page_es,
   ...publish_es,
 }

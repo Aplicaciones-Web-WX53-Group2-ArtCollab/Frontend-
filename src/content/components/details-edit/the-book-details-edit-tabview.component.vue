@@ -1,45 +1,67 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
+import { BookInternalService } from '@/content/services/book-internal.service.js'
 
-const defaultValue = ref('Boulevard');
-const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol cuando puede haber un rayo? Vuelve el fenómeno literario de mayor éxito de los últimos tiempos en una edición revisada por la autora. Luke Howland, lleno de problemas y sumido en una desesperación profunda, y Hasley Weigel, tan despistada como optimista, no se ajustan al prototipo de pareja perfecta. Como si cada uno fuese un cielo uno es tormenta y el otro un día soleado: él es oscuridad. Ella un rayo de sol. Y, sin embargo, juntos deciden ponerle nombre a lo que habían creado: un boulevard teñido de tonos grisáceos, celestes y azules eléctricos preparándose para la tormenta. Ella era para él y él era para ella. Una historia de amor tan única que te marcará para el resto de tus días.');
+const bookService = new BookInternalService();
+
+let defaultValue = ref('');
+let defaultValue2 = ref('');
+
+bookService.getBookById(1)
+  .then(response => {
+    defaultValue.value = response.data.title;
+    defaultValue2.value = response.data.description;
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+watch(defaultValue, (newTitle) => {
+  emit('update:title', newTitle);
+});
+
+watch(defaultValue2, (newDescription) => {
+  emit('update:description', newDescription);
+});
+
+const emit = defineEmits(['update:title', 'update:description']);
 </script>
 
 <template>
   <div class="card">
     <pv-tabview id='tv' class="details-tabview lg:max-w-full md:max-w-20rem">
       <div class="flex flex-column">
-        <pv-tabpanel :header="$t('editDetails.storyDetails')" aria-label="Story Details">
+        <pv-tabpanel :header="$t('storyDetails')" :aria-label="$t('storyDetails')">
           <div class="flex align-items-center justify-content-center mb-5 mt-3">
             <div class="title flex flex-column">
-              <label class="text-2xl font-bold" for="title">{{ $t('editDetails.title') }}</label>
-              <pv-textarea v-model="defaultValue" rows="1" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" aria-label="Title" />
+              <label class="text-2xl font-bold" for="title">{{ $t('title') }}</label>
+              <pv-textarea v-model="defaultValue" rows="1" cols="50" :placeholder="$t('title')" class="details-textarea lg:max-w-full md:max-w-20rem" :aria-label="$t('title')" />
             </div>
           </div>
           <div class="flex align-items-center justify-content-center mb-5">
             <div class="description flex flex-column">
-              <label class="text-2xl font-bold" for="description">{{ $t('editDetails.description') }}</label>
-              <pv-textarea v-model="defaultValue2" rows="14" cols="50" class="details-textarea lg:max-w-full md:max-w-20rem" aria-label="Description" />
+              <label class="text-2xl font-bold" for="description">{{ $t('description') }}</label>
+              <pv-textarea v-model="defaultValue2" rows="14" cols="50" :placeholder="$t('description')" class="details-textarea lg:max-w-full md:max-w-20rem" :aria-label="$t('description')" />
             </div>
           </div>
         </pv-tabpanel>
       </div>
-      <pv-tabpanel :header="$t('editDetails.contentTable')" aria-label="Content Table">
+      <pv-tabpanel :header="$t('contentTable')" :aria-label="$t('contentTable')">
         <pv-card class="shadow-none">
               <template #content>
                 <div class="table-of-contents flex flex-row gap-8">
                   <div class="chapters flex flex-column pr-8 mr-6">
-                    <p class="pb-2">{{ $t('editDetails.prologue') }}</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 1</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 2</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }}3</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 4</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 5</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 6</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 7</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 8</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 9</p>
-                    <p class="pb-2">{{ $t('editDetails.chapter') }} 10</p>
+                    <p class="pb-2" :aria-label="$t('prologue')">{{ $t('prologue') }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 1 })">{{ $tc('chapter', { number: 1 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 2 })">{{ $tc('chapter', { number: 2 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 3 })">{{ $tc('chapter', { number: 3 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 4 })">{{ $tc('chapter', { number: 4 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 5 })">{{ $tc('chapter', { number: 5 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 6 })">{{ $tc('chapter', { number: 6 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 7 })">{{ $tc('chapter', { number: 7 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 8 })">{{ $tc('chapter', { number: 8 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 9 })">{{ $tc('chapter', { number: 9 }) }}</p>
+                    <p class="pb-2" :aria-label="$tc('chapter', { number: 10 })">{{ $tc('chapter', { number: 10 }) }}</p>
                   </div>
                   <div class="flex flex-column pl-8 ml-6">
                     <div class="right-side flex flex-row gap-2 pb-2">
@@ -124,7 +146,7 @@ const defaultValue2 = ref('¿Quién dijo que después de la tormenta sale el sol
               </template>
         </pv-card>
       </pv-tabpanel>
-      <pv-tabpanel :header="$t('editDetails.earned')" aria-label="Earned">
+      <pv-tabpanel :header="$t('earned')" :aria-label="$t('earned')">
       </pv-tabpanel>
     </pv-tabview>
   </div>
