@@ -1,5 +1,5 @@
 <script >
-import { UserEndpointService } from '@/shared/service/user-endpoint.service.js'
+import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { Reader } from '@/shared/models/reader.entity.js'
 import { ChatService } from '@/collaboration/service/chat.service.js'
 import { Chat } from '@/collaboration/models/chat.entity.js'

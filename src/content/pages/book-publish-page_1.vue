@@ -9,7 +9,7 @@ import BookPublishCoverUpload from '@/content/components/publish/book-publish-co
 <script>
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
-import router from '@/router.js'
+import router from '@/router/router.js'
 
 export default {
   name: 'book-publish-page-1',
