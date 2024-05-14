@@ -12,9 +12,13 @@ import BookIllustrationsUpload from '@/content/components/publish/book-publish-i
   <book-banner/>
   <div class="buttons flex justify-content-end flex-wrap">
     <div class="px-6">
-      <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">{{ $t('publish') }}</pv-button>
+      <router-link to="/book-profile">
+        <pv-button class="border-round-2xl bg-cyan-800 border-transparent px-4 mx-2">{{ $t('publish') }}</pv-button>
+      </router-link>
       <pv-button class="border-round-2xl bg-cyan-600 border-transparent px-4 mx-2">{{ $t('save') }}</pv-button>
-      <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">{{ $t('preview') }}</pv-button>
+      <router-link to="/chapter-preview">
+        <pv-button class="border-round-2xl bg-cyan-600 border-transparent mx-2">{{ $t('preview') }}</pv-button>
+      </router-link>
     </div>
   </div>
   <div class="input flex align-items-center justify-content-center">

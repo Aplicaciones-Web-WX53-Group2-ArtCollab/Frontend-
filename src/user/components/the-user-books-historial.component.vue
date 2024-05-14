@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <h1 class="main-title">Mis historias</h1>
-      <router-link to="/publish-1">
+      <router-link to="/book-publish">
         <button class="new-story-button">Historia nueva</button>
       </router-link>
     </div>
