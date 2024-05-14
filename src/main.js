@@ -38,7 +38,7 @@ import InputText from 'primevue/inputtext';
 import Sidebar from 'primevue/sidebar';
 import i18n from '@/locale/i18n.js'
 import Image from 'primevue/image';
-
+import Dialog from 'primevue/dialog';
 
 
 import 'primeicons/primeicons.css'
@@ -72,6 +72,7 @@ app.component('pv-password', Password);
 app.component('pv-checkbox', Checkbox);
 app.component('pv-dataView', DataView);
 app.component('pv-image', Image);
+app.component('pv-dialog', Dialog);
 app.use(router);
 app.use(i18n);
 app.use(ToastService);
