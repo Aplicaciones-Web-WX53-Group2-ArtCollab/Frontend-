@@ -29,28 +29,39 @@ export default {
   },
   methods: {
     async postTemplate() {
-      const response = await fetch('/server/db.json');
-      const db = await response.json();
+      try {
+        const response = await this.bookService.getAllBooks();
+        const templates = response.data.filter(book => book.type === 'template' && !isNaN(book.id));
+        const lastTemplate = templates[templates.length - 1];
 
-      const numericTemplates = db.template.filter(template => !isNaN(template.id));
+        let lastId;
+        if (lastTemplate) {
+          lastId = isNaN(lastTemplate.id) ? 0 : Number(lastTemplate.id);
+        } else {
+          lastId = 0;
+        }
 
-      const lastTemplate = numericTemplates[numericTemplates.length - 1];
+        const newId = (lastId + 1).toString();
 
-      if (isNaN(lastTemplate.id)) {
-        console.error('lastTemplate.id no puede convertirse a un número:', lastTemplate.id);
-        return;
+        const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+
+        const dateOnly = `${year}-${month}-${day}`;
+
+        this.book = new Book(this.title, this.description, dateOnly, 'book', newId, this.imgUrl, 0, 0, genres);
+
+        this.bookService.create(this.book).then((response) => {
+          console.log(response);
+          router.push('/publish-2');
+        }).catch((error) => {
+          console.error('Error posting data:', error);
+        });
+      } catch (error) {
+        console.error('Error fetching books:', error);
       }
-
-      const lastId = (Number(lastTemplate.id) + 1).toString();
-
-      const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
-      this.book = new Book(this.title, this.description, new Date(), 'book', lastId, this.imgUrl, 0, 0, genres);
-      this.bookService.create(this.book).then((response) => {
-        console.log(response);
-        router.push('/publish-2');
-      }).catch((error) => {
-        console.error('Error posting data:', error);
-      });
     }
   }
 }
