@@ -458,6 +458,50 @@
       "imgUrl": "https://i.pinimg.com/originals/c0/46/2f/c0462f5a27f6cc16d17f0c123d8c7602.jpg",
       "id": "20",
       "portfolio_id": 20
+    },
+    {
+      "title": "Hooky",
+      "description": "Dani y Dorian perdieron el autobús de la escuela de magia. Ahora deben encontrar a alguien que les enseñe a convertirse en grandes maestros de la brujería... ¿Lo lograrán?",
+      "datePublish": "2024-05-13T22:00:34.830Z",
+      "type": "book",
+      "id": "21",
+      "imgUrl": "https://images.cdn1.buscalibre.com/fit-in/360x360/d4/4c/d44ca754ffd1f3fa205a56751b3e30c9.jpg",
+      "likes": 0,
+      "views": 0,
+      "genre": "Fantasy"
+    },
+    {
+      "title": "Caperucita roja",
+      "description": "Una niña con una caperucita roja que lleva el almuerzo a su abuelita. Un lobo hambriento y tramposo que vive en el bosque. El encuentro es inevitable y... tenemos todos los ingredientes para que el cuento más conocido por todos los niños y las niñas del mundo se vuelva a representar.",
+      "datePublish": "2024-05-13T22:23:16.528Z",
+      "type": "book",
+      "id": "22",
+      "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTocjE_mrBvWiREmlE6-vvH8K1jEoT8TiMW43toYmsYfw&s",
+      "likes": 0,
+      "views": 0,
+      "genre": "Fantasy"
+    },
+    {
+      "title": "La bella y la bestia",
+      "description": "Una hermosa joven llamada Bella, acepta alojarse en un castillo con una bestia a cambio de la libertad de su padre. El animal es en realidad un príncipe encantado que, para romper el hechizo, tendrá que ganarse el amor de una dama.",
+      "datePublish": "2024-05-13T22:35:18.252Z",
+      "type": "book",
+      "id": "23",
+      "imgUrl": "https://images.cdn1.buscalibre.com/fit-in/360x360/d2/39/d2396183ee8a161a23829195f076c095.jpg",
+      "likes": 0,
+      "views": 0,
+      "genre": "Romance, Fantasy"
+    },
+    {
+      "title": "Matilda",
+      "description": "Matilda es una lectora empedernida con tan solo cinco años. Sensible e inteligente, todos la admiran menos sus mediocres padres que la consideran una inútil. Además, tiene poderes extraños y maravillosos. Un día, decide desquitarse y empieza a emplearlos contra la cruel señorita Trumchbull.",
+      "datePublish": "2024-05-13T22:45:53.414Z",
+      "type": "book",
+      "id": "24",
+      "imgUrl": "https://www.crisol.com.pe/media/catalog/product/cache/cf84e6047db2ba7f2d5c381080c69ffe/9/7/9786124349218_v7z0knyvje49k3s4.jpg",
+      "likes": 0,
+      "views": 0,
+      "genre": "Fantasy, Comedy"
     }
   ],
   "templateState": [

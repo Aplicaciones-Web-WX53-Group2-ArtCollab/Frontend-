@@ -2,7 +2,6 @@
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import FooterContent from '@/public/components/footer-content.component.vue'
 import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
-import BookInput from '@/content/components/publish/book-publish-input.component.vue'
 import BookFileUpload from '@/content/components/publish/book-publish-fileupload.component.vue'
 import BookPublishEditor from '@/content/components/publish/the-book-publish-editor.component.vue'
 import { ref } from 'vue'
