@@ -9,4 +9,7 @@ export class BookInternalService {
     increaseLike(id, like){
         return http.patch('/template/' + id, {likes: like+1})
     }
+    create(body) {
+        return http.post('/template', body)
+    }
 }
