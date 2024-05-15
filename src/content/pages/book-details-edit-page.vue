@@ -12,7 +12,7 @@ import { BookInternalService } from '@/content/services/book-internal.service.js
 import { Book } from '@/content/models/book.entity.js'
 
 export default {
-  name: 'book-details-edit-page-1',
+  name: 'book-details-edit-page',
   data() {
     return {
       book: new Book(),
@@ -30,16 +30,27 @@ export default {
         console.error(error);
       }
     },
-    updateBookDetails() {
-      let updateObject = {
-        imgUrl: this.book.imgUrl,
-        title: this.book.title,
-        description: this.book.description
-      };
-      return this.bookService.updateBook(this.book.id, updateObject)
-        .catch(error => {
-          console.error(error);
-        });
+    async updateBookDetails() {
+      try {
+        const existingBook = await this.bookService.getBookById(this.book.id);
+        let updateObject = {
+          title: this.book.title,
+          description: this.book.description,
+          date_publish: existingBook.data.date_publish,
+          type: existingBook.data.type,
+          likes: existingBook.data.likes,
+          views: existingBook.data.views,
+          templateState_id: existingBook.data.templateState_id,
+          template_History_id: existingBook.data.template_History_id,
+          imgUrl: this.book.imgUrl ? this.book.imgUrl : existingBook.data.imgUrl,
+          id: existingBook.data.id,
+          portfolio_id: existingBook.data.portfolio_id,
+          genre: existingBook.data.genre
+        };
+        return this.bookService.updateBook(this.book.id, updateObject);
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
 }

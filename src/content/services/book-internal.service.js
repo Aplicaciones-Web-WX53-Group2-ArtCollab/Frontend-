@@ -16,6 +16,6 @@ export class BookInternalService {
         return http.post('/template', body)
     }
     updateBook(id, updateObject) {
-        return http.patch('/template/' + id, updateObject)
+        return http.put('/template/' + id, updateObject)
     }
 }
