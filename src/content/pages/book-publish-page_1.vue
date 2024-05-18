@@ -53,9 +53,8 @@ export default {
 
         this.book = new Book(this.title, this.description, dateOnly, 'book', newId, this.imgUrl, 0, 0, genres);
 
-        this.bookService.create(this.book).then((response) => {
-          console.log(response);
-          router.push('/publish-2');
+        this.bookService.create(this.book).then(() => {
+          router.push('/chapter-publish');
         }).catch((error) => {
           console.error('Error posting data:', error);
         });

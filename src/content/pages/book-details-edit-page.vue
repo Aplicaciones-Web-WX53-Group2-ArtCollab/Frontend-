@@ -12,7 +12,7 @@ import { BookInternalService } from '@/content/services/book-internal.service.js
 import { Book } from '@/content/models/book.entity.js'
 
 export default {
-  name: 'book-details-edit-page-1',
+  name: 'book-details-edit-page',
   data() {
     return {
       book: new Book(),
@@ -32,10 +32,14 @@ export default {
     },
     updateBookDetails() {
       let updateObject = {
-        imgUrl: this.book.imgUrl,
         title: this.book.title,
         description: this.book.description
       };
+
+      if (this.book.imgUrl != null) {
+        updateObject.imgUrl = this.book.imgUrl;
+      }
+
       return this.bookService.updateBook(this.book.id, updateObject)
         .catch(error => {
           console.error(error);
