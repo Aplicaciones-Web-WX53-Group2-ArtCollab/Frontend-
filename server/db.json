@@ -440,6 +440,48 @@
       "imgUrl": "https://i.pinimg.com/originals/c0/46/2f/c0462f5a27f6cc16d17f0c123d8c7602.jpg",
       "id": "20",
       "portfolio_id": 20
+    },
+    {
+      "title": "Hooky Illustration",
+      "description": "An illustration of Hooky's characters.",
+      "date_publish": "2024-04-28",
+      "type": "illustration",
+      "likes": 0,
+      "views": 0,
+      "templateState_id": 21,
+      "template_History_id": 21,
+      "imgUrl": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-1.png?raw=true",
+      "id": "21",
+      "portfolio_id": 21,
+      "author_id": 3
+    },
+    {
+      "title": "Marionetta Illustration",
+      "description": "An illustration of Marionetta's characters.",
+      "date_publish": "2024-04-28",
+      "type": "illustration",
+      "likes": 0,
+      "views": 0,
+      "templateState_id": 22,
+      "template_History_id": 22,
+      "imgUrl": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-2.png?raw=true",
+      "id": "22",
+      "portfolio_id": 22,
+      "author_id": 3
+    },
+    {
+      "title": "Girls hanging out Illustration",
+      "description": "An illustration of three girls hanging out.",
+      "date_publish": "2024-04-28",
+      "type": "illustration",
+      "likes": 0,
+      "views": 0,
+      "templateState_id": 23,
+      "template_History_id": 23,
+      "imgUrl": "https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/portfolio-3.png?raw=true",
+      "id": "23",
+      "portfolio_id": 23,
+      "author_id": 3
     }
   ],
   "templateState": [

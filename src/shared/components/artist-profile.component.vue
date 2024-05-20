@@ -1,33 +1,29 @@
 <script>
-import { Portfolio } from '@/user/models/portfolio.entity.js'
-import { PortfolioEndpoint } from '@/user/services/portfolio-endpoint.service.js'
+import { Reader } from '@/user/models/reader.entity.js'
+import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+import { IllustrationService } from '@/shared/services/illustration.service.js'
 export default {
   name: 'the-artist-profile',
   data() {
     return {
-      social_media: 'Social Media',
-      illustrated_books: 'Illustrated Books',
-      portfolioImage1: '',
-      portfolioImage2: '',
-      portfolioImage3: '',
-      portfolios: [],
-      portfolio: new Portfolio(),
-      portfolioApiFake: new PortfolioEndpoint()
+      reader: new Reader(),
+      illustrations: []
     }
   },
-  async created() {
-    this.portfolioApiFake.getAllPortfolios().then((response) => {
-      response.data.forEach((portfolioData) => {
-        const { id, reader_id, create_at, title, description, quantity, images } = portfolioData;
-        if (portfolioData.id === 3) {
-          this.portfolio = new Portfolio(id, reader_id, create_at, title, description, quantity, images);
-          this.portfolioImage1 = images.image_1;
-          this.portfolioImage2 = images.image_2;
-          this.portfolioImage3 = images.image_3;
-        }
-      });
+  created() {
+    const userService = new UserEndpointService();
+    userService.getUserById(3).then((response) => {
+      this.reader._id = response.data.id;
+      this.reader._name = response.data.name;
+      this.reader._imgURL = response.data.imgUrl;
     }).catch((error) => {
-      console.error('Error fetching portfolios:', error);
+      console.error('Error fetching user:', error);
+    });
+    const illustrationService = new IllustrationService();
+    illustrationService.getAllContent().then((response) => {
+      this.illustrations = response.data.filter(illustration => illustration.author_id === Number(this.reader._id));
+    }).catch((error) => {
+      console.error('Error fetching illustrations:', error);
     });
   }
 }
@@ -40,12 +36,12 @@ export default {
       <div class="banner-background"></div>
       <div class="profile-image">
         <img
-          src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/artist-profile-image.png?raw=true"
+          :src="reader._imgURL"
           width="496" alt="Artist profile image">
         <div class="connect-button">
           <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">Conectar</pv-button>
         </div>
-        <div class="text">Miriam Bonastre</div>
+        <div class="text">{{ reader._name }}</div>
       </div>
     </div>
     <div class="flexbox-container" aria-label="Artist information container">
@@ -98,9 +94,9 @@ export default {
         <div class="portfolio" aria-label="Artist portfolio">
           <div class="portfolio-title">{{ $t('artistProfile.portfolio') }}</div>
           <div class="flex-container">
-            <img class="normal-image" :src="portfolioImage1" alt="Portfolio first image">
-            <img class="normal-image" :src="portfolioImage2" alt="Portfolio first image">
-            <img class="large-image" :src="portfolioImage3" alt="Portfolio first image">
+            <div class="illustrations-container">
+              <img :class="index === illustrations.length - 1 ? 'large-image' : 'normal-image'" v-for="(illustration, index) in illustrations" :key="illustration.id" :src="illustration.imgUrl" alt="Illustration Image">
+            </div>
           </div>
         </div>
       </div>
@@ -119,14 +115,14 @@ export default {
   top: 5%;
   left: 0;
   width: 100%;
-  height: 40vh; /* Altura del 75% del viewport height */
+  height: 40vh;
   background-color: #f8cd7c;
-  z-index: 1; /* z-index menor para que esté detrás del otro fondo */
+  z-index: 1;
 }
 
 .profile-image img {
   position: relative;
-  z-index: 1; /* z-index menor para que la imagen esté detrás del texto */
+  z-index: 1;
 }
 
 .connect-button {
@@ -141,7 +137,7 @@ export default {
   position: relative;
   color: black;
   font: bold 30px/30px Archivo, sans-serif;
-  z-index: 2; /* z-index mayor para que el texto esté delante de la imagen */
+  z-index: 2;
   top: -10%;
 }
 
@@ -153,7 +149,6 @@ export default {
   width: 100%;
 }
 
-/* Estilos para los elementos flex dentro del contenedor */
 .flex-item {
   padding: 10px;
   max-width: 60vw;
@@ -162,10 +157,10 @@ export default {
 }
 
 .profile-image {
-  position: relative; /* Asegúrate de que .elemento tenga una posición que no sea 'static' para que z-index funcione */
+  position: relative;
   text-align: center;
   padding: 20px;
-  z-index: 3; /* z-index aún mayor para que esté delante de ambos fondos */
+  z-index: 3;
 }
 
 .flex-container-2 {
@@ -177,26 +172,26 @@ export default {
 }
 
 .flex-container img {
-  margin-right: 10px; /* Espacio entre las cajas */
-  margin-bottom: 10px; /* Espacio entre las cajas */
-  margin-top: 10px; /* Espacio entre las cajas */
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .small-image {
-  width: 10%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 10%;
+  height: auto;
   margin: 10px 10px 10px 0;
 }
 
 .normal-image {
-  width: 25%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 25%;
+  height: auto;
   margin: 10px 10px 10px 0;
 }
 
 .large-image {
-  width: 30%; /* Ajusta el ancho según tus necesidades */
-  height: auto; /* Mantiene la proporción de la imagen */
+  width: 30%;
+  height: auto;
 }
 
 .bio {
@@ -204,7 +199,7 @@ export default {
 }
 
 .bio-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -213,11 +208,11 @@ export default {
 }
 
 .portfolio-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
 }
 
 .media-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
 }
 
 .artist-books {
@@ -225,7 +220,7 @@ export default {
 }
 
 .artist-books-title {
-  font-weight: 600; /* Semibold */
+  font-weight: 600;
 }
 
 .flex-container p {
@@ -238,6 +233,18 @@ export default {
   justify-content: center;
   color: black;
   text-decoration: underline;
+}
+
+.illustrations-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .flex-container {
+    flex-direction: row;
+  }
 }
 
 @media (width <= 540px) {

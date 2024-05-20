@@ -4,7 +4,6 @@ import NavbarContent from '@/public/components/navbar-content.component.vue'
 
 import { ref } from 'vue'
 
-import TheArtistProfileEdit from '@/user/components/artist-profile-edit.component.vue'
 import TheUserProfile from '@/user/components/the-user-profile.component.vue'
 
 const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
