@@ -1,7 +1,6 @@
 <script setup>
   import NavbarContent from '@/public/components/navbar-content.component.vue'
   import theUserProfileComponent from '@/user/components/the-user-profile.component.vue'
-  import footerContentComponent from '@/public/components/footer-content.component.vue'
   import { ref } from 'vue'
 
   const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
@@ -20,7 +19,6 @@
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <theUserProfileComponent/>
-  <footerContentComponent/>
 
 </template>
 

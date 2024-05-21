@@ -2,7 +2,6 @@
 
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import BookProfile from '@/content/components/profiles/book-profile.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 
 import { ref } from 'vue'
 
@@ -21,7 +20,6 @@ const handleShowEmailLoginUpdate = (value) => {
   <navbar-content :showLogin="showLogin" :showEmailLogin="showEmailLogin"
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <book-profile/>
-  <footer-content/>
 </template>
 
 <style scoped>

@@ -1,6 +1,5 @@
 <script setup>
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
 import BookFileUpload from '@/content/components/publish/book-publish-fileupload.component.vue'
 import BookPublishEditor from '@/content/components/publish/the-book-publish-editor.component.vue'
@@ -49,7 +48,6 @@ const handleShowEmailLoginUpdate = (value) => {
       <book-file-upload/>
     </div>
   </div>
-  <footer-content/>
 </template>
 
 <style scoped>

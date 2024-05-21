@@ -1,6 +1,5 @@
 <script setup>
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
 import BookPublishEditor from '@/content/components/publish/the-book-publish-editor.component.vue'
 import BookIllustrationsUpload from '@/content/components/publish/book-publish-illustrations-upload.component.vue'
@@ -38,7 +37,6 @@ import BookIllustrationsUpload from '@/content/components/publish/book-publish-i
       <book-illustrations-upload/>
     </div>
   </div>
-  <footer-content/>
 </template>
 
 <style scoped>

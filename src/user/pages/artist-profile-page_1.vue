@@ -3,7 +3,7 @@ import FooterContent from '@/public/components/footer-content.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 
 import { ref } from 'vue'
-import TheArtistProfile from '@/shared/components/artist-profile.component.vue'
+import TheArtistProfile from '@/public/components/artist-profile.component.vue'
 
 const showLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión
 const showEmailLogin = ref(false); //Esta variable se encarga de mostrar el componente de inicio de sesión con correo electrónico

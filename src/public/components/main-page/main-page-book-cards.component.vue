@@ -41,10 +41,10 @@ export default {
 </script>
 
 <template>
-  <div class="book-card flex flex-row gap-5 align-items-center" aria-label="Tarjeta de libros">
-    <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="cursor-pointer" height="300px" width="200px"/>
+  <div class="book-card mt-4 lg:mt-0 flex flex-row gap-5  align-items-center" aria-label="Tarjeta de libros">
+    <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="cursor-pointer mx-2 w-5rem h-10rem lg:w-10rem lg:h-15rem"/>
     <h1 class="position">{{ position }}</h1>
-    <div class="book-info flex flex-column md:align-content-center">
+    <div class="book-info text-xs lg:text-base flex flex-column md:align-content-center">
       <p class="book-genre cursor-pointer">{{ bookGenre }}</p>
       <p class="book-title font-bold cursor-pointer">{{ bookTitle }}</p>
       <p class="book-authors" :aria-label="'Escritor del libro: ' + bookWriter + ', Ilustrador del libro: ' + bookIllustrator">{{ bookWriter }} / {{bookIllustrator}}</p>
