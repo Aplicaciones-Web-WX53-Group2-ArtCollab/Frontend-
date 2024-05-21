@@ -30,8 +30,10 @@ export default {
 </script>
 
 <template>
-  <div class="book-card grid gap-5 align-items-center justify-content-between" aria-label="Tarjeta de libros">
-    <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="col cursor-pointer" height="300px" width="200px"/>
+  <div class="book-card grid gap-5 align-items-center justify-content-between w-full" aria-label="Tarjeta de libros">
+    <div class="col">
+      <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="cursor-pointer" height="300px" width="200px"/>
+    </div>
     <h1 class="col position">{{ position }}</h1>
     <div class="col book-info flex flex-column md:align-content-center">
       <p class="book-genre cursor-pointer capitalize">{{ bookGenre }}</p>

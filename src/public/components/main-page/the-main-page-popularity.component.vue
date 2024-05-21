@@ -59,8 +59,8 @@ export default {
 </script>
 
 <template>
-  <div class="popularity-container mt-5 grid" aria-label="Sección de libros populares">
-    <div class="popular-per-genre md:col">
+  <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5" aria-label="Sección de libros populares">
+    <div class="popular-per-genre col">
       <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center align-self-start ">{{$t('popular_per_genre')}}</span>
         <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @change="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" aria-label="Seleccionar género de libro"/>
