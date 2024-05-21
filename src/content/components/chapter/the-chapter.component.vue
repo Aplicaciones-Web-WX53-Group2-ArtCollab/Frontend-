@@ -60,7 +60,7 @@ export default {
       }
     },
     slideRight() {
-      if (this.currentPosition != 0) {
+      if (this.currentPosition !== 0) {
         this.slider.style.marginLeft = this.currentMargin + (100 / this.slidesPerPage) + '%';;
         this.currentMargin += (100 / this.slidesPerPage);
         this.currentPosition--;
@@ -73,12 +73,12 @@ export default {
       }
     },
     slideLeft() {
-      if (this.currentPosition != this.slidesCount) {
+      if (this.currentPosition !== this.slidesCount) {
         this.slider.style.marginLeft = this.currentMargin - (100 / this.slidesPerPage) + '%';
         this.currentMargin -= (100 / this.slidesPerPage);
         this.currentPosition++;
       };
-      if (this.currentPosition == this.slidesCount) {
+      if (this.currentPosition === this.slidesCount) {
         this.buttons[1].classList.add('inactive');
       }
       if (this.currentPosition > 0) {
@@ -103,7 +103,7 @@ export default {
   <div class="bg-white" aria-label="Main content area">
   <div class="bg-dark-blue" aria-label="Header section">
     <pv-toolbar class="flex border-noround text-white-alpha-90 bg-indigo-900	">
-      <template #start class="flex justify-content-start">
+      <template #start>
         <div class="flex justify-content-start">
       <img src="/src/assets/logo.png" alt="ArtCollab Logo" width="50" height="50" />
       <h1>Boulevard</h1>
@@ -111,11 +111,11 @@ export default {
           <h1 class="lg:text-4xl">{{ $t('chapter') }}</h1>
         </div>
       </template>
-      <template #center class="flex justify-content-center">
+      <template #center>
       <div class="flex">
-        <pv-button icon="pi pi-chevron-left" class="p-button border-none text-white bg-blue-800" @click="nextPage"></pv-button>
+        <pv-button icon="pi pi-chevron-left" class="p-button border-none text-white bg-blue-800"></pv-button>
         <p class="lg:text-2xl">#2</p>
-        <pv-button icon="pi pi-chevron-right" class="p-button border-none text-white bg-blue-800" @click="nextPage"></pv-button>
+        <pv-button icon="pi pi-chevron-right" class="p-button border-none text-white bg-blue-800"></pv-button>
       </div>
       </template>
     </pv-toolbar>
@@ -225,11 +225,11 @@ export default {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  max-width: 100%; /* Asegura que el textarea no sobrepase el ancho del contenedor padre */
+  max-width: 100%;
 }
 .send {
   display: flex;
-  justify-content: flex-end; /* Alinea el botón de envío a la derecha */
+  justify-content: flex-end;
 }
 .comments-section {
   width: 100%;

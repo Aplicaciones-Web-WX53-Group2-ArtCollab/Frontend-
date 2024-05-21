@@ -1,6 +1,5 @@
 <script setup>
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 import BookPublishDropdown from '@/content/components/publish/book-publish-dropdown.component.vue'
 import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
 import BookPublishCoverUpload from '@/content/components/publish/book-publish-coverupload.component.vue'
@@ -108,7 +107,6 @@ export default {
       </div>
     </div>
   </div>
-  <footer-content/>
 </template>
 
 <style scoped>

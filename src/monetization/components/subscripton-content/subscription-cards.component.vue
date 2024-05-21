@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="cards-container" aria-label="Subscription cards container">
     <div class="flex flex-row flex-wrap justify-content-center align-content-center gap-7" aria-label="Subscription cards">
-      <pv-card class="w-20rem h-30rem" aria-label="Artist subscription card">
+      <pv-card class=" w-20rem h-30rem" aria-label="Artist subscription card">
         <template #title>
           <div class="flex" aria-label="Subscription price">
             <h1> {{ $t('subscriptionCards.priceArtist') }}</h1>
@@ -109,5 +109,11 @@ export default {
   padding: 2rem;
   width:70%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .cards-container{
+    width: 90%;
+  }
 }
 </style>

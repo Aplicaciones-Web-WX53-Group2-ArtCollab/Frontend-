@@ -1,5 +1,5 @@
 <script>
-import MainPageCarousels from '@/shared/components/main-page/main-page-carousels.component.vue'
+import MainPageCarousels from '@/public/components/main-page/main-page-carousels.component.vue'
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
 

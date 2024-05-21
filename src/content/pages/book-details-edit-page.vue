@@ -4,7 +4,6 @@ import TheBookDetailsEditToolbar from '@/content/components/details-edit/the-boo
 import TheBookDetailsEditCover from '@/content/components/details-edit/the-book-details-edit-cover.component.vue'
 import TheBookDetailsEditTabview from '@/content/components/details-edit/the-book-details-edit-tabview.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 </script>
 
 <script>
@@ -56,7 +55,6 @@ export default {
       <the-book-details-edit-tabview @update:title="book.title = $event" @update:description="book.description = $event"/>
     </div>
   </div>
-  <footer-content/>
 </template>
 
 <style scoped>

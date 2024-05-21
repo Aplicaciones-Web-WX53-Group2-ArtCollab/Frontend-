@@ -1,5 +1,5 @@
 <script>
-import MainPageCarousels from '@/shared/components/main-page/main-page-carousels.component.vue'
+import MainPageCarousels from '@/public/components/main-page/main-page-carousels.component.vue'
 import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { Reader } from '@/shared/models/reader.entity.js'
 

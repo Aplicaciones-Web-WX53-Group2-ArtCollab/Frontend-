@@ -1,7 +1,6 @@
 <script setup>
 
 import NavbarContent from '@/public/components/navbar-content.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 import BookFileUpload from '@/content/components/publish/book-publish-fileupload.component.vue'
 
 import { ref } from 'vue';
@@ -40,7 +39,6 @@ const defaultValue2 = ref('Lorem ipsum dolor sit amet consectetur adipiscing eli
       <book-file-upload/>
     </div>
   </div>
-  <footer-content/>
 </template>
 
 <style scoped>

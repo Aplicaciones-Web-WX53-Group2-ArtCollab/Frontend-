@@ -55,8 +55,8 @@ export default {
 }
 
 .banner-image{
-  width: 300px; 
-  height: 500px; 
+  width: 300px;
+  height: 500px;
 }
 
 .banner::after {

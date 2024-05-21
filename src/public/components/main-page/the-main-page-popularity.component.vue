@@ -1,6 +1,6 @@
 <script>
 import { ref } from 'vue'
-import MainPageBookCards from '@/shared/components/main-page/main-page-book-cards.component.vue'
+import MainPageBookCards from '@/public/components/main-page/main-page-book-cards.component.vue'
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
 
