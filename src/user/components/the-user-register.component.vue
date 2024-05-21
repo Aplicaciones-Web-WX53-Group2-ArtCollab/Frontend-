@@ -21,7 +21,6 @@ export default {
   },
 
   computed: {
-    //las propiedades Computed son funciones que se ejecutan cada vez que una de las propiedades que utiliza cambia. Lo que permite actualizar el estado de la aplicación en tiempo real.
     isEmailValid() {
       const re = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; //Expresión regular para validar el correo electrónico. Referencia: https://regexr.com/3e48o
       return re.test(this.email);
@@ -56,9 +55,6 @@ export default {
           type:this.artist ? 'artist' : 'reader',
           subscription_id: '',
         }
-        // ).then(() => {
-        //   this.$router.push({ name: 'home' });
-        // }
         ).catch((error) => {
           console.error(error);
         });

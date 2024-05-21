@@ -1,14 +1,3 @@
-<!--Usage examples:-->
-<!--<main-page-book-cards
-  v-for="(book, index) in books"
-  :key="index"
-  :book-cover="book.cover"
-  :position="index + 1"
-  :book-genre="book.genre"
-  :book-title="book.title"
-  :book-writer="book.writer"
-  :book-illustrator="book.illustrator"
-/>-->
 <script>
 export default {
   props: {
@@ -41,11 +30,11 @@ export default {
 </script>
 
 <template>
-  <div class="book-card flex flex-row gap-5 align-items-center" aria-label="Tarjeta de libros">
-    <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="cursor-pointer" height="300px" width="200px"/>
-    <h1 class="position">{{ position }}</h1>
-    <div class="book-info flex flex-column md:align-content-center">
-      <p class="book-genre cursor-pointer">{{ bookGenre }}</p>
+  <div class="book-card grid gap-5 align-items-center justify-content-between" aria-label="Tarjeta de libros">
+    <img :src="bookCover" :alt="'Portada del libro ' + bookTitle" class="col cursor-pointer" height="300px" width="200px"/>
+    <h1 class="col position">{{ position }}</h1>
+    <div class="col book-info flex flex-column md:align-content-center">
+      <p class="book-genre cursor-pointer capitalize">{{ bookGenre }}</p>
       <p class="book-title font-bold cursor-pointer">{{ bookTitle }}</p>
       <p class="book-authors" :aria-label="'Escritor del libro: ' + bookWriter + ', Ilustrador del libro: ' + bookIllustrator">{{ bookWriter }} / {{bookIllustrator}}</p>
     </div>

@@ -27,12 +27,10 @@ export default {
     },
     getArtist() {
       this.userService.getUsers().then((response) => {
-        console.log(response.data);
         response.data.forEach((user) => {
           if (user.type === 'artist' && user.name === 'Miriam Bonastre') {
             const { id, name, username, email, password, type, imgUrl, subscription_id } = user;
             this.userData = new Reader(id, name, username, email, password, type, imgUrl, subscription_id);
-            console.log(this.userData)
           }
         });
       });
@@ -47,7 +45,6 @@ export default {
            }
          })
       })
-      console.log(this.messages);
     }
 
   },

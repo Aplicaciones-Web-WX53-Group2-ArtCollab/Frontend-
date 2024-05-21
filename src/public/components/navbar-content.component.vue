@@ -61,7 +61,6 @@ export default {
     getLoggedInUser(){
       this.userServices.getLoggedInUser().then((response) => {
         this.loggedInUser = response.data[0];
-        console.log(this.loggedInUser);
       });
     }
   },
