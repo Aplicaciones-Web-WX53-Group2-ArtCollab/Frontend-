@@ -10,10 +10,10 @@ import ChapterPublishPage from '@/content/pages/chapter-publish-page.vue'
 import ChapterPage from '@/content/pages/chapter-page.vue'
 import UserProfilePage from '@/user/pages/user-profile-page.component.vue'
 import BookDetailsEditPage from '@/content/pages/book-details-edit-page.vue'
-import ArtistProfilePage_1 from '@/user/pages/artist-profile-page_1.vue'
+import ArtistProfilePage from '@/user/pages/artist-profile-page.vue'
 import ThePageRoom from '@/collaboration/pages/the-page-room.component.vue'
 import ThePageChat from '@/collaboration/pages/the-page-chat.component.vue'
-import ChapterpreviewPage from '@/content/pages/chapterpreview-page.vue'
+import ChapterPreviewPage from '@/content/pages/chapterpreview-page.vue'
 import AboutPage from '@/content/pages/about-page.vue'
 import UserStories from '@/user/pages/user-stories.vue'
 import ChapterDetailsEditPage from '@/content/pages/chapter-details-edit-page.vue'
@@ -36,10 +36,10 @@ const routes = [
   { path: '/writer-profile', component:UserProfilePage },
   { path: '/book-edit', component: BookDetailsEditPage },
   { path: '/chapter-edit', component: ChapterDetailsEditPage },
-  { path: '/illustrator-profile', component: ArtistProfilePage_1 },
+  { path: '/illustrator-profile', component: ArtistProfilePage },
   { path: '/artist-room', component: ThePageRoom },
   { path: '/chat', component: ThePageChat },
-  { path: '/chapter-preview', component: ChapterpreviewPage },
+  { path: '/chapter-preview', component: ChapterPreviewPage },
   { path: '/about', component: AboutPage},
   { path: '/genre/romance', component:()=> import('@/content/pages/the-romance-books.component.vue')},
   { path: '/genre/fantasy', component:() => import('@/content/pages/the-fantasy-books.component.vue')},

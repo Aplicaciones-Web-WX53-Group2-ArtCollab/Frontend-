@@ -1,6 +1,6 @@
 <script>
 import { Reader } from '@/user/models/reader.entity.js'
-import { UserEndpointService } from '@/user/services/user-endpoint.service.js'
+import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { IllustrationService } from '@/shared/services/illustration.service.js'
 export default {
   name: 'the-artist-profile-edit',
