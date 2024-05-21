@@ -1,6 +1,5 @@
 <script setup>
 import NavbarContent from '../../public/components/navbar-content.component.vue';
-import FooterContent from '../../public/components/footer-content.component.vue';
 import TheHeroMonetization from '@/monetization/components/monetization-content/the-hero-monetization.component.vue'
 import TheStepsContent from '@/monetization/components/monetization-content/the-steps-content.component.vue'
 import { ref } from 'vue'
@@ -23,7 +22,6 @@ const handleShowEmailLoginUpdate = (value) => {
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
       <the-hero-monetization/>
       <the-steps-content/>
-      <footer-content/>
 </template>
 
 <style scoped>

@@ -61,7 +61,6 @@ export default {
     getLoggedInUser(){
       this.userServices.getLoggedInUser().then((response) => {
         this.loggedInUser = response.data[0];
-        console.log(this.loggedInUser);
       });
     }
   },
@@ -135,12 +134,6 @@ export default {
               <h2 > {{ $t('artists') }} </h2>
             </router-link>
           </div>
-        </div>
-        <div class="card flex flex-wrap justify-content-center gap-3" aria-label="search buttons content">
-          <pv-iconfield icon-position="left" >
-            <pv-inputicon class="pi pi-search text-black-alpha-90 text-2xl absolute mt-1 top-0"></pv-inputicon>
-            <pv-inputtext  class="pl-6" />
-          </pv-iconfield>
         </div>
         <div aria-label="login button" class="hidden md:block">
           <div v-if="loggedInUser" class="flex gap-3">

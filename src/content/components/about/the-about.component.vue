@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="about text-bluegray-900 text-center lg:text-justify" aria-label="About Section">
+  <div class="about mx-2 text-bluegray-900 text-center lg:text-justify" aria-label="About Section">
     <h1 class=" text-2xl lg:text-7xl font-bold" aria-label="About Title">{{ $t('footer.about') }}</h1>
     <p class="font-bold" aria-label="StartUp name">Somos ArtCollab.</p>
     <p class="line-height-4 text-xs lg:text-xl" aria-label="About Description">

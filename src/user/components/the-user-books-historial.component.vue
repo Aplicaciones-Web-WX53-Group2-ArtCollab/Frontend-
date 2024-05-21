@@ -46,7 +46,6 @@ export default {
   created() {
     this.bookApiFake.getBook().then((response) => {
         this.books = response.data.map(bookData => new Book(bookData.name,'','','','', bookData.image));
-        console.log(this.books);
       })
       .catch((error) => {
         console.error('Error fetching books:', error);

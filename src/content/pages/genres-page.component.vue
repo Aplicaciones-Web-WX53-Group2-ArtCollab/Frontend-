@@ -1,7 +1,6 @@
 <script setup>
 
 import GenresNavbar from '@/content/components/popular-books/the-genre-navbar.component.vue'
-import FooterContent from '@/public/components/footer-content.component.vue'
 import NavbarContent from '@/public/components/navbar-content.component.vue'
 import AllBooksCards from '@/content/components/popular-books/all-book-card.component.vue'
 import { ref } from 'vue'
@@ -22,7 +21,6 @@ const handleShowEmailLoginUpdate = (value) => {
                   @update:showLogin="handleShowLoginUpdate" @update:showEmailLogin="handleShowEmailLoginUpdate"/>
   <genres-navbar class="my-7"/>
   <all-books-cards/>
-  <footer-content/>
 </template>
 
 <style scoped>

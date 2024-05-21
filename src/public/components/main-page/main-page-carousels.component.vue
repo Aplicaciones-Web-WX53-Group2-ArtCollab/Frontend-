@@ -39,11 +39,11 @@ export default {
     },
     height: {
       type: String,
-      default: '200px'
+      default: '300px'
     },
     width: {
       type: String,
-      default: '100px'
+      default: '200px'
     }
   },
   setup() {
@@ -53,14 +53,14 @@ export default {
 </script>
 
 <template>
-  <div class="genre-container mt-7" aria-label="Carrusel de imágenes de libros">
+  <div class="mt-7" aria-label="Carrousel de imágenes de libros">
     <h3 class="title cursor-pointer">{{ title }} <i class="pi pi-angle-right"></i> </h3>
     <pv-carousel :value="image" circular :autoplayInterval="3000" :num-visible="3" :num-scroll="1" :responsive-options="responsiveOptions">
       <template #item="slotProps" >
         <div class="image-container flex justify-content-center " >
           <img :src="slotProps.data" alt="Carousel image" class="carousel-image cursor-pointer" :height="height" :width="width"/>
         </div>
-        <p v-if="name" class="alt-text flex justify-content-center">{{ name[slotProps.index] }}</p>
+        <p v-if="name" class="alt-text flex justify-content-center gap-5">{{ name[slotProps.index] }}</p>
       </template>
     </pv-carousel>
   </div>

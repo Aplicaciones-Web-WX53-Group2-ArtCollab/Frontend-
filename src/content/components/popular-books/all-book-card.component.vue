@@ -39,14 +39,14 @@ export default {
 
 <template>
 <div class="flex justify-content-center align-content-center my-8">
-  <div class="flex flex-column lg:flex-row  gap-6">
+  <div class="flex mx-5 flex-column lg:flex-row  gap-6">
     <div class="w-20rem flex flex-column gap-4">
       <div>
-        <img width="240" :src="bookPopular.imgUrl" alt="Book cover" />
+        <img class="w-10rem lg:w-20rem" :src="bookPopular.imgUrl" alt="Book cover" />
       </div>
       <div>
-        <h3>{{ bookPopular.title }}</h3>
-        <p> {{bookPopular.description}}</p>
+        <h3 class="text-xs lg:text-base">{{ bookPopular.title }}</h3>
+        <p class="text-xs lg:text-base"> {{bookPopular.description}}</p>
       </div>
       </div>
 
@@ -55,7 +55,7 @@ export default {
         <div>
             <img width="100" :src="book.imgUrl" alt="Book cover" />
           </div>
-          <div class="flex gap-4">
+          <div class="flex gap-4 text-xs lg:text-base">
             <p class="font-bold"> {{index+2}}</p>
             <h3> {{ book.title }}</h3>
           </div>

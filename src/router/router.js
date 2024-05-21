@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import MainPage from '@/shared/pages/main-page.vue'
+import MainPage from '@/public/pages/main-page.vue'
 import UserRegister from '@/user/pages/user-register.vue'
 import GenresPage from '@/content/pages/genres-page.component.vue'
 import SubscriptionApplication from '@/monetization/pages/subscription-application.component.vue'

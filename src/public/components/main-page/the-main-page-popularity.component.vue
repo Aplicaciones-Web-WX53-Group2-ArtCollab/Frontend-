@@ -1,6 +1,6 @@
 <script>
 import { ref } from 'vue'
-import MainPageBookCards from '@/shared/components/main-page/main-page-book-cards.component.vue'
+import MainPageBookCards from '@/public/components/main-page/main-page-book-cards.component.vue'
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
 
@@ -60,7 +60,7 @@ export default {
 
 <template>
   <div class="popularity-container flex flex-column md:flex-row gap-5 mt-5" aria-label="Sección de libros populares">
-    <div class="popular-per-genre">
+    <div class="popular-per-genre col">
       <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center align-self-start ">{{$t('popular_per_genre')}}</span>
         <pv-dropdown v-model="selectedGenre" :options="genres" :placeholder="$t('select_genre')" optionLabel="name" optionValue="id" @change="onGenreChange" class="border-0 pv-dropdown  w-14rem md:w-auto" aria-label="Seleccionar género de libro"/>
@@ -79,7 +79,7 @@ export default {
       </div>
     </div>
 
-    <div class="top-3">
+    <div class="top-3 md:col px-0">
       <h3 class="title flex flex-column md:flex-row md:justify-content-between h-4rem">
         <span class="font-bold flex md:align-self-center">{{$t('top_3')}}</span>
       </h3>
@@ -105,10 +105,6 @@ export default {
 
 .pv-dropdown{
   height: 3rem;
-}
-
-.popular-per-genre{
-  width:50%;
 }
 
 </style>

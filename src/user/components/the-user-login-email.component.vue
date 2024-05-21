@@ -64,7 +64,7 @@ export default {
             <div class="flex justify-content-center gap-2 mt-3">
               <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_1')" plain text @click="goBack" aria-label="Volver a las opciones de inicio de sesión"/>
               <router-link to="/" class="w-full">
-              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_2')" plain text aria-label="Iniciar sesión" @click="login; closeLogin"/>
+              <pv-button class="w-full bg-white text-sm" :label="$t('login_email_button_2')" plain text aria-label="Iniciar sesión" @click="login(); closeLogin()"/>
               </router-link>
             </div>
           </div>
