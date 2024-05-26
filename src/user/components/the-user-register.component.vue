@@ -55,9 +55,10 @@ export default {
           type:this.artist ? 'artist' : 'reader',
           subscription_id: '',
         }
-        ).catch((error) => {
-          console.error(error);
-        });
+        ).then(() => {
+          this.router.push('/');
+        }
+        );
       }
     },
   },
@@ -97,7 +98,7 @@ export default {
             <h4>{{ $t('register_data_policy') }}</h4>
 
             <div class="flex justify-content-center gap-2 mt-3 mb-3">
-              <router-link to="/"> <pv-button class="register-button w-full w-10rem" @click="register" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" /></router-link>
+              <pv-button class="register-button w-full w-10rem" @click="register" :label="$t('register_button')" plain text aria-label="Botón de registro" :disabled="!isFormValid" />
             </div>
 
             <pv-divider align="center" type="solid" >
