@@ -1,19 +1,19 @@
-<script setup>
-import NavbarContent from '@/public/components/navbar-content.component.vue'
-import BookPublishDropdown from '@/content/components/publish/book-publish-dropdown.component.vue'
-import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
-import BookPublishCoverUpload from '@/content/components/publish/book-publish-coverupload.component.vue'
-</script>
-
 <script>
 import { BookInternalService } from '@/content/services/book-internal.service.js'
 import { Book } from '@/content/models/book.entity.js'
 import router from '@/router/router.js'
+import NavbarContent from '@/public/components/navbar-content.component.vue'
+import BookPublishDropdown from '@/content/components/publish/book-publish-dropdown.component.vue'
+import BookBanner from '@/content/components/publish/book-publish-banner.component.vue'
+import BookPublishCoverUpload from '@/content/components/publish/book-publish-coverupload.component.vue'
 
 export default {
-  name: 'book-publish-page-1',
-  setup() {
-    return { router };
+  name: 'book-publish-page',
+  components: {
+    NavbarContent,
+    BookPublishDropdown,
+    BookBanner,
+    BookPublishCoverUpload
   },
   data() {
     return {
@@ -23,7 +23,8 @@ export default {
       description: '',
       genre1: '',
       genre2: '',
-      imgUrl: ''
+      imgUrl: '',
+      router
     }
   },
   methods: {

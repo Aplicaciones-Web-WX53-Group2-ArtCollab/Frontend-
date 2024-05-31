@@ -5,7 +5,7 @@ import GenresPage from '@/content/pages/genres-page.component.vue'
 import SubscriptionApplication from '@/monetization/pages/subscription-application.component.vue'
 import MonetizationApplication from '@/monetization/pages/monetization-application.component.vue'
 import ArtistOverview from '@/user/pages/artist-overview.vue'
-import BookPublishPage_1 from '@/content/pages/book-publish-page_1.vue'
+import BookPublishPage from '@/content/pages/book-publish-page.vue'
 import ChapterPublishPage from '@/content/pages/chapter-publish-page.vue'
 import ChapterPage from '@/content/pages/chapter-page.vue'
 import UserProfilePage from '@/user/pages/user-profile-page.component.vue'
@@ -29,7 +29,7 @@ const routes = [
   { path: '/subscription', component: SubscriptionApplication },
   { path: '/monetization', component: MonetizationApplication },
   { path: '/artist', component: ArtistOverview },
-  { path: '/book-publish', component: BookPublishPage_1 },
+  { path: '/book-publish', component: BookPublishPage },
   { path: '/chapter-publish', component: ChapterPublishPage },
   { path: '/book-profile', component: BookProfilePage },
   { path: '/chapter', component: ChapterPage },

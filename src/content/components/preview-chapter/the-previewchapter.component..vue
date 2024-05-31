@@ -126,7 +126,7 @@ export default {
           <router-link to="/book-profile">
             <pv-button class="p-button-rounded border-none text-white colorgreen mr-2">{{ $t('post') }}</pv-button>
           </router-link>
-          <router-link to="/publish-2">
+          <router-link to="/chapter-publish">
             <pv-button class="p-button-rounded border-none text-black-alpha-90 colorblue">{{ $t('back') }}</pv-button>
           </router-link>
         </div>
