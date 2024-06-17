@@ -1,5 +1,5 @@
 export class Reader {
-  constructor(id=null, name=null, username=null, email=null, password=null, type=null, imgURL=null, subscription_id=null) {
+  constructor(id=null, name=null, username=null, email=null, password=null, type=null, imgURL=null, subscription_id=null, description=null) {
     this._id = id;
     this._name = name;
     this._username = username;
@@ -8,5 +8,6 @@ export class Reader {
     this._type = type;
     this._imgURL = imgURL;
     this._subscription_id = subscription_id;
+    this._description = description;
   }
 }

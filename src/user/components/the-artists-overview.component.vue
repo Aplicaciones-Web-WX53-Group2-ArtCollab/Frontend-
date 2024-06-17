@@ -69,7 +69,9 @@ export default {
       <h3 class="text-2xl font-bold mt-5 mb-5">{{$t('artists')}}</h3>
       <div class="artist-profile-images flex flex-wrap justify-content-center gap-8">
         <div v-for="(image, index) in artist_profile_images" :key="index" class="image-container md:w-3 w-8 flex justify-content-center flex-column justify-content-center">
-          <router-link to="illustrator-profile"> <img :src="image._imgURL" alt="Artist Profile Image" class="carousel-image cursor-pointer"></router-link>
+              <router-link :to="`/illustrator-profile/${image._id}`">
+                <img :src="image._imgURL" alt="Artist Profile Image" class="carousel-image cursor-pointer">
+              </router-link>
           <label class="text-center cursor-pointer">{{ image._name }}</label>
         </div>
       </div>

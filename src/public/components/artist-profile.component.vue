@@ -12,10 +12,11 @@ export default {
   },
   created() {
     const userService = new UserEndpointService();
-    userService.getUserById(3).then((response) => {
+    userService.getUserById(this.$route.params.id).then((response) => {
       this.reader._id = response.data.id;
       this.reader._name = response.data.name;
       this.reader._imgURL = response.data.imgUrl;
+      this.reader._description = response.data.description;
     }).catch((error) => {
       console.error('Error fetching user:', error);
     });
@@ -65,30 +66,12 @@ export default {
             <a href="https://www.tiktok.com/" target="_blank"><p>https://www.tiktok.com/</p></a>
           </div>
         </div>
-        <div class="artist-books" aria-label="Artist books">
-          <div class="artist-books-title">{{ $t('artistProfile.illustrated_books') }}</div>
-          <div class="flex-container-2">
-            <img class="normal-image"
-                 src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/marionetta-cover.png?raw=true"
-                 alt="Book 1 image">
-            <p>Marionetta</p>
-          </div>
-          <div class="flex-container-2">
-            <img class="normal-image"
-                 src="https://github.com/Aplicaciones-Web-WX53-Group2-ArtCollab/Frontend-/blob/bounded-context/content/src/assets/images/hooky-cover.png?raw=true"
-                 alt="Book 2 image">
-            <p>Hooky</p>
-          </div>
-        </div>
       </div>
       <div class="flex-item" aria-label="Artist biography and portfolio">
         <div class="bio" aria-label="Biography">
           <div class="bio-title" aria-label="Biography title">Bio</div>
           <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi,
-              vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam
-              penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum
-              litora eros sociis iaculis.</p>
+            <p>{{ reader._description }}</p>
           </div>
         </div>
         <div class="portfolio" aria-label="Artist portfolio">
@@ -112,7 +95,6 @@ export default {
 
 .banner-background {
   position: absolute;
-  top: 5%;
   left: 0;
   width: 100%;
   height: 40vh;
@@ -215,14 +197,6 @@ export default {
 }
 
 .media-title {
-  font-weight: 600;
-}
-
-.artist-books {
-  margin-top: 20px;
-}
-
-.artist-books-title {
   font-weight: 600;
 }
 

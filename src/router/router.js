@@ -36,7 +36,11 @@ const routes = [
   { path: '/writer-profile', component:UserProfilePage },
   { path: '/book-edit', component: BookDetailsEditPage },
   { path: '/chapter-edit', component: ChapterDetailsEditPage },
-  { path: '/illustrator-profile', component: ArtistProfilePage },
+  {
+    path: '/illustrator-profile/:id',
+    name: 'IllustratorProfile',
+    component: ArtistProfilePage
+  },
   { path: '/artist-room', component: ThePageRoom },
   { path: '/chat', component: ThePageChat },
   { path: '/chapter-preview', component: ChapterPreviewPage },
