@@ -1,27 +1,21 @@
 import axios from 'axios'
 
+const http = axios.create({
+  baseURL: 'https://art-collab.azurewebsites.net/api/v1',
+  headers: {
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
+  }
+})
 export class UserEndpointService {
-  baseUrl = 'https://art-collab.azurewebsites.net/api/v1'
-  readerUrl = '/reader'
-  loginUrl = '/login'
 
   getUsers(){
-    return axios.get(`${this.baseUrl}${this.readerUrl}`)
+    return http.get('/reader')
   }
-
   getUserById(id){
-    return axios.get(`${this.baseUrl}${this.readerUrl}/${id}`)
+    return http.get(`/reader/${id}`)
   }
 
   createUser(reader){
-    return axios.post(`${this.baseUrl}${this.readerUrl}`, reader)
-  }
-
-  loginUser(reader){
-    return axios.post(`${this.baseUrl}${this.loginUrl}`, reader)
-  }
-
-  getLoggedInUser(){
-    return axios.get(`${this.baseUrl}${this.loginUrl}`)
+    return http.post('/reader', reader)
   }
 }

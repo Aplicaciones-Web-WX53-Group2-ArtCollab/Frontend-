@@ -1,7 +1,7 @@
 <script >
 import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
 import { Reader } from '@/shared/models/reader.entity.js'
-import { ChatService } from '@/collaboration/service/chat.service.js'
+import { CommentService } from '@/collaboration/service/comment.service.js'
 import { Chat } from '@/collaboration/models/chat.entity.js'
 import { Message } from '@/collaboration/models/message.entity.js'
 
@@ -14,7 +14,7 @@ export default {
       newMessage: '',
       userData: new Reader(),
       userService: new UserEndpointService(),
-      chatService: new ChatService(),
+      chatService: new CommentService(),
       currentMessage:''
 
     }
