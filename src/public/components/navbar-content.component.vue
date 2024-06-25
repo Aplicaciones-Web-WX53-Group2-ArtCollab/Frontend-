@@ -58,14 +58,6 @@ export default {
       this.$emit('update:showEmailLogin', false);
     },
 
-    getLoggedInUser(){
-      this.userServices.getLoggedInUser().then((response) => {
-        this.loggedInUser = response.data[0];
-      });
-    }
-  },
-  mounted() {
-    this.getLoggedInUser();
   },
 };
 </script>
@@ -109,7 +101,6 @@ export default {
                     </pv-button>
                 </router-link>
               </div>
-              <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
               <div v-else>
                 <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
                 <the-user-login ref="login"/>
@@ -147,7 +138,6 @@ export default {
               </pv-button>
             </router-link>
           </div>
-          <!-- Muestra el botón de inicio de sesión si el usuario no está conectado -->
           <div v-else>
             <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
             <the-user-login ref="login"/>
