@@ -8,13 +8,12 @@ export class ChatService{
     getChatById(id){
         return axios.get(`${this.baseUrl}${this.chatUrl}/${id}`)
     }
-
     createMessages(chat){
-        return axios.post(`${this.baseUrl}/message`, chat)
+        return axios.post(`${this.baseUrl}/comment`, chat)
     }
 
     getMessages(){
-        return axios.get(`${this.baseUrl}/message`)
+        return axios.get(`${this.baseUrl}/comment`)
     }
 
     deleteChatRoom(id){
