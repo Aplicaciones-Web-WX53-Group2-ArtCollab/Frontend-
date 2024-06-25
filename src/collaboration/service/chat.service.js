@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export class ChatService{
-    baseUrl = 'https://6633c60ff7d50bbd9b4a9f24.mockapi.io'
+    baseUrl = 'https://art-collab.azurewebsites.net/api/v1'
     chatUrl = '/chat'
 
 
