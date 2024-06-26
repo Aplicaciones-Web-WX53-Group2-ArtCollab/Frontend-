@@ -11,11 +11,11 @@ export default {
   },
   computed: {
     romanceBooks() {
-      return this.books.filter(book => book._genre === 'drama').map(book => book.imgUrl);
+      return this.books.filter(book => book._genre === 'Drama').map(book => book.imgUrl);
     },
 
     fantasyBooks() {
-      return this.books.filter(book => book._genre === 'fantasía').map(book => book.imgUrl);
+      return this.books.filter(book => book._genre === 'Fantasy').map(book => book.imgUrl);
     }
   },
   data() {
