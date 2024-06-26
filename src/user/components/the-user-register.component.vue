@@ -1,5 +1,6 @@
 <script>
 import { UserEndpointService } from '@/shared/services/user-endpoint.service.js'
+import { useRouter } from 'vue-router'
 
 export default {
   name: 'the-user-register',
@@ -52,11 +53,12 @@ export default {
           password: this.password,
           imgURL:'',
           name:'',
-          type:this.artist ? 'artist' : 'reader',
+          type:this.artist ? 'ilustrator' : 'reader',
           subscription_id: '',
         }
         ).then(() => {
-          this.router.push('/');
+            const router = useRouter();
+            router.push('/');
         }
         );
       }
