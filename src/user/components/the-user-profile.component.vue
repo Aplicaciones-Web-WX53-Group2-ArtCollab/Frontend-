@@ -12,6 +12,7 @@ export default {
       illustrated_books: 'Illustrated Books',
       portfolio: 'Portfolio',
       currentName: sessionStorage.getItem('currentUser') ? JSON.parse(sessionStorage.getItem('currentUser')).username : '',
+      currentImage: sessionStorage.getItem('currentUser') ? JSON.parse(sessionStorage.getItem('currentUser')).imgUrl : '',
     };
   },
   async created() {
@@ -24,7 +25,12 @@ export default {
     }).catch((error) => {
       console.error('Error fetching books:', error);
     });
+  },
+  computed:{
+    getCapitalizeName(){
+      return this.currentName.charAt(0).toUpperCase() + this.currentName.slice(1);
 
+    }
   }
 
 };
@@ -36,8 +42,8 @@ export default {
     <div class="banner">
       <div class="banner-background"></div>
       <div class="profile-image">
-        <img src="/src/assets/images/profile-picture.png" alt="User profile picture">
-        <div class="text"> {{currentName}}</div>
+        <img :src="currentImage" alt="Profile image">
+        <div class="text"> {{getCapitalizeName}}</div>
       </div>
     </div>
     <div class="flexbox-container">

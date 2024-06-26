@@ -24,7 +24,7 @@ export default {
     login() {
       this.userServices.getUsers().then((response) => {
         let users = response.data;
-        let foundUser = users.find(user => user.username === 'LordMathi2741' );
+        let foundUser = users.find(user => user.username === 'miriam123' );
         console.log(foundUser)
         if(foundUser){
           alert('Logged in');
