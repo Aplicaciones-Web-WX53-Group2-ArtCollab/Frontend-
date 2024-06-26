@@ -18,6 +18,7 @@ export default {
         borderBottom: '1px solid #d1d1d1',
         width: '100%',
       },
+      router: useRouter()
     };
   },
 
@@ -57,8 +58,7 @@ export default {
           subscription_id: '',
         }
         ).then(() => {
-            const router = useRouter();
-            router.push('/');
+            this.router.push('/home');
         }
         );
       }
