@@ -10,15 +10,15 @@ export default {
   <template #content>
     <div class="flex justify-content-between" aria-label="Room header">
     <div class="align-content-center" aria-label="Room title">
-      <h1 class="text-4xl font-bold">{{ $t('artistroom.room') }}</h1>
+      <h1 class=" text-base md:text-4xl font-bold">{{ $t('artistroom.room') }}</h1>
     </div>
-    <div class="sm:flex" aria-label="Artists profiles">
+    <div class="sm:flex sm:gap-4" aria-label="Artists profiles">
       <div class="column" aria-label="Miriam profile">
-        <img class="sm:w-auto" src="/src/assets/miriam.png" alt="Miriam" width="223" height="224"/>
+        <img class="sm:w-auto" src="/src/assets/miriam.png" alt="Miriam" width="150" height="130"/>
         <p class="text-xl"> Miriam Bonastre</p>
       </div>
       <div class="column" aria-label="Flor profile">
-        <img class="sm:w-auto" src="/src/assets/flor.png" alt="Flor" width="223" height="224"/>
+        <img class="sm:w-auto" src="/src/assets/flor.png" alt="Flor" width="150" height="130"/>
         <p class="text-xl">Flor M. Salvador</p>
       </div>
     </div>
