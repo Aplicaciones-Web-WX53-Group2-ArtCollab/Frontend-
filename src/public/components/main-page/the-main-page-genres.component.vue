@@ -33,7 +33,6 @@ export default {
           this.book = new Book(title, description, datePublish, type, id, imgUrl, genre);
           this.books.push(this.book);
         }
-        console.log(this.books);
       });
     }).catch((error) => {
       console.error('Error fetching books:', error);
