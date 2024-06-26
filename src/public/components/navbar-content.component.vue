@@ -90,20 +90,22 @@ export default {
               <router-link to="/artist">
               <h2 > {{ $t('artists') }} </h2>
               </router-link>
-              <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
-                <router-link to="/my-stories">
-                  <pv-button class="bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
-                </router-link>
+              <div aria-label="login button">
+                <div v-if="loggedInUser" class="flex gap-3">
+                  <router-link to="/my-stories">
+                    <pv-button class=" bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
+                  </router-link>
                   <router-link to="/writer-profile">
-                    <pv-button class="flex items-center gap-2">
-                    <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
-                    <span>{{ loggedInUser.username }}</span>
+                    <pv-button class="flex items-center gap-2 hidden">
+                      <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
+                      <span>{{ loggedInUser.username }}</span>
                     </pv-button>
-                </router-link>
-              </div>
-              <div v-else>
-                <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
-                <the-user-login ref="login"/>
+                  </router-link>
+                </div>
+                <div v-else>
+                  <pv-button @click="openLogin" class=" bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
+                  <the-user-login ref="login"/>
+                </div>
               </div>
             </pv-sidebar>
             <pv-button class="bg-transparent text-black-alpha-80 border-transparent text-2xl hover:text-cyan-600"  icon="pi pi-bars"  @click="visible = true" aria-label="Menu" />
@@ -124,21 +126,6 @@ export default {
             <router-link to="/artist">
               <h2 > {{ $t('artists') }}</h2>
             </router-link>
-            <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
-              <router-link to="/my-stories">
-                <pv-button class="bg-cyan-600" label="Publicar"> {{ $t('publish') }} </pv-button>
-              </router-link>
-              <router-link to="/writer-profile">
-                <pv-button class="flex items-center gap-2">
-                  <img :src="loggedInUser.imgURL" alt="ProfileImage" height="25px" class="w-8 h-8 rounded-full">
-                  <span>{{ loggedInUser.username }}</span>
-                </pv-button>
-              </router-link>
-            </div>
-            <div v-else>
-              <pv-button @click="openLogin" class="md:block hidden bg-cyan-600" label="Iniciar Sesion"> {{ $t('login') }} </pv-button>
-              <the-user-login ref="login"/>
-            </div>
           </div>
         </div>
         <div aria-label="login button" class="hidden md:block">
