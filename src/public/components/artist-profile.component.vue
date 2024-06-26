@@ -40,7 +40,7 @@ export default {
           :src="reader._imgURL"
           width="496" alt="Artist profile image">
         <div class="connect-button">
-          <router-link to="/artist-room"> <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">Conectar</pv-button> </router-link>
+          <router-link to="/artist-room"> <pv-button class="bg-yellow-500 border-transparent px-6 py-2 lg:mr-8 md:mr-8">{{$t('connect')}}</pv-button> </router-link>
         </div>
         <div class="text">{{ reader._name }}</div>
       </div>

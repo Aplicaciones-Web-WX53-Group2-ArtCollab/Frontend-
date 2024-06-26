@@ -64,7 +64,6 @@ export default {
       <div class="flex-item">
         <div class="bio">
           <div class="bio-title">Bio</div>
-          <div>Lorem ipsum dolor sit amet consectetur adipiscing elit mauris ornare malesuada himenaeos eleifend morbi, vivamus nostra faucibus platea nisl nec lacinia hendrerit ultricies id maecenas diam. Eget vel aliquet nam penatibus vulputate felis dapibus magnis montes auctor ut, augue placerat praesent class condimentum litora eros sociis iaculis.</div>
         </div>
         <div class="published-book" >
           <div class="published-book-title">{{ $t('published_books') }}</div>
@@ -80,13 +79,6 @@ export default {
 </template>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .banner {
   position: relative;
 }

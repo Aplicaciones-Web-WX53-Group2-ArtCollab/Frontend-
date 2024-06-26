@@ -8,6 +8,7 @@ import detailsEdit_en from '@/locale/details-edit/details-edit_en.js'
 import about_en from '@/locale/about/about_en.js'
 import book_profile_en from '@/locale/book-profile/book_profile_en.js'
 import genreNavbar_en from '@/locale/genre-navbar/genre-navbar_en.js'
+import connect_en from '@/locale/connect/connect_en.js'
 
 const en = {
   gender: 'Gender',
@@ -33,6 +34,7 @@ const en = {
   ...about_en,
   ...book_profile_en,
   ...genreNavbar_en,
+  ...connect_en,
  navbar:{
    gender: 'Gender',
    popular: 'Popular',
