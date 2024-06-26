@@ -122,7 +122,7 @@ export default {
               <h2> {{ $t('monetization') }} </h2>
             </router-link>
             <router-link to="/artist">
-              <h2 > {{ $t('artists') }} </h2>
+              <h2 > {{ $t('artists') }}</h2>
             </router-link>
             <div v-if="loggedInUser" class="flex gap-3 flex-column w-8">
               <router-link to="/my-stories">
