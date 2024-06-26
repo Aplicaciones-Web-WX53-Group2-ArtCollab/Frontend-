@@ -7,6 +7,7 @@ import publish_es from '@/locale/publish/publish_es.js'
 import detailsEdit_es from '@/locale/details-edit/details-edit_es.js'
 import about_es from '@/locale/about/about_es.js'
 import book_profile_es from '@/locale/book-profile/book_profile_es.js'
+import genreNavbar_es from '@/locale/genre-navbar/genre-navbar_es.js'
 
 const es = {
   gender: 'Género',
@@ -31,6 +32,7 @@ const es = {
   ...recover_es,
   ...about_es,
   ...book_profile_es,
+  ...genreNavbar_es,
   navbar:{
    gender: 'Género',
    popular: 'Populares',
