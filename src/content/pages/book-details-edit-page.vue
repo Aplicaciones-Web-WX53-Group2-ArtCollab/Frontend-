@@ -39,8 +39,6 @@ export default {
           description: this.book.description,
           date_publish: existingBook.data.date_publish,
           type: existingBook.data.type,
-          likes: existingBook.data.likes,
-          views: existingBook.data.views,
           templateState_id: existingBook.data.templateState_id,
           template_History_id: existingBook.data.template_History_id,
           imgUrl: this.book.imgUrl ? this.book.imgUrl : existingBook.data.imgUrl,

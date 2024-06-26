@@ -33,7 +33,7 @@ import BookIllustrationsUpload from '@/content/components/publish/book-publish-i
   <book-publish-editor/>
   <div class="flex align-items-center justify-content-center">
     <div class="image-fileupload flex flex-column gap-2 m-5">
-      <label for="titulo" class="text-center font-bold text-xl">{{ $t('uploadIllustrations') }}</label>
+      <label for="title" class="text-center font-bold text-xl">{{ $t('uploadIllustrations') }}</label>
       <book-illustrations-upload/>
     </div>
   </div>

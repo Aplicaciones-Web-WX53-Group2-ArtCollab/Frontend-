@@ -116,7 +116,7 @@ export default {
 }
 
 .thumbnail-fileupload {
-  margin-right: 8rem; /* Ajusta el margen derecho para separar de los otros elementos */
+  margin-right: 8rem;
   max-width: 15rem;
 }
 

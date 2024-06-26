@@ -1,6 +1,6 @@
 <script >
 export default {
-  name: 'ingresos-obtenidos',
+  name: 'the-income-obtain',
 }
 </script>
 
@@ -8,7 +8,7 @@ export default {
 
   <div class="bg-dark-blue">
     <pv-toolbar class="flex border-noround text-white-alpha-90 bg-white">
-      <template #start class="flex justify-content-start">
+      <template #start>
         <div class="flex justify-content-start">
           <pv-button icon="pi pi-chevron-left" class="text-black-alpha-90 border-none bg-transparent"></pv-button>
           <div class="text-black-alpha-90">
@@ -17,7 +17,7 @@ export default {
           </div>
         </div>
       </template>
-      <template #end class="flex justify-content-center">
+      <template #end>
         <div class="flex">
           <pv-button class="p-button border-round-2xl border-none text-black-alpha-90 light">{{ $t('cancel') }}</pv-button>
           <p class="lg:text-2xl">#2</p>
@@ -55,7 +55,7 @@ export default {
   background-color: #097682;
 }
 .rectangle-container{
-  border: 2px solid whitesmoke; /* Añade un borde alrededor del contenedor para crear el rectángulo */
+  border: 2px solid whitesmoke;
   width: 100%;
 }
 </style>

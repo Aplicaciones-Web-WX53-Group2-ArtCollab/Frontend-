@@ -1,7 +1,7 @@
 <script >
 import { Book } from '@/content/models/book.entity.js'
 import { BookInternalService } from '@/content/services/book-internal.service.js'
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 export default {
   name: 'book-details-edit-cover',
@@ -17,9 +17,9 @@ export default {
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description, datePublish, type, id, imgUrl, likes, views } = bookData;
+        const { title, description, datePublish, type, id, imgUrl } = bookData;
         if (bookData.type === 'book' && id === '1') {
-          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views);
+          this.book = new Book(title, description, datePublish, type, id, imgUrl);
         }
       });
     }).catch((error) => {

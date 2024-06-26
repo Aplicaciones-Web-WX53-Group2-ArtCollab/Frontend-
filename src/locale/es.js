@@ -5,6 +5,8 @@ import recover_es from '@/locale/recover/recover_es.js'
 import main_page_es from '@/locale/main-page/main_page_es.js'
 import publish_es from '@/locale/publish/publish_es.js'
 import detailsEdit_es from '@/locale/details-edit/details-edit_es.js'
+import about_es from '@/locale/about/about_es.js'
+import book_profile_es from '@/locale/book-profile/book_profile_es.js'
 
 const es = {
   gender: 'Género',
@@ -27,6 +29,8 @@ const es = {
   ...login_es,
   ...register_es,
   ...recover_es,
+  ...about_es,
+  ...book_profile_es,
   navbar:{
    gender: 'Género',
    popular: 'Populares',
@@ -49,7 +53,7 @@ const es = {
   ...main_page_es,
   ...publish_es,
     artistroom:{
-        room: 'Esta es tu sala de artista',
+        room: 'Esta book_profile_es tu sala de artista',
         chat: 'Iniciar un nuevo chat',
         newchat: 'Nuevo chat con',
         text: 'Tu: Perfecto',
@@ -73,13 +77,13 @@ const es = {
     profileHighlight: 'Perfil destacado al inicio de la sesión',
     priority: 'Tener mayor prioridad para trabajar con escritores destacados',
     subscribe: 'Suscribirse',
-    cancelAnytime: 'Cancela en cualquier momento',
+    cancelAnytime: 'Cancela book_profile_en cualquier momento',
     freeMonthlyPackage: 'Un paquete mensual gratuito de monedas',
     earlyAccess: 'Acceso anticipado a nuevas historias',
     noAds: 'Sin anuncios',
-    storyHighlight: 'Historia destacada en la página principal',
-    storyAds: 'Anuncios de su historia en nuestras páginas',
-    recommendedList: 'Entrar en nuestra lista de historias recomendadas a editoriales'
+    storyHighlight: 'Historia destacada book_profile_en la página principal',
+    storyAds: 'Anuncios de su historia book_profile_en nuestras páginas',
+    recommendedList: 'Entrar book_profile_en nuestra lista de historias recomendadas a editoriales'
   },
 
   heroSubscription:{
@@ -103,10 +107,10 @@ const es = {
   },
   stepsContent: {
     title: 'Programa de reparto de ingresos publicitarios',
-    creatorsCanEarn: '¡Los creadores pueden ganar 50% por los anunciones mostrados en sus series!',
+    creatorsCanEarn: '¡Los creadores pueden ganar 50% por los anunciones mostrados book_profile_en sus series!',
     followSteps: 'Sigue los siguientes pasos para unirte al programa de reparto de ingresos publicitarios',
-    step1: 'Registrate con tu cuenta de escritor en el programa de reparto de ingresos publicitarios',
-    step2: 'Alcanza los 20,000 me gusta y 40,000 vistas globales mensuales en tu libro',
+    step1: 'Registrate con tu cuenta de escritor book_profile_en el programa de reparto de ingresos publicitarios',
+    step2: 'Alcanza los 20,000 me gusta y 40,000 vistas globales mensuales book_profile_en tu libro',
     step3: 'Aplica para una revisión',
     startSharing: '¡Comienza a compartir tus historias ahora!'
   }

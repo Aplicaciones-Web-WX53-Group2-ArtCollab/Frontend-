@@ -19,7 +19,7 @@ const es = {
   register_checkbox: 'Soy artista',
   register_terms: 'Al registrarme, acepto los Términos de uso y la Política de privacidad de ArtCollab.',
   register_data_policy: 'ArtCollab recopila y procesa su dirección de correo electrónico con fines de marketing. ' +
-    'Puede darse de baja fácilmente en cualquier momento a través del enlace de exclusión en los correos electrónicos de marketing.',
+    'Puede darse de baja fácilmente book_profile_en cualquier momento a través del enlace de exclusión book_profile_en los correos electrónicos de marketing.',
   register_button: 'Registrarse ahora',
   register_footer: 'O regístrate con',
 }

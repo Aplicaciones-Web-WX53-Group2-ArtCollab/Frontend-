@@ -5,6 +5,8 @@ import recover_en from '@/locale/recover/recover_en.js'
 import main_page_en from './main-page/main_page_en'
 import publish_en from '@/locale/publish/publish_en.js'
 import detailsEdit_en from '@/locale/details-edit/details-edit_en.js'
+import about_en from '@/locale/about/about_en.js'
+import book_profile_en from '@/locale/book-profile/book_profile_en.js'
 
 const en = {
   gender: 'Gender',
@@ -27,6 +29,8 @@ const en = {
   ...login_en,
   ...register_en,
   ...recover_en,
+  ...about_en,
+  ...book_profile_en,
  navbar:{
    gender: 'Gender',
    popular: 'Popular',

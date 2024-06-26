@@ -16,9 +16,9 @@ export default {
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description,datePublish,type,id, imgUrl,likes,views  }= bookData;
+        const { title, description,datePublish,type,id, imgUrl  }= bookData;
         if(bookData.type === 'book'){
-          this.book = new Book(title, description,datePublish,type,id, imgUrl,likes,views);
+          this.book = new Book(title, description,datePublish,type,id, imgUrl);
           this.books.push(this.book);
           if(bookData.views > this.bookPopular.views){
             this.bookPopular = bookData;

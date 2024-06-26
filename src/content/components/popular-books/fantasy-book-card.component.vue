@@ -15,9 +15,9 @@ export default {
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
        response.data.forEach((bookData) => {
-        const { title, description,datePublish,type,id, imgUrl,likes,views  }= bookData;
+        const { title, description,datePublish,type,id, imgUrl }= bookData;
         if(bookData.type === 'book'){
-          this.book = new Book(title, description,datePublish,type,id, imgUrl,likes,views);
+          this.book = new Book(title, description,datePublish,type,id, imgUrl);
           this.books.push(this.book);
         }
     });
@@ -54,17 +54,6 @@ export default {
           </template>
           <template #title>
             {{ book.title }}
-          </template>
-          <template #footer>
-            <pv-rating class="rating" :cancel="false" :stars="1" @click="increaseLikes(book.id, book.likes)">
-              <template #onicon>
-                <i class="pi pi-heart-fill">{{book.view}} M</i>
-              </template>
-              <template #officon>
-                <i class="pi pi-heart">{{book.likes}} M</i>
-              </template>
-            </pv-rating>
-
           </template>
         </pv-card>
       </div>

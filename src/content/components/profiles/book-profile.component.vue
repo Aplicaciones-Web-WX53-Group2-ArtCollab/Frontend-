@@ -9,10 +9,10 @@
     </div>
     <div class="book-content">
       <div class="chapter-container">
-        <h3>Tabla de contenidos</h3>
+        <h3>{{$t('content_table')}}</h3>
         <ul>
-          <li><span>Prólogo</span> <i class="pi pi-heart-fill"> 100k</i></li>
-          <li v-for="n in 10" :key="n"><span>Capítulo {{ n }}</span> <i class="pi pi-lock"></i> <i class="pi pi-heart-fill"> 100k</i></li>
+          <li><span>{{$t('book_prologue')}}</span> <i class="pi pi-heart-fill"> 100k</i></li>
+          <li v-for="n in 10" :key="n"><span>{{$t('book_chapter')}} {{ n }}</span> <i class="pi pi-lock"></i> <i class="pi pi-heart-fill"> 100k</i></li>
         </ul>
       </div>
       <div class="right-section">
@@ -23,7 +23,7 @@
         <div class="description-container">
           <p>The Creators did not expect their beloved dragons to sail skyward upon their end. To curl into balls just beyond gravity’s grip, littering the sky with tombstones. With moons.</p>
         </div>
-        <button class="chapter-button">Capítulo seleccionado <i class="pi pi-dollar"> 5</i> <i class="pi pi-arrow-right"></i></button>
+        <button class="chapter-button">{{$t('chapter_selected')}} <i class="pi pi-dollar"> 5</i> <i class="pi pi-arrow-right"></i></button>
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@ export default {
   display: flex;
   height: 100%;
   width: 80%;
-  background-color: rgba(176, 224, 230, 0.5); /* Light turquoise with increased transparency */
+  background-color: rgba(176, 224, 230, 0.5);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -99,12 +99,12 @@ export default {
 }
 
 .chapter-container {
-  background-color: rgba(0, 128, 128, 0.5); /* Dark turquoise with increased transparency */
-  color: black; /* Changed text color to black */
+  background-color: rgba(0, 128, 128, 0.5);
+  color: black;
 }
 
 .chapter-list h3 {
-  margin-bottom: 10px; /* Space under the title */
+  margin-bottom: 10px;
 }
 
 .chapter-list ul {
@@ -114,7 +114,7 @@ export default {
 }
 
 .chapter-list li {
-  margin-bottom: 100px; /* Increased space between chapters */
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,7 +132,7 @@ export default {
 }
 
 .chapter-button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
