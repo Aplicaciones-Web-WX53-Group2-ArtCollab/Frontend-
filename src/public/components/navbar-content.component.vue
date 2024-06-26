@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       visible: false,
-      loggedInUser:null,
+      loggedInUser: sessionStorage.getItem('currentUser') ? JSON.parse(sessionStorage.getItem('currentUser')) : null,
       userServices: new UserEndpointService(),
       items: [
         {

@@ -10,7 +10,8 @@ export default {
       bookApiFake:new BookService(),
       social_media: 'Social Media',
       illustrated_books: 'Illustrated Books',
-      portfolio: 'Portfolio'
+      portfolio: 'Portfolio',
+      currentName: sessionStorage.getItem('currentUser') ? JSON.parse(sessionStorage.getItem('currentUser')).username : '',
     };
   },
   async created() {
@@ -36,7 +37,7 @@ export default {
       <div class="banner-background"></div>
       <div class="profile-image">
         <img src="/src/assets/images/profile-picture.png" alt="User profile picture">
-        <div class="text">Flor M. Salvador</div>
+        <div class="text"> {{currentName}}</div>
       </div>
     </div>
     <div class="flexbox-container">

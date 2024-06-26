@@ -22,20 +22,18 @@ export default {
     },
 
     login() {
-      if (this.email==='flor-salvador01@gmail.com' || this.password==='flor123') {
-        this.userServices.loginUser({
-          email: this.email,
-          password: this.password,
-          username: 'flor_salvador_01',
-          imgURL: 'https://github.com/Open-Source-SW54-Group-3-ArtCollab/Frontend/blob/c67583889d63d5be31314130243591969b6449a2/frontend/src/assets/images/flor-profile.png?raw=true',
-          name: 'Flor M. Salvador',
-          type: 'writer',
-          subscription_id: '1',
+      this.userServices.getUsers().then((response) => {
+        let users = response.data;
+        let foundUser = users.find(user => user.username === 'LordMathi2741' );
+        console.log(foundUser)
+        if(foundUser){
+          alert('Logged in');
+          this.$emit('update:showEmailLogin', false);
+          sessionStorage.setItem('currentUser', JSON.stringify(foundUser));
+        } else {
+         alert('User doesnt exist')
         }
-        );
-      } else {
-        this.loginErrorMessage = this.$t('login_email_error_message');
-      }
+      });
     }
   },
   emits: ['update:showEmailLogin'],

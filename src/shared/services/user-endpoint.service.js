@@ -18,4 +18,6 @@ export class UserEndpointService {
   createUser(reader){
     return http.post('/reader', reader)
   }
+
+
 }

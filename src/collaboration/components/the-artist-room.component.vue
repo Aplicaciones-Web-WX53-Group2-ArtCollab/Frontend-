@@ -1,6 +1,11 @@
 <script>
 export default {
-  name: 'the-artist-room'
+  name: 'the-artist-room',
+  data() {
+    return {
+      currentUsername: sessionStorage.getItem('currentUser') ? JSON.parse(sessionStorage.getItem('currentUser')).username : '',
+    };
+  },
 }
 </script>
 
@@ -19,7 +24,7 @@ export default {
       </div>
       <div class="column" aria-label="Flor profile">
         <img class="sm:w-auto" src="/src/assets/flor.png" alt="Flor" width="150" height="130"/>
-        <p class="text-xl">Flor M. Salvador</p>
+        <p class="text-xl"> {{currentUsername}}</p>
       </div>
     </div>
     </div>
