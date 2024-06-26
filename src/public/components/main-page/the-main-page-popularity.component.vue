@@ -13,13 +13,11 @@ export default {
     booksPopularPerGenre() {
       return this.books.slice()
         .filter(book => book._genre === this.currentGenre)
-        .sort((a, b) => b._views - a._views)
         .slice(0, 3)
     },
 
     booksTop3() {
     return this.books.slice()
-        .sort((a, b) => b._views - a._views)
         .slice(0, 3);
     }
   },
@@ -31,16 +29,16 @@ export default {
       selectedGenre : ref(),
       genres : ref([
         { id: 'drama', name: 'Drama' },
-        { id: 'fantasía', name: 'Fantasía' },
+        { id: 'Fantasy', name: 'Fantasía' },
       ])
     }
   },
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description, datePublish, type, id, imgUrl, likes, views, genre } = bookData;
+        const { title, description, datePublish, type, id, imgUrl, genre } = bookData;
         if (bookData.type === 'book') {
-          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views, genre);
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, genre);
           this.books.push(this.book);
         }
       });

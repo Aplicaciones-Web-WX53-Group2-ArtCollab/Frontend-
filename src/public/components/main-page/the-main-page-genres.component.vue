@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     romanceBooks() {
-      return this.books.filter(book => book._genre === 'Drama').map(book => book.imgUrl);
+      return this.books.filter(book => book._genre === 'drama').map(book => book.imgUrl);
     },
 
     fantasyBooks() {
@@ -28,11 +28,12 @@ export default {
   async created() {
     this.bookApiFake.getAllBooks().then((response) => {
       response.data.forEach((bookData) => {
-        const { title, description, datePublish, type, id, imgUrl, likes, views, genre } = bookData;
+        const { title, description, datePublish, type, id, imgUrl, genre } = bookData;
         if (bookData.type === 'book') {
-          this.book = new Book(title, description, datePublish, type, id, imgUrl, likes, views, genre);
+          this.book = new Book(title, description, datePublish, type, id, imgUrl, genre);
           this.books.push(this.book);
         }
+        console.log(this.books);
       });
     }).catch((error) => {
       console.error('Error fetching books:', error);

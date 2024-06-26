@@ -27,7 +27,7 @@ export default {
     this.userApiFake.getUsers().then((response) => {
       response.data.forEach((userData) => {
         const { name, email, username, password, type, id, imgUrl, subscription_id} = userData;
-        if (userData.type === 'artist') {
+        if (userData.type === 'ilustrator') {
           this.artist = new Reader(id, name,  username, email, password, type, imgUrl, subscription_id);
           this.artists.push(this.artist);
         }
