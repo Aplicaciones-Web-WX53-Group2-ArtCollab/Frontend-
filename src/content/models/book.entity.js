@@ -1,13 +1,16 @@
 export class Book {
 
-  constructor(title = null, description = null, date_publish = null, type = null, id = null, imgUrl = null, genre = null) {
+  constructor(title = null, description = null, type = null, imgUrl = null, genre = null, likes = 0, views = 0, portfolioDescription = null, portfolioQuantity= null, templateState = null) {
     this._title = title;
     this._description = description;
-    this._datePublish = date_publish;
     this._type = type;
-    this._id = id;
     this._imgUrl = imgUrl;
     this._genre = genre;
+    this._likes = likes;
+    this._views = views;
+    this._portfolioDescription = portfolioDescription;
+    this._portfolioQuantity = portfolioQuantity;
+    this._templateState = templateState;
   }
 
   get title() {
@@ -52,5 +55,53 @@ export class Book {
 
   set imgUrl(value) {
     this._imgUrl = value;
+  }
+
+  get genre() {
+    return this._genre;
+  }
+
+  set genre(value) {
+    this._genre = value;
+  }
+
+  get likes() {
+    return this._likes;
+  }
+
+  set likes(value) {
+    this._likes = value;
+  }
+
+  get views() {
+    return this._views;
+  }
+
+  set views(value) {
+    this._views = value;
+  }
+
+  get portfolioDescription() {
+    return this._portfolioDescription;
+  }
+
+  set portfolioDescription(value) {
+    this._portfolioDescription = value;
+  }
+
+  get portfolioQuantity() {
+    return this._portfolioQuantity;
+  }
+
+  set portfolioQuantity(value) {
+    this._portfolioQuantity = value;
+  }
+
+  get templateState() {
+    return this._templateState;
+  }
+
+  set templateState(value) {
+    this._templateState = value;
   }
 }

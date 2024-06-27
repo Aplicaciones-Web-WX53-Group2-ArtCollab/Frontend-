@@ -30,28 +30,8 @@ export default {
   methods: {
     async postTemplate() {
       try {
-        const response = await this.bookService.getAllBooks();
-        const templates = response.data.filter(book => book.type === 'template' && !isNaN(book.id));
-        const lastTemplate = templates[templates.length - 1];
-
-        let lastId;
-        if (lastTemplate) {
-          lastId = isNaN(lastTemplate.id) ? 0 : Number(lastTemplate.id);
-        } else {
-          lastId = 0;
-        }
-
-        const newId = (lastId + 1).toString();
-
         const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = (now.getMonth() + 1).toString().padStart(2, '0');
-        const day = now.getDate().toString().padStart(2, '0');
-
-        const dateOnly = `${year}-${month}-${day}`;
-
-        this.book = new Book(this.title, this.description, dateOnly, 'book', newId, this.imgUrl, 0, 0, genres);
+        this.book = new Book(this.title, this.description, 'book',  this.imgUrl, genres, 0, 0, "string", 1, false);
 
         this.bookService.create(this.book).then(() => {
           router.push('/chapter-publish');
