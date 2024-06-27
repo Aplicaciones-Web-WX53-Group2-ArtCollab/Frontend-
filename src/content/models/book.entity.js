@@ -1,11 +1,12 @@
 export class Book {
 
-  constructor(title = null, description = null, type = null, imgUrl = null, genre = null, likes = 0, views = 0, portfolioDescription = null, portfolioQuantity= null, templateState = null) {
+  constructor(title = null, description = null, type = null, imgUrl = null, genre = null, portfolioTitle = null, likes = 0, views = 0, portfolioDescription = null, portfolioQuantity= null, templateState = null) {
     this._title = title;
     this._description = description;
     this._type = type;
     this._imgUrl = imgUrl;
     this._genre = genre;
+    this._portfolioTitle = portfolioTitle;
     this._likes = likes;
     this._views = views;
     this._portfolioDescription = portfolioDescription;
@@ -103,5 +104,13 @@ export class Book {
 
   set templateState(value) {
     this._templateState = value;
+  }
+
+  get portfolioTitle() {
+    return this._portfolioTitle;
+  }
+
+  set portfolioTitle(value) {
+    this._portfolioTitle = value;
   }
 }

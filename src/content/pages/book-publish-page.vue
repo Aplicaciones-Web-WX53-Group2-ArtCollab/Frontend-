@@ -31,7 +31,7 @@ export default {
     async postTemplate() {
       try {
         //const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
-        this.book = new Book(this.title, this.description, 'book',  this.imgUrl, this.genre1, 0, 0, "string", 1, false);
+        this.book = new Book(this.title, this.description, 'book',  this.imgUrl, this.genre1, "string",0, 0, "string", 1, false);
 
         this.bookService.create(this.book).then(() => {
           router.push('/chapter-publish');
