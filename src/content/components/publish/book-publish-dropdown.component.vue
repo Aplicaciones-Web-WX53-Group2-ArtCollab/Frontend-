@@ -19,9 +19,9 @@ import { ref, defineEmits } from "vue";
 
 const selectedGenre = ref();
 const genres = ref([
-  { name: 'romance' },
-  { name: 'fantasy' },
-  { name: 'comedy' }
+  { name: 'Romance' },
+  { name: 'Fantasy' },
+  { name: 'Comedy' }
 ]);
 
 const emit = defineEmits(['update:genre']);
