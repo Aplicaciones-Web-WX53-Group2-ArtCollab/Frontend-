@@ -30,10 +30,44 @@ export default {
   methods: {
     async postTemplate() {
       try {
-        //const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
-        this.book = new Book(this.title, this.description, 'book',  this.imgUrl, this.genre1, "string",0, 0, "string", 1, false);
+        const response = await this.bookService.getAllBooks();
+        const templates = response.data.filter(book => book.type === 'template' && !isNaN(book.id));
+        const lastTemplate = templates[templates.length - 1];
 
-        this.bookService.create(this.book).then(() => {
+        let lastId;
+        if (lastTemplate) {
+          lastId = isNaN(lastTemplate.id) ? 0 : Number(lastTemplate.id);
+        } else {
+          lastId = 0;
+        }
+
+        const newId = (lastId + 1).toString();
+
+        const genres = [this.genre1, this.genre2].filter(Boolean).join(', ');
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+
+        const dateOnly = `${year}-${month}-${day}`;
+
+        this.book = new Book(this.title, this.description, dateOnly, 'book', newId, this.imgUrl, genres, 'string', 0, 0,'string', 0, false);
+
+        const bookData = {
+          title: this.book.title,
+          description: this.book.description,
+          type: this.book.type,
+          imgUrl: this.book.imgUrl,
+          genre: this.book.genre,
+          portfolioTitle: this.book.portfolioTitle,
+          likes: this.book.likes,
+          views: this.book.views,
+          portfolioDescription: this.book.portfolioDescription,
+          portfolioQuantity: this.book.portfolioQuantity,
+          templateState: this.book.templateState
+        };
+
+        this.bookService.create(bookData).then(() => {
           router.push('/chapter-publish');
         }).catch((error) => {
           console.error('Error posting data:', error);
